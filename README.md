@@ -57,7 +57,7 @@ Ref. [NJIT Graduate Computing Sciences Course Catalog][]
 ## Who is the instructor?
 
 **Instructor**.  [Dr. William DeMeo][me]   
-**Email**. [williamdemeo at gmail](mailto:williamdemeo@gmail.com?subject=DS644: (replace-this-text-with-informative-subject-description))    
+**Email**. [williamdemeo at gmail][email-me]  
 **Office location**. [GITC][] 4201A  
 **Office hours**. Wednesdays 15:00--17:00
 
@@ -269,7 +269,7 @@ Students are strongly encouraged to ask many questions!  When in doubt, ask!
 
 2. **On** [Slack][]. Another good place to ask a question is the [Slack discussion forum for the course][Slack].  Rather than emailing questions to the teaching staff, students are encouraged to post questions on [Slack][].
 
-3. **By** [email][email-me]. Students may ask questions by [emailing the instructor][email me] or on by sending a message via [Canvas][].  However, the response time will likely be slower than if the question were asked on [Slack][].
+3. **By** [email][email-me]. Students may ask questions by [emailing the instructor][email-me] or on by sending a message via [Canvas][].  However, the response time will likely be slower than if the question were asked on [Slack][].
 
 **Important Remarks about electronic correspondence**
 
@@ -368,15 +368,12 @@ early in the semester in order to have their learning needs appropriately met.
 
 [coursera-progfun]: https://www.coursera.org/learn/scala-functional-programming
 [coursera-bigdata]: https://www.coursera.org/learn/scala-spark-big-data
-[email-me]: mailto:williamdemeo@gmail.com?subject=ds644
+ 
 
 
 [§ 102 (Monday) Canvas]:
 [§ 104 (Wednesday) Canvas]:
-[§ 102 (Monday) Gradescope]: https://www.gradescope.com/courses/485519
-Entry Code:57268Y
-[§ 104 (Wednesday) Gradescope]: https://www.gradescope.com/courses/485522
-Entry Code:ZZKG7Z
-[Slack]:
-[Canvas]:
 [me]: https://williamdemeo.gitlab.io/
+[email-me]: mailto:williamdemeo@gmail.com
+[Slack]: https://join.slack.com/t/slack-dpv8594/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
+
