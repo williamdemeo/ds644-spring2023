@@ -301,16 +301,11 @@ If emailing the instructor, students are urged to use an informative subject fie
 
 ## What if I have a disability?
 
-If you believe that you have a disability that qualifies under the
-Americans with Disabilities Act and Section 504 of the Rehabilitation
-Act and requires accommodations, you should contact the [Office of Accessibility Resources and Services](https://www.njit.edu/studentsuccess/node/5) for information 
-on appropriate policies and procedures. 
-The next step is to talk to the instructor who will be happy to assist with 
-accommodations, but **will not provide them retroactively** 
-(so file the appropriate requests and paperwork well before the first exam!).
+If you believe that you have a disability that qualifies under the Americans with Disabilities Act and Section 504 of the Rehabilitation Act and requires accommodations, you should contact the [Office of Accessibility Resources and Services](https://www.njit.edu/studentsuccess/node/5) for information on appropriate policies and procedures. The next step is to talk to the instructor who will be happy to assist with accommodations, but **will not provide them retroactively** (so file the appropriate requests and paperwork well before the first exam!).
 
-Students must have their paper work in order and should contact the instructor 
-early in the semester in order to have their learning needs appropriately met. 
+Students must have their paper work in order and should contact the instructor early in the semester in order to have their learning needs appropriately met.
+
+<!-- ------------------------------ -->
 
 
 [Apache Spark and Delta Lake Under the Hood]: https://databricks.com/p/ebook/apache-spark-delta-lake-under-the-hood
@@ -320,6 +315,8 @@ early in the semester in order to have their learning needs appropriately met.
 
 [CKB Room 124]: https://goo.gl/maps/PvJth6DXEvyuV1Ep6
 [Coursera]: https://www.coursera.org
+[coursera-progfun]: https://www.coursera.org/learn/scala-functional-programming
+[coursera-bigdata]: https://www.coursera.org/learn/scala-spark-big-data
 
 [Databricks]: https://www.databricks.com/
 [Download and Install Scala]: https://www.scala-lang.org/download/
@@ -327,6 +324,7 @@ early in the semester in order to have their learning needs appropriately met.
 [ECEC]: https://goo.gl/maps/ZBW1fdPqii6frCJZ7
 [ECEC 100]: https://goo.gl/maps/ZBW1fdPqii6frCJZ7
 [ECEC Room 100]: https://goo.gl/maps/ZBW1fdPqii6frCJZ7
+[email-me]: mailto:williamdemeo@gmail.com
 
 [FP in Scala]: https://www.manning.com/books/functional-programming-in-scala-second-edition
 [FP in Scala GitHub repository]: https://github.com/fpinscala/fpinscala
@@ -351,6 +349,7 @@ early in the semester in order to have their learning needs appropriately met.
 [Learning Spark publisher web page]: https://www.oreilly.com/library/view/learning-spark/9781449359034/
 
 [Manning web site]: https://www.manning.com/books/functional-programming-in-scala-second-edition
+[me]: https://williamdemeo.gitlab.io/
 
 [NJIT]: https://njit.edu
 [NJIT Graduate Computing Sciences Course Catalog]: https://catalog.njit.edu/graduate/computing-sciences/data-science/#coursestext
@@ -358,6 +357,7 @@ early in the semester in order to have their learning needs appropriately met.
 
 [Scala]: https://www.scala-lang.org/
 [Scala Programming for Big Data Analytics]: https://amzn.to/3J8zekk
+[Slack]: https://join.slack.com/t/slack-dpv8594/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 [source code accompanying FP in Scala]: https://www.manning.com/downloads/2363
 [Spark]: https://spark.apache.org/
 
@@ -366,14 +366,7 @@ early in the semester in order to have their learning needs appropriately met.
 
 [Volume, velocity, and variety: Understanding the three V's of big data]: https://www.zdnet.com/article/volume-velocity-and-variety-understanding-the-three-vs-of-big-data/
 
-[coursera-progfun]: https://www.coursera.org/learn/scala-functional-programming
-[coursera-bigdata]: https://www.coursera.org/learn/scala-spark-big-data
- 
+[§ 102 (Monday) Canvas]: XXXX
+[§ 104 (Wednesday) Canvas]: XXXX
 
-
-[§ 102 (Monday) Canvas]:
-[§ 104 (Wednesday) Canvas]:
-[me]: https://williamdemeo.gitlab.io/
-[email-me]: mailto:williamdemeo@gmail.com
-[Slack]: https://join.slack.com/t/slack-dpv8594/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 
