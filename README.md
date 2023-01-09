@@ -56,7 +56,7 @@ Ref. [NJIT Graduate Computing Sciences Course Catalog][]
 
 ## Who is the instructor?
 
-**Instructor**.  Dr. William DeMeo   
+**Instructor**.  [Dr. William DeMeo][me]   
 **Email**. [williamdemeo at gmail](mailto:williamdemeo@gmail.com?subject=DS644: (replace-this-text-with-informative-subject-description))    
 **Office location**. [GITC][] 4201A  
 **Office hours**. Wednesdays 15:00--17:00
@@ -92,16 +92,16 @@ Information about homework is in the [homework directory](homework):
 
 ## When and where are the exams?
 
-**All exams take place in the** [same classroom as the lecture][CKB Room 124]**.
+**All exams take place in the same classroom as the lecture**, [CKB Room 124][].
 
-+  **MIDTERM EXAM**  
-   +  [§ 102 (Monday) Canvas][] TBA
-   +  [§ 104 (Wednesday) Canvas][] TBA
++  **MIDTERM EXAM DATE**  
+   +  [§ 102 (Monday)][] TBA
+   +  [§ 104 (Wednesday)][] TBA
 
 
-+  **FINAL EXAM** (cumulative)  
-   +  [§ 102 (Monday) Canvas][] TBA
-   +  [§ 104 (Wednesday) Canvas][] TBA
++  **FINAL EXAM DATE** (cumulative)  
+   +  [§ 102 (Monday)][] TBA
+   +  [§ 104 (Wednesday)][] TBA
 
 In accordance with university policy, **the final exam must be taken by all students at the scheduled time in the usual classroom.** *Do not make plans which would have you depart campus before the scheduled final exam date.*
 
@@ -128,17 +128,14 @@ Students are expected to have access to the following textbooks (electronic or h
 
 +  [Functional Programming in Scala][FP in Scala]  
 
-   <a href="https://www.manning.com/books/functional-programming-in-scala-second-edition"><img src=".img/fpinscala.png" width="100"></a>
+   <a href="https://www.manning.com/books/functional-programming-in-scala-second-edition"><img src="https://images.manning.com/264/352/resize/book/4/156da28-8fb7-4015-bc02-986c2c4e0828/Pilquist-MEAP-HI.png" width="100"></a>
 
    **Edition**. 2nd  
    **Authors**. Michael Pilquist, Rúnar Bjarnason, and Paul Chiusano  
    **Release date**. Early 2023 (estimated)  
    **ISBN**. 9781617299582
 
-   **Attention!** At the time of this writing, the 2nd edition of [FP in Scala][] (covering Scala 3) is only
-   available via the "Manning Early Access Program" (MEAP) from the [Manning web site][].
-   You should **not** buy this book from Amazon just yet, as you may
-   end up with the 1st edition (covering Scala 2).
+   **Attention!** At the time of this writing, the 2nd edition of [FP in Scala][] (covering Scala 3) is available via the "Manning Early Access Program" (MEAP) from the [Manning web site][]. You should **not** buy this book from Amazon just yet, as you may end up with the 1st edition (covering Scala 2).
 
    The source code that accompanies [FP in Scala][] is available in [this zip archive](https://www.manning.com/downloads/2363) **or** from the [FP in Scala GitHub repository][].
 
