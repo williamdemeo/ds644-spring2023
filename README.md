@@ -6,7 +6,7 @@
 
 ## What is this web page?
 
-This is the main web page for the course *DS 644, Introduction to Big Data* taught by [Dr. William DeMeo](mailto:williamdemeo@gmail.com) in the Spring semester of 2023 at [NJIT][].
+This is the main web page for Sections 102 and 104 of the course *DS 644: Introduction to Big Data* taught by [Dr. William DeMeo][me] in the spring semester of 2023 at [NJIT][].
 
 *This page will be updated throughout the semester. Students are expected to visit this page periodically.* 
 
@@ -14,6 +14,7 @@ This is the main web page for the course *DS 644, Introduction to Big Data* taug
 
 **Contents**
 
+- [What is this web page?](#what-is-this-web-page)
 - [What is the course about?](#what-is-the-course-about)
 - [When and where are the lectures?](#when-and-where-are-the-lectures)
 - [Who is the instructor?](#who-is-the-instructor)
@@ -29,22 +30,18 @@ This is the main web page for the course *DS 644, Introduction to Big Data* taug
 - [What is the grading policy?](#what-is-the-grading-policy)
 - [Where can I find the homework?](#where-can-i-find-the-homework)
 - [Can I turn in assignments after the deadline?](#can-i-turn-in-assignments-after-the-deadline)
-- [Is it possible to make-up a missed exam?](#is-it-possible-to-make-up-a-missed-exam)
-- [(How) Should I ask questions?](#how-should-i-ask-questions)
+- [Is it possible to make up a missed exam?](#is-it-possible-to-make-up-a-missed-exam)
+- [Should I ask questions? If so, how and when?](#should-i-ask-questions-if-so-how-and-when)
 - [Is tutoring available?](#is-tutoring-available)
 - [Can I email the instructor?](#can-i-email-the-instructor)
 - [What if I have a disability?](#what-if-i-have-a-disability)
-
-<!-- markdown-toc end -->
-
-
 
 
 ---------
 
 ## What is the course about?
 
-*Description*. This course provides an in-depth coverage of various topics in big data from data generation, storage, management, transfer, to analytics, with focus on the state-of-the-art technologies, tools, architectures, and systems that constitute big-data computing solutions in high-performance networks. Real-life big-data applications and workflows in various domains (particularly in the sciences) are introduced as use cases to illustrate the development, deployment, and execution of a wide spectrum of emerging big-data solutions.
+This course provides an in-depth coverage of various topics in big data from data generation, storage, management, transfer, to analytics, with focus on the state-of-the-art technologies, tools, architectures, and systems that constitute big-data computing solutions in high-performance networks. Real-life big-data applications and workflows in various domains (particularly in the sciences) are introduced as use cases to illustrate the development, deployment, and execution of a wide spectrum of emerging big-data solutions.
 
 Ref. [NJIT Graduate Computing Sciences Course Catalog][]
 
@@ -75,7 +72,7 @@ Students should have a had some prior computer programming experience.  Students
 
 ## Where is the course schedule?
 
-[github.com/williamdemeo/ds644-spring2023/schedule](https://github.com/williamdemeo/ds644-spring2023/tree/master/schedule)
+The [schedule for this course](schedule) will evolve over the course of the semester, so students should check it often.  It is found in the [schedule directory](schedule) of this repository: [github.com/williamdemeo/ds644-spring2023/schedule](schedule)
 
 ------------------
 
@@ -88,19 +85,14 @@ Students should have a had some prior computer programming experience.  Students
 
 ## Where is information about homework?
 
-The homework information page is at [github.com/williamdemeo/ds644-spring2023/homework](https://github.com/williamdemeo/ds644-spring2023/tree/master/homework).
-
-The [Gradescope][] pages for this class are the following:
-
-+ [§ 102 (Monday) Gradescope][]   -- **Entry Code**. XXXXXX
-+ [§ 104 (Wednesday) Gradescope][]  -- **Entry Code**. XXXXXX
-
+Information about homework is in the [homework directory](homework):
+[github.com/williamdemeo/ds644-spring2023/homework](homework).
 
 --------------------------------------------------------------------
 
 ## When and where are the exams?
 
-**All exams take place in the same classroom as the lecture**.
+**All exams take place in the** [same classroom as the lecture][CKB Room 124]**.
 
 +  **MIDTERM EXAM**  
    +  [§ 102 (Monday) Canvas][] TBA
@@ -134,7 +126,7 @@ Students are expected to have access to the following textbooks (electronic or h
    If you want a hard copy, you can [buy Learning Spark from Amazon][] (often at a discounted price ≈$35).
 
 
-+  [Functional Programming in Scala][]  
++  [Functional Programming in Scala][FP in Scala]  
 
    <a href="https://www.manning.com/books/functional-programming-in-scala-second-edition"><img src=".img/fpinscala.png" width="100"></a>
 
@@ -160,13 +152,16 @@ These are not required but might be helpful.
 
 +  **Online courses and videos**
 
-   +  [Coursera](https://www.coursera.org) offers many courses in [Scala](https://www.coursera.org/courses?query=scala), [Spark](https://www.coursera.org/courses?query=spark), [Big Data](https://www.coursera.org/courses?query=big%20data), but we most highly recommend the [introductory course by Martin Odersky][coursera progfun] and the [Big Data course by Heather Miller][coursera bigdata].
-   
+   +  [Coursera][] offers many courses in Scala, Spark, and Big Data
+   ([search for "scala"](https://www.coursera.org/courses?query=scala), [search for "spark"](https://www.coursera.org/courses?query=spark) or [search for "big data"](https://www.coursera.org/courses?query=big%20data) at the [Coursera website][Coursera]), but we especially recommend these two:
+
       +  [Functional Programming Principles in Scala][coursera progfun], by Martin Odersky.
       +  [Big Data Analysis with Scala and Spark][coursera bigdata], by Heather Miller.
 
 +  **Books**
 
+   In addition to [the primary book for the course][Learning Spark], students may find the following books helpful.
+   
    +  [The Scala 3 Book](https://docs.scala-lang.org/scala3/book/introduction.html): an informal introduction to the Scala language.
    +  [The Science of Functional Programming](https://github.com/winitzki/sofp): A tutorial, with examples in Scala, by Sergei Winitzki (2022).
 
@@ -249,7 +244,7 @@ Students are strongly encouraged to start the homework early, so that they have 
 
 -------------------
 
-## Is it possible to make-up a missed exam?
+## Is it possible to make up a missed exam?
 
 Generally speaking, there are no make-up exams. However, if a student misses an exam for one of the legitimate reasons listed below,
 and if that student contacts the instructor well before the day of the exam, then it might be possible for that student to take an alternative version of the exam *before* the scheduled exam time.
@@ -324,6 +319,7 @@ early in the semester in order to have their learning needs appropriately met.
 [buy Learning Spark from Amazon]: https://amzn.to/3Rh5og8
 
 [CKB Room 124]: https://goo.gl/maps/PvJth6DXEvyuV1Ep6
+[Coursera]: https://www.coursera.org
 
 [Databricks]: https://www.databricks.com/
 [Download and Install Scala]: https://www.scala-lang.org/download/
@@ -338,8 +334,6 @@ early in the semester in order to have their learning needs appropriately met.
 [fpinscala]: https://github.com/fpinscala/fpinscala
 [free electronic copy of Learning Spark, 2nd ed]: https://pages.databricks.com/rs/094-YMS-629/images/LearningSpark2.0.pdf
 [free electronic copy of Learning Spark]: https://pages.databricks.com/rs/094-YMS-629/images/LearningSpark2.0.pdf
-[Functional Programming in Scala]: https://www.manning.com/books/functional-programming-in-scala-second-edition
-[Functional Programming in Scala, 2nd ed]: https://www.manning.com/books/functional-programming-in-scala-second-edition
 
 [GITC]: https://goo.gl/maps/Sj3SJzQkhCAyE7QG6
 [Gradescope]: https://www.gradescope.com/
@@ -359,8 +353,7 @@ early in the semester in order to have their learning needs appropriately met.
 [Manning web site]: https://www.manning.com/books/functional-programming-in-scala-second-edition
 
 [NJIT]: https://njit.edu
-[NJIT Graduate Computing Sciences Course Catalog]: https://catalog.njit.edu/graduate/computing-sciences/computer-science/#coursestext
-
+[NJIT Graduate Computing Sciences Course Catalog]: https://catalog.njit.edu/graduate/computing-sciences/data-science/#coursestext
 [Optimizing Databricks Workloads]: https://amzn.to/3PV5utr
 
 [Scala]: https://www.scala-lang.org/
@@ -379,8 +372,11 @@ early in the semester in order to have their learning needs appropriately met.
 
 [§ 102 (Monday) Canvas]:
 [§ 104 (Wednesday) Canvas]:
-[§ 102 (Monday) Gradescope]:
-[§ 104 (Wednesday) Gradescope]:
+[§ 102 (Monday) Gradescope]: https://www.gradescope.com/courses/485519
+Entry Code:57268Y
+[§ 104 (Wednesday) Gradescope]: https://www.gradescope.com/courses/485522
+Entry Code:ZZKG7Z
 [Slack]:
 [email me]: mailto:williamdemeo@gmail.com?subject=ds644
 [Canvas]:
+[me]: https://williamdemeo.gitlab.io/
