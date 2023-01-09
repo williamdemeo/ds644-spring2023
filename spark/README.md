@@ -183,12 +183,12 @@ and place `movies.dat` and `ratings.dat` in there.
 
 ```
 mkdir /user/hadoop
-cp movies.dat ratings.dat
-the master cluster (e.g., `hdfs://ip-172-31-27-212.us-west-1.compute.internal:8020/user/hadoop/`
+cp movies.dat ratings.dat /usr/hadoop
+```
 
+<!-- ter (e.g., `hdfs://ip-172-31-27-212.us-west-1.compute.internal:8020/user/hadoop/`/user/hadoop/ -->
 
-
-ssh -i ~/aws_id_rsa.pem hadoop@ec2-54-219-61-238.us-west-1.compute.amazonaws.com
+<!-- ssh -i ~/aws_id_rsa.pem hadoop@ec2-54-219-61-238.us-west-1.compute.amazonaws.com -->
 
 
 ```
