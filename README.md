@@ -149,11 +149,14 @@ These are not required but might be helpful.
 
 +  **Online courses and videos**
 
-   +  [Coursera][] offers many courses in Scala, Spark, and Big Data
+   +  [Coursera][] offers many courses covering Scala, Spark, and Big Data
    ([search for "scala"](https://www.coursera.org/courses?query=scala), [search for "spark"](https://www.coursera.org/courses?query=spark) or [search for "big data"](https://www.coursera.org/courses?query=big%20data) at the [Coursera website][Coursera]), but we especially recommend these two:
 
-      +  [Functional Programming Principles in Scala][coursera progfun], by Martin Odersky.
-      +  [Big Data Analysis with Scala and Spark][coursera bigdata], by Heather Miller.
+      +  [Functional Programming Principles in Scala][coursera-progfun], by Martin Odersky.
+      +  [Big Data Analysis with Scala and Spark][coursera-bigdata], by Heather Miller.
+
+   +  [Udemy][] offers many courses covering Scala, Spark, and Big Data as well
+   
 
 +  **Books**
 
@@ -266,7 +269,7 @@ Students are strongly encouraged to ask many questions!  When in doubt, ask!
 
 2. **On** [Slack][]. Another good place to ask a question is the [Slack discussion forum for the course][Slack].  Rather than emailing questions to the teaching staff, students are encouraged to post questions on [Slack][].
 
-3. **By** [email][email me]. Students may ask questions by [emailing the instructor][email me] or on by sending a message via [Canvas][].  However, the response time will likely be slower than if the question were asked on [Slack][].
+3. **By** [email][email-me]. Students may ask questions by [emailing the instructor][email me] or on by sending a message via [Canvas][].  However, the response time will likely be slower than if the question were asked on [Slack][].
 
 **Important Remarks about electronic correspondence**
 
@@ -365,6 +368,7 @@ early in the semester in order to have their learning needs appropriately met.
 
 [coursera-progfun]: https://www.coursera.org/learn/scala-functional-programming
 [coursera-bigdata]: https://www.coursera.org/learn/scala-spark-big-data
+[email-me]: mailto:williamdemeo@gmail.com?subject=ds644
 
 
 [§ 102 (Monday) Canvas]:
@@ -374,6 +378,5 @@ Entry Code:57268Y
 [§ 104 (Wednesday) Gradescope]: https://www.gradescope.com/courses/485522
 Entry Code:ZZKG7Z
 [Slack]:
-[email me]: mailto:williamdemeo@gmail.com?subject=ds644
 [Canvas]:
 [me]: https://williamdemeo.gitlab.io/
