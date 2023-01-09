@@ -178,7 +178,7 @@ These are not required but might be helpful.
 
 Short Answer: **Yes**!
 
-Long Answer: Students are expected to attend all classes. A grade penalty will be assessed if a student has an excessive number of absences (whether excused or unexcused). Specifically, students are permitted (but strongly discouraged from taking) **five** absences in total, and one must <a href="mailto:williamdemeo@gmail.com?subject=ds644-absence">email the instructor</a> if/when they miss a class. Each additional absence, and any absence not mentioned to the instructor, may result in the deduction of points from the final grade.
+Long Answer: Students are expected to attend all classes. A grade penalty will be assessed if a student has an excessive number of absences (whether excused or unexcused). Specifically, students are permitted (but strongly discouraged from taking) **five** absences in total, and one must [email the instructor][email-me] if/when they miss a class. Each additional absence, and any absence not mentioned to the instructor, may result in the deduction of points from the final grade.
 
 Occasionally attendance will be recorded at the start of class.
 
@@ -234,7 +234,7 @@ At the end of the semester, letter grades will be assigned roughly according to 
 
 The online homework assignments will account for 20% of the course grade and will be due roughly twice per month, unless otherwise indicated.  See the tentative [course schedule](schedule).
 
-Students are strongly encouraged to start the homework early, so that they have time to get help from the instructor or [a tutor](#tutoring-service) if needed.
+Students are strongly encouraged to start the homework early, so that they have time to get help from the instructor or [a tutor](#is-tutoring-available) if needed.
 
 -----------------------------------
 
@@ -269,7 +269,7 @@ Students are strongly encouraged to ask many questions!  When in doubt, ask!
 
 2. **On** [Slack][]. Another good place to ask a question is the [Slack discussion forum for the course][Slack].  Rather than emailing questions to the teaching staff, students are encouraged to post questions on [Slack][].
 
-3. **By** [email][email-me]. Students may ask questions by [emailing the instructor][email-me] or on by sending a message via [Canvas][].  However, the response time will likely be slower than if the question were asked on [Slack][].
+3. **By** [email][email-me]. Students may ask questions by [emailing the instructor][email-me] or on by sending a message via Canvas.  However, the response time will likely be slower than if the question is asked on [Slack][].
 
 **Important Remarks about electronic correspondence**
 
@@ -292,10 +292,9 @@ The undergraduate tutoring schedule is available at [computing.njit.edu/undergra
 
 ## Can I email the instructor?
 
-Students may [email the instructor][email me] directly, though the response time will likely be much slower than if the question is asked on [Slack][].
+Students may [email the instructor][email-me] directly, though the response time will likely be much slower than if the question is asked on [Slack][].
 
-If emailing the instructor, students are urged to use an informative subject field. Using 
-<a href="mailto:williamdemeo@gmail.com?subject=DS644: (fill in subject here)&body=Dear Dr. DeMeo, (your message) Sincerely, (your full name)">this link</a> should populate the message fields with some helpful information. If an email message does not at least mention the class name and section number, the response to that email may be delayed.
+If emailing the instructor, students are urged to use an informative subject field. If an email message does not at least mention the class name and section number, responses to that email may be delayed.
 
 ---------------------------------------------
 
