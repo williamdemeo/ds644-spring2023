@@ -356,7 +356,7 @@ Students must have their paper work in order and should contact the instructor e
 
 [Scala]: https://www.scala-lang.org/
 [Scala Programming for Big Data Analytics]: https://amzn.to/3J8zekk
-[Slack]: https://join.slack.com/t/slack-dpv8594/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
+[Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 [source code accompanying FP in Scala]: https://www.manning.com/downloads/2363
 [Spark]: https://spark.apache.org/
 
