@@ -367,5 +367,5 @@ Students must have their paper work in order and should contact the instructor e
 
 [§ 102 (Monday) Canvas]: XXXX
 [§ 104 (Wednesday) Canvas]: XXXX
-
+[Udemy]: https://www.udemy.com/
 
