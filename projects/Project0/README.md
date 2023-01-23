@@ -14,9 +14,29 @@ You can still submit after the 5th time to get feedbacks on your improved soluti
 
 Download the [recursion.zip][] archive file and extract it somewhere on your machine.
 
-Load the resulting project folder, called `recfun`, into VS Code as explained in lecture.
+**Important** (especially for Windows users) Make sure your extraction program doesn't nefariously create an extra "recursion" directory when you unpack the `recursion.zip` file.  Some extractors will leave you with a directory structure like
 
-Complete the project by replacing the `???` symbols in the file `src/main/scala/recursion/Main.scala` with your own code that solves the given problems.
+```
+.../recursion/recursion/build.sbt
+.../recursion/recursion/src
+.../recursion/recursion/src/main
+...etc...
+```
+
+Whereas what we want is:
+
+```
+.../recursion/build.sbt
+.../recursion/src
+.../recursion/src/main
+...etc...
+```
+
+That is, you want just ONE subdirectory called "recursion", not two!
+
+Load the resulting project folder, called `recursion`, into VS Code as explained in lecture.
+
+Complete the project by replacing the `???` symbols in the file `recursion/src/main/scala/recursion/Main.scala` with your own code that solves the given problems.
 
 ### Exercise 1: Parentheses Balancing
 
