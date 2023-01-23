@@ -81,7 +81,7 @@ You can make use of functions `isEmpty`, `head` and `tail` on the list of intege
 
 ### How to Submit your Solutions
 
-After you have tested your program and you are happy with the result, upload **only** your modified `Main.scala` file to Gradescope for the assignment called "Mini-project A".
+After you have tested your program and you are happy with the result, upload **only** your modified `Main.scala` file to Gradescope for the assignment called "Project 0".
 
 *Do not upload any other files for this assignment!  Only upload your modified `Main.scala` file.*
 
