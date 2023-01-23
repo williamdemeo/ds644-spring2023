@@ -2,14 +2,12 @@
 
 ## PROJECTS
 
-### Mini-Project A: Scala and Spark set up
+### Project 0: Recursion (basic Scala set up and recursive functions)
 
-### Mini-Project B: Principles of FP in Scala
+### Project 1: Functional and Object Oriented Sets
 
-### Mini-Project C: More FP in Scala
+### Project 2: 
 
-### Project 1: RDDs (Wikipedia)
+### Project 3: RDDs (Wikipedia)
 
-### Project 2: A basic data science algorithm (StackOverflow, K-means) 
-
-### Project 3: DataFrames and Datasets (TimeUsage)
+### Project 4: DataFrames and Datasets (TimeUsage)
