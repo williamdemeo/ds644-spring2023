@@ -31,7 +31,7 @@ This is the main web page for Sections 102 and 104 of the course *DS 644: Introd
 - [Where can I find the homework?](#where-can-i-find-the-homework)
 - [Can I turn in assignments after the deadline?](#can-i-turn-in-assignments-after-the-deadline)
 - [Is it possible to make up a missed exam?](#is-it-possible-to-make-up-a-missed-exam)
-- [Should I ask questions? If so, how and when?](#should-i-ask-questions-if-so-how-and-when)
+- [Should I ask questions? (Slack)](#should-i-ask-questions-(slack))
 - [Is tutoring available?](#is-tutoring-available)
 - [Can I email the instructor?](#can-i-email-the-instructor)
 - [What if I have a disability?](#what-if-i-have-a-disability)
@@ -261,7 +261,7 @@ If a student misses an exam due to some unforeseen circumstance, that student mu
 
 -----------------------------------------------------------
 
-## Should I ask questions? If so, how and when?
+## Should I ask questions? (Slack)
 
 Students are strongly encouraged to ask many questions!  When in doubt, ask!
 
