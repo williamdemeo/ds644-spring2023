@@ -48,7 +48,7 @@
 
     If the dialog box disappears or you didn't see it before you are able to click "Yes," then you can click on the bell icon on the bottom right and you will see any alert messages that you missed.
 
-    Alternatively, whenever you want to (re)import a build, you can click on the Metals ℳ icon on the left and then select "Import build" from the "Build Commands" menu.
+    Alternatively, whenever you want to (re)import a build, you can click on the Metals icon on the left and then select "Import build" from the "Build Commands" menu.
 
 6.  Open the `Main.scala` file by clicking the two-paper Explorer icon on the top left and then find the `src/main/scala/Main.scala` file in the Explorer view.  When it opens in the editor window, you should see a play button on the top right of the VSCode window.  If you click the play button, VSCode will build and run your program.
 
