@@ -2,8 +2,14 @@
 
 ## Scala Setup Instructions
 
+### Preliminaries
+
 If any of the intructions on this page are unclear, please post a message on [Slack][].
 
+We use [VSCode][] in this class.  However, if you are already comfortable with the IntelliJ IDE and you wish to use it instead of VSCode,  then the steps you must follow to setup Scala will be different from the ones below.  If you need help configuring IntelliJ for use with Scala, please contact the instructor as soon as possible, preferably in the first week or two of the semester.
+
+
+### How to set up Scala
 
 1.  **Install the correct version of the Java Development Kit**.
 
@@ -64,7 +70,7 @@ Once you have a Scala project loaded into VSCode, as described in the previous s
 
 In the dialog box that appears, select "Worksheet" and then type a name for the worksheet, e.g., "practice" and hit Enter.
 
-You will see a new file (called, e.g., `practice.worksheet.sc`) open up in the VSCode editor window.  Type some Scala code in the editor window and then save the file.
+You will see a new file (called, e.g., `practice.worksheet.sc`) open up in the VSCode editor window.  Type some Scala code in that editor window and then save the file.
 
 If you have Scala set up correctly, then VSCode will evaluate the worksheet and the results will appear in comments to the right of the code.  If this doesn't work, it means either you have an error somewhere in your worksheet, or the Scala project was not set up correctly.
 
@@ -78,3 +84,4 @@ As questions or problems arise, I will post notes about them and their solutions
 [Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 
 
+[VSCode]: https://code.visualstudio.com

@@ -1,9 +1,16 @@
 # DS 644: Introduction to Big Data
 
-If any of the intructions on this page are unclear, please post a message on [Slack][].
-
 
 ## Spark Setup Instructions
+
+### Preliminaries
+
+If any of the intructions on this page are unclear, please post a message on [Slack][].
+
+We use [VSCode][] in this class.  However, if you are already comfortable with the IntelliJ IDE and you wish to use it instead of VSCode,  then the steps you must follow to setup Spark may differ from the ones below.  If you need help configuring IntelliJ for use with Scala, please contact the instructor as soon as possible, preferably in the first week or two of the semester.
+
+### How to set up Spark
+
 
 Please follow the link below that mentions your operating system. (If you intend to use an operating system other than Linux, Mac, or Windows, please ask the instructor whether it is okay asap!)
 
@@ -241,3 +248,4 @@ EEEEEEEEEEEEEEEEEEEE MMMMMMM             MMMMMMM RRRRRRR      RRRRRR
 
 
 [Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
+[VSCode]: https://code.visualstudio.com
