@@ -14,7 +14,7 @@
 
     + [The Oracle JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
 
-    However, to download the Oracle JDK you will have to provide Oracle with your email address.  If you are opposed to sharing your email address and/or if you prefer to avoid using proprietary (closed source) software, then you may try [OpenJDK]((https://adoptium.net/temurin/releases/?version=11) instead of the Oracle version.  [OpenJDK]((https://adoptium.net/temurin/releases/?version=11) is an open source version of the JDK.  (It should work just as well as the Oracle version, though I have not verified this yet.)
+    However, to download the Oracle JDK you will have to provide Oracle with your email address.  If you are opposed to sharing your email address and/or if you prefer to avoid using proprietary (closed source) software, then you may try [OpenJDK](https://adoptium.net/temurin/releases/?version=11) instead of the Oracle version.  [OpenJDK](https://adoptium.net/temurin/releases/?version=11) is an open source version of the JDK.  (It should work just as well as the Oracle version, though I have not verified this yet.)
 
 2.  **Install [VSCode](https://code.visualstudio.com/download)**.
 
