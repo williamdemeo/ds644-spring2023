@@ -2,6 +2,9 @@
 
 ## Scala Setup Instructions
 
+If any of the intructions on this page are unclear, please post a message on [Slack][].
+
+
 1.  **Install the correct version of the Java Development Kit**.
 
     You must install the [Java Development Kit (JDK) version 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
@@ -53,5 +56,25 @@
 6.  Open the `Main.scala` file by clicking the two-paper Explorer icon on the top left and then find the `src/main/scala/Main.scala` file in the Explorer view.  When it opens in the editor window, you should see a play button on the top right of the VSCode window.  If you click the play button, VSCode will build and run your program.
 
 
-If any of these intructions are unclear, please post a message on Slack.
+## Scala worksheets
+
+A useful way to get started with and practice programming in Scala is to use a **worksheet**.
+
+Once you have a Scala project loaded into VSCode, as described in the previous section, you can open a worksheet by right-clicking on the `src/main/scala` directory in the VSCode Explorer pane and selecting "New Scala File..."
+
+In the dialog box that appears, select "Worksheet" and then type a name for the worksheet, e.g., "practice" and hit Enter.
+
+You will see a new file (called, e.g., `practice.worksheet.sc`) open up in the VSCode editor window.  Type some Scala code in the editor window and then save the file.
+
+If you have Scala set up correctly, then VSCode will evaluate the worksheet and the results will appear in comments to the right of the code.  If this doesn't work, it means either you have an error somewhere in your worksheet, or the Scala project was not set up correctly.
+
+## Troubleshooting
+
+If any of these intructions are unclear, please post a message on [Slack][].
+
+As questions or problems arise, I will post notes about them and their solutions here and on [Slack][].
+
+
+[Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
+
 

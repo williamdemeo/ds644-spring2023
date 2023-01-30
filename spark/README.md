@@ -1,5 +1,8 @@
 # DS 644: Introduction to Big Data
 
+If any of the intructions on this page are unclear, please post a message on [Slack][].
+
+
 ## Spark Setup Instructions
 
 Please follow the link below that mentions your operating system. (If you intend to use an operating system other than Linux, Mac, or Windows, please ask the instructor whether it is okay asap!)
@@ -235,3 +238,6 @@ EEEEEEEEEEEEEEEEEEEE MMMMMMM             MMMMMMM RRRRRRR      RRRRRR
 [Scala Build Tool]: https://www.scala-sbt.org/
 
 [sbt]: https://www.scala-sbt.org/
+
+
+[Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
