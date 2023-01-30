@@ -36,7 +36,11 @@
 
     (Alternatively, you could first create the "MyFirstScalaProject" folder in your file manager or command line and then open that folder with the VSCode `File` -> `Open Folder` menu option.)
 
-3.  Click on the calligraphic letter ℳ icon on the left-hand pane of VSCode.  Note that this icon will appear only if you successfully installed the VSCode Metals extension as described in Step 3 of the previous section above.
+3.  Click on the Metals icon in the left-hand pane of VSCode. It's a calligraphic letter ℳ like this
+
+    ![Metals](../img/Metals-icon.png)
+
+    Note that the ℳ icon will only appear if you successfully installed the VSCode Metals extension as described in Step 3 of the previous section.
 
 4.  Click on the blue "New Scala Project" button.  After a few seconds, you should see a list of project templates.  Select the first one `scala/hello-world.g8`, then click "ok" in the next dialog, and then leave "hello-world" in the next dialog box and hit Enter.
 
