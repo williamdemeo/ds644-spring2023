@@ -1,6 +1,6 @@
 # DS 644: Introduction to Big Data
 
-## Scala and Spark Setup
+## Spark Setup Instructions
 
 Please follow the link below that mentions your operating system. (If you intend to use an operating system other than Linux, Mac, or Windows, please ask the instructor whether it is okay asap!)
 
