@@ -59,7 +59,7 @@ We use [VSCode][] in this class.  However, if you are already comfortable with t
 
     Alternatively, whenever you want to (re)import a build, you can click on the Metals icon on the left and then select "Import build" from the "Build Commands" menu.
 
-6.  Open the `Main.scala` file by clicking the two-paper Explorer icon on the top left and then find the `src/main/scala/Main.scala` file in the Explorer view.  When it opens in the editor window, you should see a play button on the top right of the VSCode window.  If you click the play button, VSCode will build and run your program.
+6.  Open the `Main.scala` file by clicking the two-paper Explorer icon on the top left and then find the `src/main/scala/Main.scala` file in the Explorer view.  When it opens in the editor window, after VSCode/Metals successfully compiles the program, you will see the words "run|debug" above the `Main` class.  If you click the word "run", VSCode will run the program and print "Hello World!" in one of the consoles in the bottom pane of the VSCode window.
 
 
 ## Scala worksheets
