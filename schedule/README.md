@@ -40,22 +40,23 @@ Upon completion, students will know
 
 | Week  |  HW Due   |     Topics                                                                     |  Readings      |
 |-------|-----------|------------------------------------------------------------------------------------|-----------------|
-|    5  |  Project 1: 3/3        | Distributed data parallelism, latency, RDDs, RDD transformations and actions  |   LS Ch 1, 2         |
-|    6  |           | Spark's Structured APIs, evaluation in Spark; cluster topology; reduction operations; pair RDDs; transformations and actions on pair RDDs | LS Ch 3 |
-|    7  |           | Joins, shuffling, partitioning, optimizing with partitioners |  LS Ch 7
-|    8  |           |  Wide vs narrow dependencies, structured vs unstructureddata, SparkSQL | LS Ch 4 |
-|    9  |           |  DataFramesSpark SQL | LS Ch 5 |
-|   10  |           | Datasets    | LS Ch 6 |
+|    5  |  Project 1: 3/3        | Distributed data parallelism, latency, Spark's Structured APIs, RDDs  |   LS Ch 1, 2         |
+|    6  |           | RDD transformations and actions, evaluation in Spark | LS Ch 3 |
+|    7  |           | Cluster topology, reduction operations, pair RDDs, transformations and actions on pair RDDs |  LS Ch 7 |
+|    8  |           | Joins, shuffling, partitioning, optimizing with partitioners | LS Ch 4 |
+|    9  |           | Wide vs narrow dependencies, structured vs unstructureddata | LS Ch 5 |
+|   10  |           | DataFrames, Spark SQL  | LS Ch 6 |
+|   11  |           | Datasets    | LS Ch 6 |
 
 
 **Part 3. Cloud**
 
 | Week  |  HW Due   |     Topics                                                                     |  Readings      |
 |-------|-----------|------------------------------------------------------------------------------------|-----------------|
-|    11  |           | Obtaining, cleaning, and storing Data, Kaggle  |  |
-|    12  |           | AWS, Databricks, Azure  | |
-|    13  |           | TBA                         |  |
-|    14  |           | TBA                          | |
+|    13  |           | Obtaining, cleaning, and storing Data, Kaggle  |  |
+|    14  |           | AWS, Databricks, Azure  | |
+|    15  |           | TBA                         |  |
+|    16  |           | TBA                          | |
 
 
 
