@@ -24,7 +24,7 @@ We use [VSCode][] in this class.  However, if you are already comfortable with t
 
     + [Oracle JDK 11][]
 
-    However, to download the Oracle JDK you will have to provide Oracle with your email address.  If you are opposed to sharing your email address and/or if you prefer to avoid using proprietary (closed source) software, then you may try [OpenJDK][] instead of the Oracle version.  [OpenJDK][] is an open source version of the JDK.  (It should work just as well as the Oracle version, though I have not verified this yet.)
+    However, to download the [Oracle JDK][] you will have to provide Oracle with your email address.  If you are opposed to sharing your email address and/or if you prefer to avoid using proprietary (closed source) software, then you may try [OpenJDK][] instead of the Oracle version.  [OpenJDK][] is an open source version of the JDK.  (It should work just as well as the Oracle version, though I have not verified this yet.)
 
 2.  **Install [VSCode][]**.
 
@@ -98,7 +98,7 @@ If you get a message that says something like "Metals is unable to find a build 
 
 Verify that VSCode and Metals are using a compatible version of the [JDK][].
 
-Specifically, make sure that Metals is not trying to use the latest version of JDK (version 17 or higher) since (as of this writing) they are are not compatible with Scala and Spark.
+Specifically, make sure that Metals is not trying to use the latest version of the JDK (version 17 or higher) since (as of this writing) they are are not compatible with Scala and Spark.
 
 This section will help you make sure that VSCode/Metals is using [JDK 11][]
 
@@ -114,6 +114,15 @@ Download and unpack the version of the [Java Development Kit (JDK) version 11][]
    I recommend using the `*.tar.gz` download as opposed to the `*.dmg` installer because installation of the `*.tar.gz` file requires that you manually unpack it in a directory of your choice, so you will know in exactly which directory the JDK resides.  If instead you use the `*.dmg` installer, it's harder to know where the JDK ends up.
 
 Now, in VSCode, click on the blocks icon on the left and in the Extensions search box, type "Metals."  Next to the name "Scala (Metals)," you will see a cog icon.  Click the cog icon and choose "Extension Settings."  In the search box, type "Java" and you will see the box where you can specify the path to the JDK that Metals uses.  
+
+**Extra Hint**. The directory containing the JDK that Metals needs to know about is the one that contains the following subdirectories:
+
+```
+bin  conf  include  jmods  legal  lib
+```
+
+Use the your file manager or the terminal to look inside the directory that you supplied to Metals and make sure it contains the directories listed above.
+
 
 #### Possible Fix 2. Try a different (older) version of Metals
 
@@ -169,6 +178,7 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [open a new terminal window (cli)]: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac
 [open a new CMD terminal window]: https://www.lifewire.com/how-to-open-command-prompt-2618089
 [OpenJDK]: https://adoptium.net/temurin/releases/?version=11
+[Oracle JDK]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Oracle JDK 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 [VSCode]: https://code.visualstudio.com
