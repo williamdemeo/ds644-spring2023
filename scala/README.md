@@ -138,7 +138,7 @@ It's possible that an older version of [Metals][] will work better on your machi
 
 #### Possible Fix 3. As a last resort, use a different IDE
 
-If you have carefully followed all of the commands above and you still can't get the "Hello World" program to compile and run, then you might consider abandoning VSCode in favor of a more mature and stable IDE, like [IntelliJ IDEA][].
+If you have carefully followed all of the commands above and you still can't get the "Hello World" program to compile and run, then you might consider abandoning VSCode in favor of [IntelliJ IDEA][], which is a more mature IDE and might be more stable on your machine.
 
 Go to the [IDEA download page][] and download/unpack/install the Community Edition of IDEA.
 
