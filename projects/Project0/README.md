@@ -14,22 +14,22 @@ You can still submit after the 5th time to get feedbacks on your improved soluti
 
 1.  Download the [recursion.zip][] archive file and extract it somewhere on your machine.
 
-    **Hint**. This is especially for Windows users. Make sure your extraction utility program doesn't create an extra "recursion" directory when you unpack the `recursion.zip` file.  Some extractors will leave you with a directory structure like this:
+    **Hint**. (especially for Windows users) make sure your extraction utility program doesn't create an extra "recursion" directory when you unpack the `recursion.zip` file.  Some extractors will leave you with a directory structure like this:
 
     ```
-    .../recursion/recursion/build.sbt
-    .../recursion/recursion/src
-    .../recursion/recursion/src/main
-    ...etc...
+    ./recursion/recursion/build.sbt
+    ./recursion/recursion/src
+    ./recursion/recursion/src/main
+    .etc...
     ```
 
-    Whereas what we want is just this:
+    whereas what we want is just this:
 
     ```
-    .../recursion/build.sbt
-    .../recursion/src
-    .../recursion/src/main
-    ...etc...
+    ./recursion/build.sbt
+    ./recursion/src
+    ./recursion/src/main
+    .etc...
     ```
 
     That is, you want just ONE subdirectory called "recursion", not two!
