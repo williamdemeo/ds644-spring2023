@@ -68,7 +68,7 @@ Do this exercise by implementing the `balance` function in `Main.scala`.
 Its signature is as follows:
 
 ```scala
-def balance(chars: List[Char]): Boolean
+def balance(chars: String): Boolean
 ```
 
 There are three methods on `List[Char]` that are useful for this exercise:
