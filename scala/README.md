@@ -155,7 +155,7 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [Java Development Kit (JDK) version 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Metals]: https://scalameta.org/metals
 [Metals documentation]: https://scalameta.org/metals/docs/editors/vscode
-[open a new terminal window (cli)]: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac)
+[open a new terminal window (cli)]: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac
 [open a new CMD terminal window]: https://www.lifewire.com/how-to-open-command-prompt-2618089
 [OpenJDK]: https://adoptium.net/temurin/releases/?version=11
 [Oracle JDK 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
