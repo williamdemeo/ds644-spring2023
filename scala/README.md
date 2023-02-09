@@ -88,7 +88,7 @@ If any of these intructions are unclear, please post a message on [Slack][].
 
 As questions or problems arise, I will post notes about them and their solutions here and on [Slack][].
 
-If you are having trouble getting the example "hello world" Scala program to load, compile, and run in VSCode, even after you have followed all of the instructions above, please consult the [Metals documentation][] site or try one of the solutions below.
+If you are having trouble getting the example "hello world" Scala program to load, compile, and run in VSCode, even after you have followed all of the instructions above, please consult the [Metals documentation][] or try one of the solutions below.
 
 ### Problem: pop-up message "unable to find build target"
 
@@ -96,7 +96,11 @@ If you get a message that says something like "Metals is unable to find a build 
 
 #### Possible Fix 1. Configure the path to JAVA HOME
 
- you should first verify that VSCode and Metals is using a compatible version of the jdk.
+Verify that VSCode and Metals are using a compatible version of the [JDK][].
+
+Specifically, make sure that Metals is not trying to use the latest version of JDK (version 17 or higher) since (as of this writing) they are are not compatible with Scala and Spark.
+
+This section will help you make sure that VSCode/Metals is using [JDK 11][]
 
 Download and unpack the version of the [Java Development Kit (JDK) version 11][] that matches for your platform.  Make a note of the directory in which you unpacked it.
 
@@ -133,11 +137,16 @@ To configure IDEA for use with Scala, launch the IDEA application and you should
 
 If you have decided to abandon VSCode and you need help configuring IntelliJ IDEA, please post a message on Slack.
 
+----
+
 ### Links mentioned on this page
 
 * [ARM 64 version of JDK 11][]
 * [IDEA download page][]
 * [IntelliJ IDEA][]
+* [Java Development Kit (JDK) version 11][]
+* [JDK][]
+* [JDK 11][]
 * [Metals documentation][]
 * [open a new CMD terminal window][]
 * [open a new terminal window (cli)][]
@@ -153,6 +162,8 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [IDEA download page]: https://www.jetbrains.com/idea/download/
 [IntelliJ IDEA]: https://www.jetbrains.com/idea/
 [Java Development Kit (JDK) version 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+[JDK]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+[JDK 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Metals]: https://scalameta.org/metals
 [Metals documentation]: https://scalameta.org/metals/docs/editors/vscode
 [open a new terminal window (cli)]: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac
