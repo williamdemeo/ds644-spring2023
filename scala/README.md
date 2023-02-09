@@ -113,7 +113,7 @@ Download and unpack the version of the [Java Development Kit (JDK) version 11][]
 
    I recommend using the `*.tar.gz` download as opposed to the `*.dmg` installer because installation of the `*.tar.gz` file requires that you manually unpack it in a directory of your choice, so you will know in exactly which directory the JDK resides.  If instead you use the `*.dmg` installer, it's harder to know where the JDK ends up.
 
-Now, in VSCode, click on the blocks icon on the left and in the Extensions search box, type "Metals."  Next to the name "Scala (Metals)," you will see a cog icon.  Click the cog icon and choose "Extension Settings."  In the search box, type "Java" and you will see the box where you can specify the path to the JDK that Metals uses.  
+Now, in VSCode, click on the [blocks icon][] on the left and in the Extensions search box, type "Metals."  Next to the name "Scala (Metals)," you will see a cog icon.  Click the cog icon and choose "Extension Settings."  In the search box, type "Java" and you will see the box where you can specify the path to the JDK that Metals uses.  
 
 **Extra Hint**. The directory containing the JDK that Metals needs to know about is the one that contains the following subdirectories:
 
@@ -126,7 +126,7 @@ Use the your file manager or the terminal to look inside the directory that you 
 
 #### Possible Fix 2. Try a different (older) version of Metals
 
-It's possible that an older version of Metals will work better on your machine.  To try a different version of Metals, do the following.
+It's possible that an older version of [Metals][] will work better on your machine.  To try a different version of Metals, do the following.
 
 1.  Open a terminal window and delete the `.vscode` and `.sbt` subdirectories of your home directory.
 
@@ -134,7 +134,7 @@ It's possible that an older version of Metals will work better on your machine. 
     +  On a Windows PC, [open a new CMD terminal window][] and type `rmdir /s .vscode .sbt`.
        (**Warning**. I haven't tested this command since I don't have access to a windows machine.)
 
-2.  Open VSCode and click on the blocks icon on the left and, in the Extensions search box, type "Metals."  When the "Scala (Metals)" extension shows up in the window to the right, click on the down-arrow in on the (Un)Install button and choose "Install a Another Version..." then choose an older version to install, say, from 6 months ago.
+2.  Open VSCode and click on the [blocks icon][] on the left of the VSCode window and, in the Extensions search box, type "Metals."  When the "Scala (Metals)" extension shows up in the window to the right, click on the down-arrow in on the (Un)Install button and choose "Install a Another Version..." then choose an older version to install, say, from 6 months ago.
 
 #### Possible Fix 3. As a last resort, use a different IDE
 
@@ -186,3 +186,4 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [VSCode Metals plugin for Scala]: https://scalameta.org/metals/
 [x64 version of JDK 11]: https://www.oracle.com/java/technologies/downloads/#license-lightbox
 
+[blocks icon]: https://github.com/williamdemeo/ds644-spring2023/blob/main/img/Extensions.png
