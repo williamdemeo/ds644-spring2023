@@ -28,7 +28,7 @@ We use [VSCode][] in this class.  However, if you are already comfortable with t
 
 2.  **Install [VSCode][]**.
 
-    Just follow the [VSCode download link][VSCode download] and then follow the instructions for installing VSCode on your architecture.
+    Use the [VSCode download link][VSCode download] and then follow the instructions for installing VSCode on your architecture.
 
 3.  **Install the [VSCode Metals plugin for Scala][]**.
 
@@ -136,7 +136,19 @@ It's possible that an older version of [Metals][] will work better on your machi
 
 2.  Open VSCode and click on the [blocks icon][] on the left of the VSCode window and, in the Extensions search box, type "Metals."  When the "Scala (Metals)" extension shows up in the window to the right, click on the down-arrow in on the (Un)Install button and choose "Install a Another Version..." then choose an older version to install, say, from 6 months ago.
 
-#### Possible Fix 3. As a last resort, use a different IDE
+#### Possible Fix 3. Install a different version of VSCode
+
+This is probably most relevant for Mac users.  It's possible that the "universal" Mac version of VSCode is not as universal as it hopes to be.
+
+1.  Uninstall VSCode and remove the hidden configuration subdirectories that VSCode put in your home directory (see Step 1 in [Possible Fix 2](#possible-fix-2-try-a-different-older-version-of-metals) above).
+
+2.  Go to the [VSCode download][] page and select an alternative version, e.g.,
+    * [VSCode for Mac Apple M1 chip][]
+    * [VSCode for Mac Intel chip][]
+
+
+
+#### Possible Fix 4. As a last resort, use a different IDE
 
 If you have carefully followed all of the commands above and you still can't get the "Hello World" program to compile and run, then you might consider abandoning VSCode in favor of [IntelliJ IDEA][], which is a more mature IDE and might be more stable on your machine.
 
@@ -165,6 +177,8 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 * [VSCode][]
 * [VSCode download][]
 * [VSCode Metals plugin for Scala][]
+* [VSCode for Mac Apple M1 chip][]
+* [VSCode for Mac Intel chip][]
 * [x64 version of JDK 11][]
 
 [ARM 64 version of JDK 11]: https://www.oracle.com/java/technologies/downloads/#license-lightbox
@@ -184,6 +198,8 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [VSCode]: https://code.visualstudio.com
 [VSCode download]: https://code.visualstudio.com/download
 [VSCode Metals plugin for Scala]: https://scalameta.org/metals/
+[VSCode for Mac Apple M1 chip]: https://code.visualstudio.com/docs/?dv=darwinarm64
+[VSCode for Mac Intel chip]: https://code.visualstudio.com/docs/?dv=darwinx64
 [x64 version of JDK 11]: https://www.oracle.com/java/technologies/downloads/#license-lightbox
 
 [blocks icon]: https://github.com/williamdemeo/ds644-spring2023/blob/main/img/Extensions.png
