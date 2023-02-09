@@ -71,19 +71,14 @@ Its signature is as follows:
 def balance(chars: String): Boolean
 ```
 
-There are three methods on `List[Char]` that are useful for this exercise:
+You can use the `toList` method to convert from a `String` to a `List[Char]`.
 
 1.  `chars.isEmpty: Boolean` returns whether a list is empty
 2.  `chars.head: Char` returns the first element of the list
 3.  `chars.tail: List[Char]` returns the list without the first element
 
-**Hint**. You can define an inner function if you need to pass extra parameters to your function.
+**Hint**. Inside the definition of `balance`, define a recursive "helper" function which will do all the work. Call your helper function at the end of the definition of `balance`.
 
-**Testing**. You can use the `toList` method to convert from a `String` to a `List[Char]`: e.g., 
-
-```scala
-"(just an) example".toList
-```
 
 ### Exercise 2: Counting Change
 
