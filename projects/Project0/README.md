@@ -12,29 +12,31 @@ You can still submit after the 5th time to get feedbacks on your improved soluti
 
 ### Mechanics
 
-Download the [recursion.zip][] archive file and extract it somewhere on your machine.
+1.  Download the [recursion.zip][] archive file and extract it somewhere on your machine.
 
-**Important** (especially for Windows users) Make sure your extraction program doesn't nefariously create an extra "recursion" directory when you unpack the `recursion.zip` file.  Some extractors will leave you with a directory structure like
+    **Hint**. This is especially for Windows users. Make sure your extraction utility program doesn't create an extra "recursion" directory when you unpack the `recursion.zip` file.  Some extractors will leave you with a directory structure like this:
 
-```
-.../recursion/recursion/build.sbt
-.../recursion/recursion/src
-.../recursion/recursion/src/main
-...etc...
-```
+    ```
+    .../recursion/recursion/build.sbt
+    .../recursion/recursion/src
+    .../recursion/recursion/src/main
+    ...etc...
+    ```
 
-Whereas what we want is:
+    Whereas what we want is just this:
 
-```
-.../recursion/build.sbt
-.../recursion/src
-.../recursion/src/main
-...etc...
-```
+    ```
+    .../recursion/build.sbt
+    .../recursion/src
+    .../recursion/src/main
+    ...etc...
+    ```
 
-That is, you want just ONE subdirectory called "recursion", not two!
+    That is, you want just ONE subdirectory called "recursion", not two!
 
-Load the resulting project folder, called `recursion`, into VS Code as explained in lecture.
+2.  Open VSCode and load the resulting project folder, called `recursion`, by selecting `File --> Open Folder`. The file explorer should open and you should locate the `recursion` folder you expanded in Step 1 above.  *Highlight the name of the folder and click the "Open" button.*
+
+    **Hint**. Do not double click the `recursion` folder, as this will likely open that folder and you may end up loading a subdirectory of `recursion` into VSCode.
 
 Complete the project by replacing the `???` symbols in the file `recursion/src/main/scala/recursion/Main.scala` with your own code that solves the given problems.
 
