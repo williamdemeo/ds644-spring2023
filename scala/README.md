@@ -28,7 +28,7 @@ We use [VSCode][] in this class.  However, if you are already comfortable with t
 
 2.  **Install [VSCode][]**.
 
-    Just follow the [VSCode download link][] and then follow the instructions for installing VSCode on your architecture.
+    Just follow the [VSCode download link][VSCode download] and then follow the instructions for installing VSCode on your architecture.
 
 3.  **Install the [VSCode Metals plugin for Scala][]**.
 
