@@ -109,18 +109,18 @@ You can make use of functions `isEmpty`, `head` and `tail` on the list of intege
 
 So, the beginning of your function should look like this (where `moneyLeft` is the balance at some stage in the algorithm, after we've used some coins and deducted them from money, and `coinsLeft` are what coins are left in the list.)
 
-```scala
-def countChange(money: Int, coins: List[Int]): Int = {
+  ```scala
+  def countChange(money: Int, coins: List[Int]): Int = {
 
-  def  countChangeAux(moneyLeft: Int, coinsLeft: List[Int]): Int = {
+    def  countChangeAux(moneyLeft: Int, coinsLeft: List[Int]): Int = {
 
-    ???  // (put your code here)
+      ???  // (put your code here)
 
+    }
+
+    coundChangeAux(money, coins)
   }
-
-  coundChangeAux(money, coins)
-}
-```
+  ```
 
 Just like the examples we did in class, the helper function `countChangeAux` will do all the work and we will simply return the result of `countChangeAux(money, coins)` at the bottom of `countChange`.
 
