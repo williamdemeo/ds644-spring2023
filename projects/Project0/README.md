@@ -71,7 +71,7 @@ Its signature is as follows:
 def balance(s: String): Boolean
 ```
 
-**Hints**. 
+#### Hints for Exercise 2
 
 1.  Inside the definition of `balance`, define a recursive "helper" function which will do all the work. Call your helper function at the end of the definition of `balance`.
 
@@ -104,9 +104,11 @@ def countChange(money: Int, coins: List[Int]): Int
 
 You can make use of functions `isEmpty`, `head` and `tail` on the list of integers `coins`.
 
-**Hints**. For this exercise (and the first one), you should define a helper function inside the definition of `countChange`. Let's call it `countChangeAux` (`Aux` for "auxiliary"). 
+#### Hints for Exercise 2
 
-So, the beginning of your function should look like this (where `moneyLeft` is the balance at some stage in the algorithm, after we've used some coins and deducted them from money, and `coinsLeft` are what coins are left in the list.)
+Define a helper function inside the definition of `countChange`. Let's call it `countChangeAux` (`Aux` for "auxiliary"). 
+
+The beginning of your function should look as follows (where `moneyLeft` is the balance at some stage in the algorithm, after we've used some coins and deducted them from money, and `coinsLeft` are what coins are left in the list):
 
   ```scala
   def countChange(money: Int, coins: List[Int]): Int = {
