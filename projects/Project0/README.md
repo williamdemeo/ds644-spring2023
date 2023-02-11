@@ -75,13 +75,9 @@ def balance(s: String): Boolean
 
 1.  Inside the definition of `balance`, define a recursive "helper" function which will do all the work. Call your helper function at the end of the definition of `balance`.
 
-2.  Use the `toList` method to convert `s` from `String` type to `List[Char]` type; the syntax to use in this case is
+2.  Use the `toList` method of the `String` class to convert `s` to `List[Char]` type (syntax: `s.toList`).
 
-    ```scala
-    s.toList
-    ```
-
-3.  You will also find the following methods of the `List[Char]` class helpful.
+3.  Use the following methods of the `List[Char]` class:
     * `s.isEmpty: Boolean` returns whether the list `s` is empty.
     * `s.head: Char` returns the first element of the list `s`.
     * `s.tail: List[Char]` returns the "tail" of the list `s` (i.e., all but the first element).
