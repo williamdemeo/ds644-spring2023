@@ -68,14 +68,18 @@ Do this exercise by implementing the `balance` function in `Main.scala`.
 Its signature is as follows:
 
 ```scala
-def balance(chars: String): Boolean
+def balance(s: String): Boolean
 ```
 
-You can use the `toList` method to convert from a `String` to a `List[Char]`.
+**Hints**. Use the `toList` method to convert `s` from `String` type to `List[Char]` type; the syntax to use in this case is
 
-1.  `chars.isEmpty: Boolean` returns whether a list is empty
-2.  `chars.head: Char` returns the first element of the list
-3.  `chars.tail: List[Char]` returns the list without the first element
+```scala
+s.toList
+```
+
+1.  `s.isEmpty: Boolean` returns whether a list is empty
+2.  `s.head: Char` returns the first element of the list
+3.  `s.tail: List[Char]` returns the list without the first element
 
 **Hint**. Inside the definition of `balance`, define a recursive "helper" function which will do all the work. Call your helper function at the end of the definition of `balance`.
 
