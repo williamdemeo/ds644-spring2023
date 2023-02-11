@@ -6,7 +6,7 @@
 
 If you have not yet setup Scala with JDK 11 and VSCode, follow the instructions on our [Scala setup](../../scala) page.
 
-Once you have submitted your solution, you should see your grade and a feedback about your code on the Gradescope website within 10 minutes. If you want to improve your grade, just submit an improved solution. (If you have trouble resubmitting, please send a direct message to your instructor on [Slack][].)  The best of all your first 5 submissions will count as the final grade.
+Once you have submitted your solution on Gradescope, you should see your grade and a feedback about your code within 5 minutes. If you want to improve your grade, you may submit an improved solution. (If you have trouble resubmitting, please send a direct message to your instructor on [Slack][].)  **The best of your first 5 submissions will count as the final grade.**
 
 You can still submit after the 5th time to get feedback on your improved solutions, however, these are for research purposes only and will not be counted towards your final grade.
 
