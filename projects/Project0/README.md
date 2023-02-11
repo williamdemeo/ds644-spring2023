@@ -4,11 +4,11 @@
 
 ### Instructions
 
-Attention: For grading purposes, you are allowed to submit a maximum of 5 times!
+If you have not yet setup Scala with JDK 11 and VSCode, follow the instructions on our [Scala setup](../../scala) page.
 
-Once you have submitted your solution, you should see your grade and a feedback about your code on the Gradescope website within 10 minutes. If you want to improve your grade, just submit an improved solution. The best of all your first 5 submissions will count as the final grade.
+Once you have submitted your solution, you should see your grade and a feedback about your code on the Gradescope website within 10 minutes. If you want to improve your grade, just submit an improved solution. (If you have trouble resubmitting, please send a direct message to your instructor on [Slack][].)  The best of all your first 5 submissions will count as the final grade.
 
-You can still submit after the 5th time to get feedbacks on your improved solutions, however, these are for research purposes only, and will not be counted towards your final grade.
+You can still submit after the 5th time to get feedback on your improved solutions, however, these are for research purposes only and will not be counted towards your final grade.
 
 ### Mechanics
 
@@ -147,7 +147,7 @@ Finally, think about how to calculate the number of ways in group 1, using a rec
 
 *Final hint*. Remember that each `d` can be used more than once!
 
-If you get stuck or have any questions, post on Slack.
+If you get stuck or have any questions, post on [Slack][].
 
 #### Test your code!
 
@@ -170,3 +170,4 @@ Use the Gradescope link for the section in which you are registered:
 [recursion.zip]: recursion.zip
 [§ 102 (Monday) Gradescope]: https://www.gradescope.com/courses/485519
 [§ 104 (Wednesday) Gradescope]: https://www.gradescope.com/courses/485522
+[Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
