@@ -118,17 +118,17 @@ So, the beginning of your function should look like this (where `moneyLeft` is t
 
     }
 
-    coundChangeAux(money, coins)
+    countChangeAux(money, coins)
   }
   ```
 
-Just like the examples we did in class, the helper function `countChangeAux` will do all the work and we will simply return the result of `countChangeAux(money, coins)` at the bottom of `countChange`.
+Just like the examples we did in class, the helper function does all the work, so we simply return the `countChangeAux(money, coins)` at the bottom of `countChange`.
 
 To define `countChangeAux`, think of the two "degenerate" cases.
 
-1.  How many ways can you give change for `moneyLeft = 0`?  Lets agree that there is exactly one way to do so (namely, you give no change, which is exactly the right amount!).
+1.  How many ways can you give change if `moneyLeft == 0`?  Lets agree that there is exactly one way to do so (namely, give no change---exactly the right amount!).
 
-2.  How many ways can you give change if `money > 0`, and you have no coins (i.e., `coins.isEmpty`)?
+2.  How many ways can you give change if `moneyLeft > 0`, and you have no coins (i.e., `coinsLeft.isEmpty`)?
 
 The first two lines of `countChangeAux` will handle these cases, using `if (moneyLeft == 0) return ???` and `if (coinsLeft.isEmpty) return ???` (replace the `???`, of course).
 
@@ -138,25 +138,35 @@ Assume we are not in the degenerate cases, so `moneyLeft > 0` and `coinsLeft` is
 
 Consider the coin denomination at the head of the `coinsLeft` list. Call this `d = coinsLeft.head`.
 
-Now, split the number of ways to make change for `moneyLeft` using `coinsLeft` into two groups:
+Now, split the number of ways to make change for `moneyLeft`, using `coinsLeft`, into two groups:
 
 1. the ways to make change which use `d` and
-2. the ways to make change without using `d`, using only coins in `coinsLeft.tail`.
+2. the ways to make change without `d`, using only coins in `coinsLeft.tail`.
 
-Finally, think about how to calculate the number of ways in group 1 and the number of ways in group 2, and return the sum of these.
+Finally, think about how to calculate the number of ways in group 1, using a recursive call to `countChangeAux`, and the number of ways in group 2, also using a recursive call, and return the sum of these.
 
+*Final hint*. Remember that each `d` can be used more than once!
+
+If you get stuck or have any questions, post on Slack.
 
 #### Test your code!
 
 The file `src/test/scala/recursion/CountChangeSuite.scala` contains code that runs some simple tests of your `countChange` function.
 Run these tests before submitting your `Main.scala` file to Gradescope.  To achieve more confidence in your solution, you may wish
-to add some tests of your own to the `CountChangeSuite.scala` file.
+to add some tests of your own to the `CountChangeSuite.scala` file (though this is not required and your tests will not be graded---you will only submit the `Main.scala` file to Gradescope).
 
 
 ### How to Submit your Solutions
 
 After you have tested your program and you are happy with the result, upload **only** your modified `Main.scala` file to Gradescope for the assignment called "Project 0".
 
+Use the Gradescope link for the section in which you are registered:
+
++ [§ 102 (Monday) Gradescope][]   -- **Entry Code**. 57268Y
++ [§ 104 (Wednesday) Gradescope][] -- **Entry Code**. ZZKG7Z
+
 *Do not upload any other files for this assignment!  Only upload your modified `Main.scala` file.*
 
 [recursion.zip]: recursion.zip
+[§ 102 (Monday) Gradescope]: https://www.gradescope.com/courses/485519
+[§ 104 (Wednesday) Gradescope]: https://www.gradescope.com/courses/485522
