@@ -105,7 +105,46 @@ def countChange(money: Int, coins: List[Int]): Int
 
 You can make use of functions `isEmpty`, `head` and `tail` on the list of integers `coins`.
 
-**Hint**. Think of the degenerate cases. How many ways can you give change for 0 CHF? How many ways can you give change for >0 CHF, if you have no coins?
+**Hints**. For this exercise (and the first one), you should define a helper function inside the definition of `countChange`. Let's call it `countChangeAux` (`Aux` for "auxiliary"). 
+
+So, the beginning of your function should look like this (where `moneyLeft` is the balance at some stage in the algorithm, after we've used some coins and deducted them from money, and `coinsLeft` are what coins are left in the list.)
+
+```scala
+def countChange(money: Int, coins: List[Int]): Int = {
+
+  def  countChangeAux(moneyLeft: Int, coinsLeft: List[Int]): Int = {
+
+    ???  // (put your code here)
+
+  }
+
+  coundChangeAux(money, coins)
+}
+```
+
+Just like the examples we did in class, the helper function `countChangeAux` will do all the work and we will simply return the result of `countChangeAux(money, coins)` at the bottom of `countChange`.
+
+To define `countChangeAux`, think of the two "degenerate" cases.
+
+1.  How many ways can you give change for `moneyLeft = 0`?  Lets agree that there is exactly one way to do so (namely, you give no change, which is exactly the right amount!).
+
+2.  How many ways can you give change if `money > 0`, and you have no coins (i.e., `coins.isEmpty`)?
+
+The first two lines of `countChangeAux` will handle these cases, using `if (moneyLeft == 0) return ???` and `if (coinsLeft.isEmpty) return ???` (replace the `???`, of course).
+
+Once you've handled the two degenerate cases, it's time to get recursive!
+
+Assume we are not in the degenerate cases, so `moneyLeft > 0` and `coinsLeft` is nonempty.
+
+Consider the coin denomination at the head of the `coinsLeft` list. Call this `d = coinsLeft.head`.
+
+Now, split the number of ways to make change for `moneyLeft` using `coinsLeft` into two groups:
+
+1. the ways to make change which use `d` and
+2. the ways to make change without using `d`, using only coins in `coinsLeft.tail`.
+
+Finally, think about how to calculate the number of ways in group 1 and the number of ways in group 2, and return the sum of these.
+
 
 #### Test your code!
 
