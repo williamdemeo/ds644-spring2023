@@ -83,6 +83,14 @@ s.toList
 
 **Hint**. Inside the definition of `balance`, define a recursive "helper" function which will do all the work. Call your helper function at the end of the definition of `balance`.
 
+#### Test your code!
+
+The file `src/test/scala/recursion/BalanceSuite.scala` contains code that runs some simple tests of your `balance` function.
+Run these tests before submitting your `Main.scala` file to Gradescope.  To achieve more confidence in your solution, you may wish
+to add some tests of your own to the `BalanceSuite.scala` file.
+
+
+----------------------------------
 
 ### Exercise 2: Counting Change
 
@@ -98,6 +106,12 @@ def countChange(money: Int, coins: List[Int]): Int
 You can make use of functions `isEmpty`, `head` and `tail` on the list of integers `coins`.
 
 **Hint**. Think of the degenerate cases. How many ways can you give change for 0 CHF? How many ways can you give change for >0 CHF, if you have no coins?
+
+#### Test your code!
+
+The file `src/test/scala/recursion/CountChangeSuite.scala` contains code that runs some simple tests of your `countChange` function.
+Run these tests before submitting your `Main.scala` file to Gradescope.  To achieve more confidence in your solution, you may wish
+to add some tests of your own to the `CountChangeSuite.scala` file.
 
 
 ### How to Submit your Solutions
