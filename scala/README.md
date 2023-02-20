@@ -80,6 +80,35 @@ You will see a new file (called, e.g., `practice.worksheet.sc`) open up in the V
 
 If you have Scala set up correctly, then VSCode will evaluate the worksheet and the results will appear in comments to the right of the code.  If this doesn't work, it means either you have an error somewhere in your worksheet, or the Scala project was not set up correctly.
 
+--------------------------
+
+## Running a Scala program in a terminal window
+
+Once you very that your Scala program runs in the IDE, you can run it from the command line with the [sbt](https://www.scala-sbt.org/) or [scala](https://www.scala-lang.org/download/2.13.10.html).
+
+
+## Running a Scala program at the sbt cli
+
+1.  Use the link above to download sbt and install it following the installation instructions.
+
+2.  Open a terminal window and change to your project directory. For example,
+
+    ```
+    cd ~/git/hub/teaching/ds644-spring2023/scala/examples/hello-world
+    ```
+
+3.  Launch sbt from within the main project directory by typing `sbt` at the command line.
+
+4.  At the `sbt` command prompt, type `run` and hit enter.
+
+
+## Running a Scala program at the terminal window cli
+
+1.  Use the link above to download Scala and then install it following the installation instructions.
+
+2.  Open a terminal window and type `scala <path to your project>/src/main/scala/Main.scala` and hit enter.
+
+
 ---------------------
 
 ## Troubleshooting

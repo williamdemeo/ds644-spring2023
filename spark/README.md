@@ -201,7 +201,7 @@ cp movies.dat ratings.dat /usr/hadoop
 <!-- ssh -i ~/aws_id_rsa.pem hadoop@ec2-54-219-61-238.us-west-1.compute.amazonaws.com -->
 
 
-```shell
+```
 $ ssh -i ~/.ssh/aws_id_rsa.pem hadoop@ec2-54-219-61-238.us-west-1.compute.amazonaws.com
 Warning: Identity file /home/williamdemeo/aws_id_rsa.pem not accessible: No such file or directory.
 The authenticity of host 'ec2-54-219-61-238.us-west-1.compute.amazonaws.com (54.219.61.238)' can't be established.
@@ -210,9 +210,7 @@ This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'ec2-54-219-61-238.us-west-1.compute.amazonaws.com' (ED25519) to the list of known hosts.
 Last login: Wed Dec 14 04:48:35 2022
-```
 
-```shell
        __|  __|_  )
        _|  (     /   Amazon Linux 2 AMI
       ___|\___|___|
