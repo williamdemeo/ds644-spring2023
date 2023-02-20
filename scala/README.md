@@ -82,12 +82,12 @@ If you have Scala set up correctly, then VSCode will evaluate the worksheet and 
 
 --------------------------
 
-## Running a Scala program in a terminal window
+## Running a Scala program in a terminal window...
 
 Once you very that your Scala program runs in the IDE, you can run it from the command line with the [sbt](https://www.scala-sbt.org/) or [scala](https://www.scala-lang.org/download/2.13.10.html).
 
 
-## Running a Scala program at the sbt cli
+### ...using the sbt cli
 
 1.  Use the link above to download sbt and install it following the installation instructions.
 
@@ -102,7 +102,7 @@ Once you very that your Scala program runs in the IDE, you can run it from the c
 4.  At the `sbt` command prompt, type `run` and hit enter.
 
 
-## Running a Scala program at the terminal window cli
+### ...using the scala cli
 
 1.  Use the link above to download Scala and then install it following the installation instructions.
 
