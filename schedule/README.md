@@ -34,13 +34,13 @@ Upon completion, students will know
 |    1  |           | Introduction to Big Data; programming paradigms; history and evolution of Big Data; functional programming |        |
 |    2  |  HW 1: 2/7 |  Functional data types, lists, functions on lists, higher-order functions, map, filter, currying  |                |
 |    3  | Project 0: 2/17  |  The substitution model, evaluation strategies (CBV, CBN), termination, tail recursion, higher-order list functions, flatMap |   |
-|    4  |  HW 2: 2/21      |  Evaluation and operators; class hierarchies; polymorphism; pattern matching; other collections  |           |
+|    4  |  HW 2: 3/1      |  Evaluation and operators; class hierarchies; polymorphism; pattern matching; other collections  |           |
 
 **Part 2. Spark**
 
 | Week  |  HW Due   |     Topics                                                                     |  Readings      |
 |-------|-----------|------------------------------------------------------------------------------------|-----------------|
-|    5  |  Project 1: 3/3        | Distributed data parallelism, latency, Spark's Structured APIs, RDDs  |   LS Ch 1, 2         |
+|    5  |  Project 1: 3/10        | Distributed data parallelism, latency, Spark's Structured APIs, RDDs  |   LS Ch 1, 2         |
 |    6  |           | RDD transformations and actions, evaluation in Spark | LS Ch 3 |
 |    7  |           | Cluster topology, reduction operations, pair RDDs, transformations and actions on pair RDDs |  LS Ch 7 |
 |    8  |           | Joins, shuffling, partitioning, optimizing with partitioners | LS Ch 4 |
