@@ -146,6 +146,8 @@ that is, with the property `­1000 <= n <= 1000`.
 After you have tested your program and you are happy with the result, upload your modified versions of the `FunSets.scala` file to Gradescope for the assignment called "Project 1: Part 1".
 
 
+------------------
+
 ### Part 2. Object­Oriented Sets (due Wednesday March 22 by 11pm)
 
 Download the [oosets.zip][] archive file, unpack it somewhere on your computer and import the resulting project directory into VS Code.
