@@ -6,7 +6,7 @@
 
 In this assignment, you will work with a functional and object oriented representations of sets based on the mathematical notion of characteristic functions. The goal is to gain practice with higher­order functions and object oriented programming in Scala.
 
-### Part 1. Functional Sets
+### Part 1. Functional Sets (due Friday March 10 by 11pm)
 
 Download the [funsets.zip][] archive file and extract it somewhere on your machine. Write your solutions by completing the stubs (marked with the `???` symbol) in the `FunSets.scala` file.
 
@@ -141,8 +141,12 @@ that is, with the property `­1000 <= n <= 1000`.
     def map(s: Set, f: Int => Int): Set
     ```
 
+### How to Submit your Solution
 
-### Part 2. Object­Oriented Sets
+After you have tested your program and you are happy with the result, upload your modified versions of the `FunSets.scala` file to Gradescope for the assignment called "Project 1: Part 1".
+
+
+### Part 2. Object­Oriented Sets (due Wednesday March 22 by 11pm)
 
 Download the [oosets.zip][] archive file, unpack it somewhere on your computer and import the resulting project directory into VS Code.
 
@@ -267,11 +271,8 @@ lazy val trending: TweetList
 
 ### How to Submit your Solutions
 
-After you have tested your program and you are happy with the result, upload your modified versions of the following files to Gradescope for the assignment called "Project 1":
-
-*  `FunSets.scala`
-*  `TweetSet.scala`
-*  `TweetReader.scala`
+After you have tested your program and you are happy with the result, upload your modified versions of the `TweetSet.scala`
+and `TweetReader.scala` to Gradescope for the assignment called "Project 1: Part 2."
 
 [funsets.zip]: funsets.zip
 [oosets.zip]: oosets.zip
