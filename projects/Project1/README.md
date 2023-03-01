@@ -4,62 +4,61 @@
 
 ### Instructions
 
-Attention: For grading purposes, you are allowed to submit a maximum of 5 times!
-
-Once you have submitted your solution, you should see your grade and a feedback about your code on the Gradescope website within 10 minutes. If you want to improve your grade, just submit an improved solution. The best of all your first 5 submissions will count as the final grade.
-
-You can still submit after the 5th time to get feedback on your improved solutions, however, these are for research purposes only, and will not be counted towards your final grade.
-
 In this assignment, you will work with a functional and object oriented representations of sets based on the mathematical notion of characteristic functions. The goal is to gain practice with higher­order functions and object oriented programming in Scala.
 
 ### Part 1. Functional Sets
 
-Download the [functional-sets.zip][] archive file and extract it somewhere on your machine. Write your solutions by completing the stubs (marked with the `???` symbol) in the `FunctionalSets.scala` file.
+Download the [funsets.zip][] archive file and extract it somewhere on your machine. Write your solutions by completing the stubs (marked with the `???` symbol) in the `FunSets.scala` file.
 
-Write your own tests! For this assignment, we don't give you tests but instead the `FunctionalSetsSuite.scala` file contains hints on how to write your own tests for the assignment.
+Students will earn credit by completing the `src/main/scala/funsets/FunSets.scala` file. This file defines an abstract type `Set` and some functions for working with inhabitants of that type.
+
+Write your own tests! For this assignment, we don't give you tests but instead the `FunSetsSuite.scala` file contains hints on how to write your own tests for the assignment.  You should use the [AnyFunSuite][] class of the `funsuite` package, which is well documented [here][AnyFunSuite].
 
 #### Representation
 
 We will work with sets of integers. As an example to motivate our representation, how would you represent the set of all negative integers?
 
-You cannot list them all… one way would be so say, "if you give me an integer, I can tell you whether it's in the set or not: for 3, I say 'no'; for ­1, I say 'yes'."
+You cannot list them all... one way would be so say, "if you give me an integer, I can tell you whether it's in the set or not: for `3`, I say 'no'; for `-1`, I say 'yes'."
 
-Mathematically, we call the function which takes an integer as argument and which returns a boolean, indicating whether the given integer belongs to a set, the **indicator function** (or "characteristic function") of that set.
+Mathematically, given a set `s ⊆ ℤ` of integers, we define a function, `χₛ: Int → Boolean`, which takes an integer, `n: Int`, as its argument and returns a boolean indicating whether `n` belongs to `s`.  The function `χₛ` is called the **indicator function** (or "characteristic function") of that set.
 
 For example, we can characterize the set of negative integers by the indicator function 
 
 ```scala
-(x: Int) => x < 0
+(n: Int) => n < 0
 ```
 
-Therefore, we choose to represent a set by its indicator function and define a **type alias** for this representation, as follows:
+Thus, we represent a set by its indicator function and define a **type alias** for this representation, as follows:
 
 ```scala
 type Set = Int => Boolean
 ```
 
-Using this representation, we define a function that tests for the presence of a value in a set:
+Using this representation, we could define a function that tests for membership---i.e., whether a given integer `n` belongs to the given set `s`:
 
 ```scala
-def contains(s: Set, elem: Int): Boolean = s(elem)
+def contains(s: Set, n: Int): Boolean = s(n)
 ```
+
+But that seems unnecessary since we could just use the function `s` for this purpose; that is, we'll write `s(n)` to test whether `s` contains `n`.
+
 
 #### Basic Functions on Sets
 
 Let's start by implementing basic functions on sets.
 
-1.  Define a function that creates a singleton set from one integer value: 
-    the set represents the set of that one given element. Its signature is as follows:
+1.  Define a function that takes an integer and constructs a *singleton set* containing only the given element.
+    Its signature is as follows:
 
     ```scala
-    def singletonSet(elem: Int): Set
+    def singletonSet(n: Int): Set
     ```
 
-    Now that we have a way to create singleton sets, we want to define a function that 
+    Now that we have a way to create singleton sets, we want to define a function that
     allow us to build bigger sets from smaller ones.
 
-2.  Define the functions `union`, `intersect`, and `diff`, which takes two sets, and return,
-    respectively, their union, intersection and set-theoretic differences, `diff(s, t)`, which 
+2.  Define the functions `union`, `intersect`, and `diff`, which take two sets, and return,
+    respectively, their union, intersection and set-theoretic differences; the latter, `diff(s, t)`,
     returns a set containing the elements of `s` that are not in `t`.
 
     These functions have the following signatures:
@@ -72,13 +71,14 @@ Let's start by implementing basic functions on sets.
     def intersect(s: Set, t: Set): Set
     ```
 
-    ```
+    ```scala
     def diff(s: Set, t: Set): Set
     ```
 
-3.  Define the function `filter` which selects only the elements of a set that are accepted
-    by a given predicate `p`. The filtered elements are returned as a new set. The signature 
-    of `filter` is
+3.  Define the function `filter` which selects the elements of a set that are accepted
+    by a given predicate `p`. The filtered elements are returned as a new set. Specifically, 
+    `filter(s, p)` returns a set that contains `n` if and only if `s(n)` and `p(n)`. 
+    The signature of `filter` is, of course,
 
     ```scala
     def filter(s: Set, p: Int => Boolean): Set
@@ -87,39 +87,44 @@ Let's start by implementing basic functions on sets.
 #### Queries and Transformations on Sets
 
 In this part, we are interested in functions used to make requests on elements of a set.
-The first function tests whether a given predicate is true for all elements of the set. 
+The first function tests whether a given predicate is true for all elements of the set.
 This `forall` function has the following signature:
 
 ```scala
 def forall(s: Set, p: Int => Boolean): Boolean
 ```
 
-Note that there is no direct way to find which elements are in a set. The `contains` function
-only allows us to know whether a *given* element is included in the set. Thus, if we wish to
-do something to all elements of a set, then we have to iterate over all integers, testing
-each time whether it is included in the set, and if so, to do something with it.
+There is no direct way to determine which elements are in a set and return all those elements.
+Instead, all we can do is to consider an *given* integer, say, `n`, and say whether `n` is in the set.
 
-Here, we must limit the search space so that our program can finish computing its result in finite time, so we consider only integers `x` in the range [-1000, 1000]; that is, with the property `­1000 <= x <= 1000`.
+If we wish to do something with all elements of a set, then we have to iterate over all integers, testing
+each time whether it is included in the set and, if so, do something with it.
 
-1.  Implement `forall` using linear recursion. For this, use a helper function nested in `forall`.
+We must therefore limit the search space so that our program can finish computing its result in finite time, 
+so we will (rather arbitrarily) consider the "domain of discourse" to be the integers `n` in the range `[-1000, 1000]`,
+that is, with the property `­1000 <= n <= 1000`.
+
+1.  Implement `forall` using recursion. For this, use a helper function nested in `forall`.
     Its structure is as follows (replace the `???`):
 
     ```scala
     def forall(s: Set, p: Int => Boolean): Boolean = {
-      def iter(a: Int): Boolean = {
+
+      def forall_aux(a: Int): Boolean = {
         if (???) ???
         else if (???) ???
-        else iter(???)
+        else forall_aux(???)
       }
-      iter(???)
+
+      forall_aux(???)
     }
     ```
 
 2.  Using `forall`, implement a function `exists` which tests whether a set contains at least
     one element for which a given predicate is true.
 
-    Note that the functions `forall` and `exists` behave like the universal and existential
-    quantifiers of first-order logic.
+    Note that the functions `forall` and `exists` behave like the *universal* and *existential
+    quantifiers* of first-order logic.
 
     Here is the signature of `exists`.
 
@@ -127,8 +132,8 @@ Here, we must limit the search space so that our program can finish computing it
     def exists(s: Set, p: Int => Boolean): Boolean
     ```
 
-3.  Finally, write a function `map` which takes a set, `X`, and a function `f`, and 
-    transforms `X` into another set by applying `f` to each element of `X`.
+3.  Finally, write a function `map` which takes a set, `s`, and a function `f`, and
+    transforms `s` into another set by applying `f` to each element of `s`.
 
     Here is the signature of `map`.
 
@@ -139,11 +144,11 @@ Here, we must limit the search space so that our program can finish computing it
 
 ### Part 2. Object­Oriented Sets
 
-Download the [oo-sets.zip][] archive file, unpack it somewhere on your computer and import the resulting project directory into VS Code.
+Download the [oosets.zip][] archive file, unpack it somewhere on your computer and import the resulting project directory into VS Code.
 
 #### Representation
 
-In this second part of the project, we will work with an *object­oriented* representations of sets based on binary trees. Students will earn credit by completing the `src/main/scala/oo-sets/TweetSet.scala` file. This file defines an abstract class `TweetSet` with two concrete subclasses, `Empty` which represents an empty set, and
+In this second part of the project, we will work with an *object­oriented* representations of sets based on binary trees. Students will earn credit by completing the `src/main/scala/oosets/TweetSet.scala` file. This file defines an abstract class `TweetSet` with two concrete subclasses, `Empty` which represents an empty set, and
 
 ```scala
 NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet)
@@ -159,9 +164,9 @@ Before tackling this part of the assignment, we suggest you first study the alre
 
 #### Filtering
 
-Implement filtering on tweet sets. Complete the stubs for the methods `filter` and `filterAcc` by replacing the `???` symbols with your code.
+Implement filtering on tweet sets. Complete the stubs for the methods `filter` and `filter_aux` by replacing the `???` symbols with your code.
 
-`filter` takes two arguments: 1) a function and 2) a predicate which takes a tweet and returns a boolean.  `filter` returns the subset of all the tweets in the original set for which the predicate is true.
+`filter` takes two arguments: 1) a function and 2) a predicate that takes a tweet and returns a boolean.  `filter` returns the subset of all the tweets in the original set for which the predicate is true.
 
 For example, the following call:
 
@@ -171,7 +176,7 @@ tweets.filter(tweet => tweet.retweets > 10)
 
 applied to a set `tweets` consisting of two tweets, say, where the first tweet was not retweeted and the second tweet was retweeted 20 times, should return a set containing only the second tweet.
 
-**Hint**. start by defining the helper method `filterAcc` which takes an accumulator set as a second argument. This accumulator accumulates the successive results of the filtering as you recurse through the dwindling collection of tweets.
+**Hint**. start by defining the helper method `filter_aux` which takes an accumulator set as a second argument. This accumulator accumulates the successive results of the filtering as you recurse through the dwindling collection of tweets.
 
 ```scala
 /** This method takes a predicate and returns a subset of all the elements
@@ -179,16 +184,16 @@ applied to a set `tweets` consisting of two tweets, say, where the first tweet w
 */
 def filter(p: Tweet => Boolean): TweetSet = {
 
-  def filterAcc(acc: TweetSet): TweetSet = {
+  def filter_aux(acc: TweetSet): TweetSet = {
     ???
   }
 
-  filterAcc(???)
+  filter_aux(???)
 
 }
 ```
 
-The definition of `filter` in terms of `filterAcc` should then be straightforward.
+The definition of `filter` in terms of `filter_aux` should then be straightforward.
 
 #### Taking Unions
 
@@ -264,11 +269,11 @@ lazy val trending: TweetList
 
 After you have tested your program and you are happy with the result, upload your modified versions of the following files to Gradescope for the assignment called "Project 1":
 
-*  `FunctionalSets.scala`
+*  `FunSets.scala`
 *  `TweetSet.scala`
 *  `TweetReader.scala`
 
-[functional-sets.zip]: functional-sets.zip
-[oo-sets.zip]: oo-sets.zip
+[funsets.zip]: funsets.zip
+[oosets.zip]: oosets.zip
 [glossary]: http://docs.scala-lang.org/glossary/
-
+[AnyFunSuite]: https://www.scalatest.org/scaladoc/3.2.15/org/scalatest/funsuite/AnyFunSuite.html

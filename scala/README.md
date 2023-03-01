@@ -89,7 +89,7 @@ Once you very that your Scala program runs in the IDE, you can run it from the c
 
 ### ...using the sbt cli
 
-1.  Use the link above to download sbt and install it following the installation instructions.
+1.  [Download and install sbt](https://www.scala-sbt.org/download.html).
 
 2.  Open a terminal window and change to your project directory. For example,
 
@@ -104,7 +104,7 @@ Once you very that your Scala program runs in the IDE, you can run it from the c
 
 ### ...using the scala cli
 
-1.  Use the link above to download Scala and then install it following the installation instructions.
+1.  [Download and install Scala 2.13](https://www.scala-lang.org/download/2.13.10.html).
 
 2.  Open a terminal window and type `scala <path to your project>/src/main/scala/Main.scala` and hit enter.
 
