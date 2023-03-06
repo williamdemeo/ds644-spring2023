@@ -63,7 +63,7 @@ For more, see [scala-lang.org/books](https://docs.scala-lang.org/books.html).
 
    The [full text of 1st edition](https://www.artima.com/pins1ed/) is available for free online.
 
-+  [Programming in Scala, 4th ed](https://www.artima.com/shop/programming_in_scala_5ed), Martin Odersky, Lex Spoon and Bill Venners. Artima 2021.  **Covers Scala 3** (we do NOT use Scala 3 in this class)
++  [Programming in Scala, 5th ed](https://www.artima.com/shop/programming_in_scala_5ed), Martin Odersky, Lex Spoon and Bill Venners. Artima 2021.  **Covers Scala 3** (we do NOT use Scala 3 in this class)
 
 ----------------
 
