@@ -2,9 +2,11 @@
 
 For more resources, see [docs.scala-lang.org/](https://docs.scala-lang.org/).
 
-## Quick References
+## References
 
 +  [Scala Standard Library API](http://www.scala-lang.org/api/)
+
++  [sbt Reference Manual](https://www.scala-sbt.org/1.x/docs/index.html)
 
 +  [Scala School!: A Scala tutorial by Twitter](https://twitter.github.io/scala_school/)
 
@@ -72,12 +74,8 @@ For more, see [scala-lang.org/books](https://docs.scala-lang.org/books.html).
 
 +  [Glossary of Scala and FP terms](http://docs.scala-lang.org/glossary/).
 
++  [Scala Cheatsheet](https://docs.scala-lang.org/cheatsheets/), for a quick reference covering pattern matching syntax, for-comprehension syntax, and more.
 
-+  Scala By Example, for more examples which illustrate concepts covered in the lectures.
-
-Scala Cheatsheet, for a quick reference covering pattern matching syntax, for-comprehension syntax, and more.
-
-Completed
 
 ----------------
 
