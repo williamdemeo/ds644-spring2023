@@ -1,0 +1,200 @@
+\noindent \textbf{Instructions}. Answer the following multiple choice questions by selecting all correct choices.
+Some of the questions will have more than one correct choice.
+
+\begin{center}
+  \textbf{\textit{Select all correct choices to receive full credit!}}
+\end{center}
+
+\begin{questions} % Begins the questions environment
+
+  % Question 1
+  \question[6] \textbf{Programming Paradigms}
+  \begin{parts}
+    \part Which of the following is {\it not} an example of a programming paradigm?
+
+    \begin{oneparcheckboxes}
+      \CorrectChoice JavaScript
+      \choice Declarative
+      \choice Imperative
+      \choice Functional
+      \choice Object-oriented
+    \end{oneparcheckboxes}
+
+    \part Which of the following characteristics are typical of imperative programs.
+
+    \begin{checkboxes}
+      \choice values of variables may change or ``mutate'' (they are \textit{mutable})
+      \choice program execution proceeds by carrying out a sequence of instructions
+      \choice functions often have \textit{side-effects}
+      \CorrectChoice all of the above
+    \end{checkboxes}
+
+    \part Which of the following characteristics are typical of functional programs.
+    \begin{checkboxes}
+      \choice values of variables do not change or ``mutate'' (they are \textit{immutable})
+      \choice functions are \textit{referentially transparent}
+      \choice functions do not have \textit{side-effects}
+      \CorrectChoice all of the above
+    \end{checkboxes}
+  \end{parts}
+
+\vskip1cm
+
+  % Question 2
+  \question[2] A \textit{higher-order function} is a function that
+  \begin{checkboxes}
+    \choice can be passed as an argument to other functions
+    \choice can be returned as output by other functions
+    \choice can be called a higher order of times than ordinary, ``lower-order'' functions
+    \CorrectChoice accepts a function (or functions) as input or returns a function (or functions) as output.
+    \choice takes a higher order of magnitude of time to return a value than ordinary, ``lower-order'' functions
+  \end{checkboxes}
+
+
+\vskip1cm
+
+  % Question 3
+  \question[2] An expression \texttt{e} is called \textit{referentially transparent} provided
+  \begin{checkboxes}
+    \choice the value of \texttt{e}, when it is reduced to ``normal form,'' is obvious or ``transparent.''
+    \choice the values all expressions to which \texttt{e} refers are obvious or ``transparent.''
+    \CorrectChoice for all programs \texttt{p}, all occurrences of \texttt{e} in \texttt{p} can be replaced by the result of evaluating \texttt{e} without affecting the meaning of \texttt{p}.
+    \choice none of the above
+  \end{checkboxes}
+
+\newpage
+
+  % Question 4
+  \question[6] \textbf{Introduction to Scala, Part I}
+
+  \begin{parts}
+    \part The programming paradigm(s) of Scala is(are) which of these? (select all that apply).
+
+    \begin{oneparcheckboxes}
+      \choice assembly
+      \choice declarative
+      \choice imperative
+      \CorrectChoice functional
+      \CorrectChoice object-oriented
+    \end{oneparcheckboxes}
+
+    \part What is the result of the following program?
+
+    \begin{verbatim}
+    val x = 0
+    def f(y: Int) = y + 1
+    val result = {
+      val x = f(3)
+      x * x
+    } + x
+    \end{verbatim}
+
+    \begin{oneparcheckboxes}
+      \choice 0
+      \CorrectChoice 16
+      \choice  32
+      \choice it does not terminate
+    \end{oneparcheckboxes}
+
+    \part Why should we care about writing functions that are ``tail-recursive?''
+
+    \begin{checkboxes}
+      \choice Recursion should be carried out on the tail, not the head.
+      \choice Recursion should be carried out on the head, not the tail.
+      \CorrectChoice Non-tail-recursive functions may exhaust stack memory.
+      \choice Non-tail-recursive functions may exhaust heap memory.
+    \end{checkboxes}
+
+  \end{parts}
+
+\vskip1cm
+
+  % Question 5
+  \question[6] Consider the following code.
+
+  \begin{verbatim}
+    def sq(x: Double): Option[Double] =
+      if (x < 0) None
+      else Some(Math.sqrt(x))
+
+    val list = List(-1.0, 4.0, 9.0)
+  \end{verbatim}
+
+  \begin{parts}
+    \part To what does the expression \texttt{list.map(sq)} evaluate?
+
+    \begin{checkboxes}
+      \choice \texttt{List(2.0, 3.0)}
+      \CorrectChoice \texttt{List(None, Some(2.0), Some(3.0))}
+      \choice \texttt{Some(List(2.0, 3.0))}
+      \choice \texttt{None}
+      \choice none of the above
+    \end{checkboxes}
+
+
+\part To what does the expression \texttt{list.flatMap(sq)} evaluate?
+
+    \begin{checkboxes}
+      \CorrectChoice \texttt{List(2.0, 3.0)}
+      \choice \texttt{List(None, Some(2.0), Some(3.0))}
+      \choice \texttt{Some(List(i, 2.0, 3.0))}
+      \choice \texttt{None}
+      \choice none of the above
+    \end{checkboxes}
+  \end{parts}
+
+  \newpage
+
+  % Question 6
+  \question[4] \textbf{Introduction to Scala, Part II}. The parts below refer to the function \texttt{test(x:Int, y:Int) = x * x}.
+
+  \begin{parts}
+    \part For the function call \texttt{test(2, 3)}, which evaluation strategy is  most efficient (takes the least number of steps)?
+
+    \begin{checkboxes}
+      \choice call-by-value is more efficient
+      \choice call-by-name is more efficient
+      \CorrectChoice call-by-value and call-by-name require the same number of steps
+      \choice the program does not terminate
+    \end{checkboxes}
+
+    \explain{In both cases we have to do one multiplication (\texttt{2 * 2}).}
+
+    \part For the function call \texttt{test(3 + 4, 8)}, which evaluation strategy is most efficient?
+
+    \begin{checkboxes}
+      \CorrectChoice call-by-value is more efficient
+      \choice call-by-name is  more efficient
+      \choice call-by-value and call-by-name require the same number of steps
+      \choice the program does not terminate
+    \end{checkboxes}
+
+    \explain{Call-by-value performs one addition (\texttt{3 + 4}) and one multiplication (\texttt{7 * 7}), whereas
+      call-by-name performs two additions and one multiplication (\texttt{(3 + 4) * (3 + 4)}).}
+
+    \part For the function call \texttt{test(7, 2*4)}, which evaluation strategy is most efficient?
+
+    \begin{checkboxes}
+      \choice call-by-value is more efficient
+      \CorrectChoice call-by-name is more efficient
+      \choice call-by-value and call-by-name require the same number of steps
+      \choice the program does not terminate
+    \end{checkboxes}
+
+    \explain{Call-by-value performs two multiplications (\texttt{2 * 4} and \texttt{7 * 7}), whereas
+      call-by-name performs just one multiplication (\texttt{7 * 7}).}
+
+    \part For the function call \texttt{test(3+4, 2*4)} which evaluation strategy is most efficient?
+
+    \begin{checkboxes}
+      \choice call-by-value is more efficient
+      \choice call-by-name is more efficient
+      \CorrectChoice call-by-value and call-by-name require the same number of steps
+      \choice the program does not terminate
+    \end{checkboxes}
+
+    \explain{Call-by-value performs one addition (\texttt{3 + 4}) and two multiplications (\texttt{2 * 4} and \texttt{7 * 7}), and
+      call-by-name performs two additions and one multiplication (\texttt{(3 + 4) * (3 + 4)}).}
+
+  \end{parts}
+\end{questions}
