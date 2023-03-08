@@ -8,15 +8,15 @@ For more resources, see [docs.scala-lang.org/](https://docs.scala-lang.org/).
 
 +  [sbt Reference Manual](https://www.scala-sbt.org/1.x/docs/index.html)
 
-+  [Scala School!: A Scala tutorial by Twitter](https://twitter.github.io/scala_school/)
-
-+  [A Tour of Scala: Tutorial introducing the main concepts of Scala](http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html)
-
 +  [Scala Overview on StackOverflow: A list of useful questions sorted by topic](https://stackoverflow.com/tags/scala/info)
 
 ----------------
 
 ## Tutorials
+
++  [Scala School!: A Scala tutorial by Twitter](https://twitter.github.io/scala_school/)
+
++  [A Tour of Scala: Tutorial introducing the main concepts of Scala](http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html)
 
 +  [Getting started with Scala and sbt](https://docs.scala-lang.org/getting-started/sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html)
 
