@@ -31,19 +31,19 @@ For example, we can characterize the set of negative integers by the indicator f
 Thus, we represent a set by its indicator function and define a **type alias** for this representation, as follows:
 
 ```scala
-type Set = Int => Boolean
+type IntSet = Int => Boolean
 ```
 
 Using this representation, we could define a function that tests for membership---i.e., whether a given integer `n` belongs to the given set `s`:
 
 ```scala
-def contains(s: Set, n: Int): Boolean = s(n)
+def contains(s: IntSet, n: Int): Boolean = s(n)
 ```
 
 But that seems unnecessary since we could just use the function `s` for this purpose; that is, we'll write `s(n)` to test whether `s` contains `n`.
 
 
-#### Basic Functions on Sets
+#### Basic Functions on IntSets
 
 Let's start by implementing basic functions on sets.
 
@@ -51,7 +51,7 @@ Let's start by implementing basic functions on sets.
     Its signature is as follows:
 
     ```scala
-    def singletonSet(n: Int): Set
+    def singletonSet(n: Int): IntSet
     ```
 
     Now that we have a way to create singleton sets, we want to define a function that
@@ -64,15 +64,15 @@ Let's start by implementing basic functions on sets.
     These functions have the following signatures:
 
     ```scala
-    def union(s: Set, t: Set): Set
+    def union(s: IntSet, t: IntSet): IntSet
     ```
 
     ```scala
-    def intersect(s: Set, t: Set): Set
+    def intersect(s: IntSet, t: IntSet): IntSet
     ```
 
     ```scala
-    def diff(s: Set, t: Set): Set
+    def diff(s: IntSet, t: IntSet): IntSet
     ```
 
 3.  Define the function `filter` which selects the elements of a set that are accepted
@@ -81,17 +81,17 @@ Let's start by implementing basic functions on sets.
     The signature of `filter` is, of course,
 
     ```scala
-    def filter(s: Set, p: Int => Boolean): Set
+    def filter(s: IntSet, p: Int => Boolean): IntSet
     ```
 
-#### Queries and Transformations on Sets
+#### Queries and Transformations on IntSets
 
 In this part, we are interested in functions used to make requests on elements of a set.
 The first function tests whether a given predicate is true for all elements of the set.
 This `forall` function has the following signature:
 
 ```scala
-def forall(s: Set, p: Int => Boolean): Boolean
+def forall(s: IntSet, p: Int => Boolean): Boolean
 ```
 
 There is no direct way to determine which elements are in a set and return all those elements.
@@ -108,7 +108,7 @@ that is, with the property `­1000 <= n <= 1000`.
     Its structure is as follows (replace the `???`):
 
     ```scala
-    def forall(s: Set, p: Int => Boolean): Boolean = {
+    def forall(s: IntSet, p: Int => Boolean): Boolean = {
 
       def forall_aux(a: Int): Boolean = {
         if (???) ???
@@ -129,7 +129,7 @@ that is, with the property `­1000 <= n <= 1000`.
     Here is the signature of `exists`.
 
     ```scala
-    def exists(s: Set, p: Int => Boolean): Boolean
+    def exists(s: IntSet, p: Int => Boolean): Boolean
     ```
 
 3.  Finally, write a function `map` which takes a set, `s`, and a function `f`, and
@@ -138,7 +138,7 @@ that is, with the property `­1000 <= n <= 1000`.
     Here is the signature of `map`.
 
     ```scala
-    def map(s: Set, f: Int => Int): Set
+    def map(s: IntSet, f: Int => Int): IntSet
     ```
 
 ### How to Submit your Solution
