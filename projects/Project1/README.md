@@ -188,15 +188,9 @@ applied to a set `tweets` consisting of two tweets, say, where the first tweet w
 /** This method takes a predicate and returns a subset of all the elements
 * in the original set for which the predicate is true.
 */
-def filter(p: Tweet => Boolean): TweetSet = {
+def filter(p: Tweet => Boolean): TweetSet = filterACC(???)
 
-  def filter_aux(acc: TweetSet): TweetSet = {
-    ???
-  }
-
-  filter_aux(???)
-
-}
+def filterACC(p: Tweet => Boolean, acc: TweetSet): TweetSet = ???
 ```
 
 The definition of `filter` in terms of `filter_aux` should then be straightforward.
