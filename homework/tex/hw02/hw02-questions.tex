@@ -1,0 +1,243 @@
+\noindent \textbf{Instructions}. Answer the following multiple choice questions by selecting the correct choices.
+
+\begin{questions} % Begins the questions environment
+  % Question 1
+  \question \textbf{Scala Higher-order Functions}
+
+All parts of this question refer to the following \texttt{sum} function.
+
+\begin{verbatim}
+def sum(f: Int => Int): (Int, Int) => Int = {
+  def sumF(a: Int, b: Int): Int = {
+    if (a > b) 0
+    else f(a) + sumF(a + 1, b)
+  }
+  sumF
+}
+\end{verbatim}
+
+\begin{parts}
+  \part What does \texttt{sum(2, 3)} compute?
+
+    \begin{checkboxes}
+      \choice \texttt{2 + 3}
+      \choice  \texttt{2 + 2 + 3 + 3}
+      \choice  \texttt{2 * 2 + 3 * 3}
+      \choice  a function that takes two integer arguments and returns their sum
+      \choice  \texttt{sum(2, 3)} causes a run-time error.
+      \CorrectChoice \texttt{sum(2, 3)} causes a compile-time error.
+    \end{checkboxes}
+
+    \part What does \texttt{sum(x => x)(2, 3)} compute?
+
+    \begin{checkboxes}
+      \CorrectChoice \texttt{2 + 3}
+      \choice \texttt{2 + 2 + 3 + 3}
+      \choice \texttt{2 * 2 + 3 * 3}
+      \choice a function that takes two integer arguments and returns their sum
+      \choice \texttt{sum(x => x)(2, 3)} causes a run-time error.
+      \choice \texttt{sum(x => x)(2, 3)} causes a compile-time error.
+    \end{checkboxes}
+
+\part What does \texttt{sum(x => x)} return?
+
+\begin{checkboxes}
+  \choice \texttt{2 + 3}
+  \choice \texttt{2 + 2 + 3 + 3}
+  \choice \texttt{2 * 2 + 3 * 3}
+  \CorrectChoice a function that takes two integer arguments and returns their sum
+  \choice \texttt{sum(x => x)(2, 3)} causes a run-time error.
+  \choice \texttt{sum(x => x)(2, 3)} causes a compile-time error.
+\end{checkboxes}
+
+\part What does \texttt{sum(x => x + x)(2, 3)} compute?
+
+\begin{checkboxes}
+\choice \texttt{2 + 3}
+\CorrectChoice \texttt{2 + 2 + 3 + 3}
+\choice \texttt{2 * 2 + 3 * 3}
+\choice a function that takes two integer arguments and returns their sum
+\choice \texttt{sum(x => x + x)(2, 3)} causes a run-time error.
+\choice \texttt{sum(x => x + x)(2, 3)} causes a compile-time error.
+\end{checkboxes}
+
+\newpage
+
+\part What does \texttt{sum(x => x * x)(2, 3)} compute?
+
+\begin{checkboxes}
+\choice \texttt{2 + 3}
+\choice \texttt{2 + 2 + 3 + 3}
+\CorrectChoice \texttt{2 * 2 + 3 * 3}
+\choice a function that takes two integer arguments and returns their sum
+\choice \texttt{sum(x => x * x)(2, 3)} causes a run-time error.
+\choice \texttt{sum(x => x * x)(2, 3)} causes a compile-time error.
+\end{checkboxes}
+
+\part What does \texttt{sum(x => x / 1.0)(2, 3)} compute?
+
+\begin{checkboxes}
+\choice \texttt{2 + 3}
+\choice \texttt{2 + 2 + 3 + 3}
+\choice \texttt{2 * 2 + 3 * 3}
+\choice a function that takes two integer arguments and returns their sum
+\choice \texttt{sum(x => x/1.0)(2, 3)} causes a run-time error.
+\CorrectChoice \texttt{sum(x => x/1.0)(2, 3)} causes a compile-time error.
+\end{checkboxes}
+\end{parts}
+
+\question \textbf{Scala Pattern Matching 1}
+
+Consider the general form of pattern matching in Scala,
+
+\begin{verbatim}
+e match { case p1 => e1 ... case pn => en }
+\end{verbatim}
+
+Which of the following are true statements?
+
+\begin{checkboxes}
+\choice Scala matches the value of the selector \texttt{e} with the patterns \texttt{p1, ..., pn} in the order in which they are written.
+\choice The match expression is rewritten to the right-hand side of the first case where the pattern matches the selector \texttt{e}.
+\choice References to pattern variables are replaced by the corresponding parts in the selector.
+\CorrectChoice All of the above.
+\choice None of the above.
+\end{checkboxes}
+
+
+\question  \textbf{Scala Pattern Matching 2}
+
+Consider the following Scala program.
+
+\begin{verbatim}
+trait Expr
+case class Number(n: Int) extends Expr
+case class Sum(e1: Expr, e2: Expr) extends Expr
+
+object Number{
+  def apply(n: Int) = new Number(n)
+}
+
+object Sum{
+  def apply(e1: Expr, e2: Expr) = new Sum(e1, e2)
+}
+
+def eval(e: Expr): Int = e match {
+  case Number(n) => n
+  case Sum(e1, e2) => eval(e1) + eval(e2)
+}
+\end{verbatim}
+
+What is the result of the following expression?
+
+\begin{verbatim}
+eval(Sum(Number(1), Number(2)))
+\end{verbatim}
+
+\begin{oneparcheckboxes}
+\choice 0
+\choice 1
+\choice 2
+\CorrectChoice 3
+\choice None of the above.
+\end{oneparcheckboxes}
+
+
+
+\question Consider the Scala code below.
+
+\begin{verbatim}
+val x = List(1,2,3)
+val y = List(0, x, 4)
+\end{verbatim}
+
+\begin{parts}
+  
+\part What is the type of \texttt{x}?
+
+\begin{checkboxes}
+\choice \texttt{List[T]}
+\CorrectChoice \texttt{List[Int]}
+\choice \texttt{List[Any]}
+\choice \texttt{List[Nothing]}
+\choice \texttt{List[Object]}
+\end{checkboxes}
+
+\part What is the type of \texttt{y}?
+
+\begin{checkboxes}
+\choice \texttt{List[T]}
+\choice \texttt{List[Int]}
+\CorrectChoice \texttt{List[Any]}
+\choice \texttt{List[Nothing]}
+\choice \texttt{List(0, x, 4)} causes a run-time error.
+\choice \texttt{List(0, x, 4)} causes a compile-time error.
+\end{checkboxes}
+
+\part What is \texttt{y.length}?
+
+\begin{checkboxes}
+\choice 0
+\CorrectChoice 3
+\choice 5
+\choice \texttt{y.length} causes a run-time error.
+\choice \texttt{y.length} causes a compile-time error.
+\end{checkboxes}
+
+\part What is \texttt{x == List(1, 2, y.length)}?
+
+\begin{checkboxes}
+\choice \texttt{List(1, 2, 3)}
+\choice \texttt{List(x, 1, 2, 3)}
+\CorrectChoice \texttt{true}
+\choice \texttt{false}
+\choice None of these.
+\end{checkboxes}
+\end{parts}
+
+\question Reducing lists with \texttt{foldLeft}.
+
+Suppose you want to implement a (polymorphic) \texttt{reverse} function, which reverses the order of a given list, \texttt{xs: List[T]}, using Scala's \texttt{foldLeft} function.
+
+You start with
+
+\begin{verbatim}
+def reverse[T](xs: List[T]): List[T] = (xs foldLeft ???)((ys, y) => ???)
+\end{verbatim}
+
+\begin{parts}
+  
+\part What aspect of the code above tells you that this \texttt{reverse} function will be {\it polymorphic}?
+
+\begin{checkboxes}
+\choice It operates on lists.
+\choice The second \texttt{???} will be a function, so it's "higher-order."
+\choice There is a folding or "reduction" operation involved.
+\choice It is recursive.
+\CorrectChoice It takes a type parameter \texttt{T}.
+\end{checkboxes}
+
+\part The first set of three question marks \texttt{???} should be replaced with which of the following?
+
+\begin{checkboxes}
+\choice \texttt{Nil}
+\choice \texttt{List()}
+\CorrectChoice \texttt{List[T]()}
+\choice \texttt{List[T](0)}
+\choice \texttt{ys :: y}
+\choice \texttt{y :: ys}
+\end{checkboxes}
+
+\part The second set of three question marks \texttt{???} should be replaced with which of the following?
+
+\begin{checkboxes}
+\choice \texttt{Nil}
+\choice \texttt{List()}
+\choice \texttt{List[T]()}
+\choice \texttt{List[T](0)}
+\choice \texttt{ys :: y}
+\CorrectChoice \texttt{y :: ys}
+\end{checkboxes}
+\end{parts}
+
+\end{questions}
