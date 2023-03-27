@@ -9,7 +9,7 @@
     let
       pkgs = nixpkgs.legacyPackages.${system};
       tex = pkgs.texlive.combine {
-          inherit (pkgs.texlive) scheme-minimal latex-bin latexmk exam geometry;
+          inherit (pkgs.texlive) scheme-minimal latex-bin latexmk exam geometry amsmath;
       };
     in rec {
       packages = {
