@@ -9,7 +9,7 @@
     let
       pkgs = nixpkgs.legacyPackages.${system};
       tex = pkgs.texlive.combine {
-          inherit (pkgs.texlive) scheme-minimal latex-bin latexmk;
+          inherit (pkgs.texlive) scheme-minimal latex-bin latexmk exam;
       };
     in rec {
       packages = {
@@ -23,7 +23,7 @@
             mkdir -p .cache/texmf-var
             env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
               latexmk -interaction=nonstopmode -pdf -lualatex \
-              midterm.tex
+              ./exams/midterm/midterm.tex
           '';
           installPhase = ''
             mkdir -p $out
