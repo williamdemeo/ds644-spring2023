@@ -1,0 +1,636 @@
+% \thispagestyle{fancy}
+
+\noindent \textbf{Instructions}. Answer the following multiple choice questions by selecting all correct choices.
+If a question has more than one correct choice, it will say in parentheses how many items you should select.
+\textit{Select all correct choices to receive full credit!}
+
+
+
+\begin{questions} % Begins the questions environment
+
+  % Q.1.1
+  \question[6] \textbf{Big data properties}.
+
+  \begin{parts}
+    \part ``Big Data'' concerns which of the following types of data?
+
+    \begin{oneparcheckboxes}
+      \choice structured
+      \choice semi-structured
+      \choice unstructured
+      \CorrectChoice all of these
+    \end{oneparcheckboxes}
+
+    \ifanswers \medskip \else     \bigskip \fi
+
+    \part JSON and XML are examples of which type of data?
+
+    \begin{oneparcheckboxes}
+      \choice structured
+      \choice unstructured
+      \CorrectChoice semi-structured
+      \choice none of these
+    \end{oneparcheckboxes}
+
+        \ifanswers \medskip \else     \bigskip \fi
+
+    \part Which of the following statements is true of unstructured data?
+
+    \begin{checkboxes}
+      \choice It is generally easier to analyze than other types of data.
+      \choice It fits neatly into a schema.
+      \CorrectChoice It is the most widespread type of data.
+      \choice It is usually found in tables.
+    \end{checkboxes}
+
+      \explain{(a) Big Data is a blanket term for the data that are too large in size and complex in nature, and which may be structured, unstructured, or semi-structured, and may also be arriving at high velocity.
+
+      (b) Semi-structured data are that which have a structure but do not fit into the relational database. Semi-structured data are organized, which makes it easier for analysis when compared to unstructured data. JSON and XML are examples of semi-structured data.}
+
+  \end{parts}
+
+\ifanswers \vskip3mm \else  \vskip1cm \fi
+
+  % Q.1.2
+  \question[6] \textbf{Hardware and Architecture}.
+
+  \begin{parts}
+    
+
+    \part What kind of hardware is typically used for big data applications?
+
+    \begin{checkboxes}
+      \choice high-performance supercomputers
+      \CorrectChoice low-cost, commodity hardware
+      \choice dumb terminals
+      \choice floppy disks
+    \end{checkboxes}
+
+    \bigskip
+
+    \part What is ``commodity'' hardware?
+
+    \begin{checkboxes}
+      \choice high-performance supercomputers
+      \choice discarded, second-hand, or recycled hardware
+      \choice hardware used for trading commodities (e.g., gold, silver, soy-beans)
+      \CorrectChoice generic, low-specification, industry-grade hardware
+    \end{checkboxes}
+
+    %% \ifanswers \newpage \fi
+    \bigskip
+
+    \part Which of the following is \textbf{not} a drawback of traditional relational database management system (or RDBMS) when used for big data applications?
+
+    \begin{checkboxes}
+      \choice They do not make it easy to handle massive volumes of unstructured or semi-structured data.
+      \choice They require more processors and memory to scale up to big data applications.
+      \CorrectChoice They are relatively slow when used to perform SQL queries on large structured data tables.
+      \choice They do not make it easy to capture and process unstructured or semi-structured data arriving at high velocity.
+    \end{checkboxes}
+
+    \explain{(a) Big data uses low-cost commodity hardware to make cost-effective solutions.
+
+    (b) Commodity hardware is a low-cost, low performance, and low specification functional hardware with no distinctive features.}
+
+  \end{parts}
+
+
+  %% \ifanswers \vskip1cm \else \newpage \fi
+\newpage %  \vskip5mm
+
+
+  % Q.1.3
+  %% \question[8] \textbf{ETL}.
+  %% \begin{parts}
+    
+  %%   \part The process that corrects errors and inconsistencies is called \textit{data} \underline{\phantom{XXXXXXXXXX}}.
+
+  %%   \begin{oneparcheckboxes}
+  %%     \choice \textit{aggregation}
+  %%     \CorrectChoice \textit{cleaning}
+  %%     \choice \textit{integration}
+  %%     \choice \textit{transformation}
+  %%     \choice \textit{reduction}
+  %%   \end{oneparcheckboxes}
+
+  %%   \explain{The data-cleaning process fills in the missing values, corrects the errors and inconsistencies, and removes redundancy in the data to improve the data quality.}
+
+    %% \part The process of combining data from different sources into a unified data view is called \textit{data}  \underline{\phantom{XXXXXXXXXX}}.
+
+    %% \begin{oneparcheckboxes}
+    %%   \choice \textit{aggregation}
+    %%   \choice \textit{cleaning}
+    %%   \CorrectChoice \textit{integration}
+    %%   \choice \textit{transformation}
+    %%   \choice \textit{reduction}
+    %% \end{oneparcheckboxes}
+
+
+    %% \part Modifying and converting data into a format acceptable for inserting in a database is called \textit{data}  \underline{\phantom{XXXXXXXXXX}}.
+
+    %% \begin{oneparcheckboxes}
+    %%   \choice \textit{aggregation}
+    %%   \choice \textit{cleaning}
+    %%   \choice \textit{integration}
+    %%   \CorrectChoice \textit{transformation}
+    %%   \choice \textit{reduction}
+    %% \end{oneparcheckboxes}
+
+
+  %%   \explain{Data transformation refers to transforming or consolidating the data into an appropriate format that is acceptable by the big data database and converting them into logical and meaningful information for data management and analysis.}
+
+  %%   \part The process of collecting the raw data, transmitting the data to a storage platform and preprocessing them is called \textit{data}  \underline{\phantom{XXXXXXXXXX}}.
+
+  %%   \begin{oneparcheckboxes}
+  %%     \CorrectChoice \textit{aggregation}
+  %%     \choice \textit{cleaning}
+  %%     \choice \textit{integration}
+  %%     \choice \textit{transformation}
+  %%     \choice \textit{reduction}
+  %%   \end{oneparcheckboxes}
+
+
+  %% \end{parts}
+
+  %% \ifanswers  \newpage \else \vskip1cm \fi
+  %% \vskip1cm 
+%\newpage
+
+  % Q.1.4
+  \question[10] \textbf{Programming Paradigms}
+
+  \begin{parts}
+
+    \part Which of the following are programming paradigms? (select three)
+
+    \begin{oneparcheckboxes}
+      \choice currying
+      \CorrectChoice declarative
+      \choice dysfunctional
+      \CorrectChoice functional
+      \CorrectChoice object-oriented
+    \end{oneparcheckboxes}
+
+    \bigskip
+
+    \part Which of the following characteristics are typical of imperative programs.  (select two)
+
+    \begin{checkboxes}
+      \CorrectChoice variables are \textit{mutable}; their values may change or ``mutate''
+      \CorrectChoice for loops are usually preferred in favor of recursive function calls
+      \choice functions are \textit{referentially transparent}
+      \choice functions are ``pure'' (do not have \textit{side-effects})
+    \end{checkboxes}
+
+    \bigskip
+    \part Which of the following characteristics are typical of functional programs.   (select two)
+    \begin{checkboxes}
+      \choice variables are \textit{mutable}; their values may change or ``mutate''
+      \choice for loops are usually preferred in favor of recursive function calls
+      \CorrectChoice functions are \textit{referentially transparent}
+      \CorrectChoice functions are ``pure'' (do not have \textit{side-effects})
+    \end{checkboxes}
+
+  % Q.2.2
+    \bigskip
+  \part By definition, a \textit{higher-order function} is a function which
+  \begin{checkboxes}
+    \choice is passed as an argument to other functions.
+    \choice is returned as output by other functions.
+    \choice is called a higher-order number of times in comparison to ``lower-order'' functions.
+    \choice requires a higher-order amount of time to compute in comparison to ``lower-order'' functions.
+    \CorrectChoice accepts a function (or functions) as input or returns a function (or functions) as output.
+  \end{checkboxes}
+
+  \bigskip
+
+  \part An expression \texttt{e} is called \textit{referentially transparent} provided
+  \begin{checkboxes}
+    \choice when reduced to ``normal form'' \texttt{e} is obvious or ``transparent.''
+    \choice the values of expressions to which \texttt{e} refers are obvious or ``transparent.''
+    \CorrectChoice for all programs \texttt{p}, all occurrences of \texttt{e} in \texttt{p} can be replaced by the result of evaluating \texttt{e} without affecting the meaning of \texttt{p}.
+    \choice none of the above
+  \end{checkboxes}
+
+  \end{parts}
+
+   \newpage
+  %\vskip1cm 
+
+  % Q.2.4
+  \question[9] \textbf{Scala I}
+
+  \begin{parts}
+    \part The main programming paradigms of Scala are which of these? (select two)
+
+    \begin{oneparcheckboxes}
+      \choice currying
+      \choice declarative
+      \choice dysfunctional
+      \CorrectChoice functional
+      \CorrectChoice object-oriented
+    \end{oneparcheckboxes}
+
+    \bigskip
+
+\part What is the result of the following program?
+
+\begin{verbatim}
+  val x = 0
+  def f(y: Int) = y + 1
+  val result = {
+    val x = f(3)
+    x * x
+  } + x
+\end{verbatim}
+
+\bigskip
+
+\begin{oneparcheckboxes}
+  \choice 0
+  \CorrectChoice 16
+  \choice  32
+  \choice it does not type check
+\end{oneparcheckboxes}
+
+\bigskip
+
+    \part Why should we care about writing functions that are ``tail-recursive?''
+
+    \begin{checkboxes}
+      \choice Recursion should be carried out on the tail, not the head.
+      \choice Recursion should be carried out on the head, not the tail.
+      \CorrectChoice They are ``stack-safe''---they help us avoid stack overflows.
+      \choice They are ``disk-safe''---they help us avoid network storage leaks.
+    \end{checkboxes}
+
+  \end{parts}
+
+  \vskip1cm
+
+  % Q.2.5
+  \question[6]
+  %% def sq(x: Double): Option[Double] =
+  %% if (x < 0) None
+  %% else Some(Math.sqrt(x))
+Let \texttt{val X = List(1, 2, 3)}\\
+\phantom{(6 pts)} and \texttt{val Y = List(1, 2, 3)}.
+
+\bigskip
+
+  \begin{parts}
+    \part To what does the expression \texttt{X.map(x => Y.map(y => y - x)))} evaluate?
+
+    \medskip
+    \begin{checkboxes}
+      \choice \texttt{List(0, 0, 0, 0, 0, 0, 0, 0, 0)}
+      \choice \texttt{List(List(0, 0, 0), List(0, 0, 0), List(0, 0, 0))}
+      \choice \texttt{List(0, -1, -2, 1, 0, -1, 2, 1, 0)}
+      \choice \texttt{List(0, 1, 2, -1, 0, 1, -2, -1, 0)}
+      \CorrectChoice \texttt{List(List(0, 1, 2), List(-1, 0, 1), List(-2, -1, 0))}
+    \end{checkboxes}
+
+\bigskip
+    \part To what does the expression \texttt{X.flatMap(x => Y.map(y => y - x)))} evaluate?
+
+    \medskip
+    \begin{checkboxes}
+      \choice \texttt{List(0, 0, 0, 0, 0, 0, 0, 0, 0)}
+      \choice \texttt{List(List(0, 0, 0), List(0, 0, 0), List(0, 0, 0))}
+      \choice \texttt{List(List(0, -1, -2), List(1, 0, -1), List(2, 1, 0))}
+      \CorrectChoice \texttt{List(0, 1, 2, -1, 0, 1, -2, -1, 0)}
+      \choice \texttt{List(List(0, 1, 2), List(-1, 0, 1), List(-2, -1, 0))}
+    \end{checkboxes}
+
+  \end{parts}
+
+  \newpage
+
+  % Q.2.6
+  \question[12] \textbf{Scala II}. The parts below refer to the function\\[8pt]
+  \texttt{def test(x:Bool, y:Int) = if (x) (y + 2)/y else 0}\\[6pt]
+  Let CBN = call-by-name\\[6pt]
+  and CBV = call-by-value.
+
+  %where \texttt{loop()} is an infinite (non-terminating) loop.
+\medskip
+
+  \begin{parts}
+    \part Which strategy evaluates \texttt{test(true, 2)} most efficiently (in the fewest steps)?
+
+    \begin{oneparcheckboxes}
+      \choice CBN % is more efficient
+      \choice CBV % is more efficient
+      \CorrectChoice CBN and CBV require the same number of steps
+      %\choice the program does not terminate
+    \end{oneparcheckboxes}
+
+    \explain{They both perform one addition (\texttt{2 + 2}) and one division (\texttt{4/2}).}
+
+    \bigskip
+
+    \part Which strategy evaluates \texttt{test(true, 1+1)} most efficiently?
+
+    \begin{oneparcheckboxes}
+      \choice CBN %is  more efficient
+      \CorrectChoice CBV %is more efficient
+      \choice CBN and CBV require the same number of steps
+      %\choice the program does not terminate
+    \end{oneparcheckboxes}
+
+    \explain{CBV performs two additions (\texttt{1 + 1} and \texttt{2 + 2}) and one division (\texttt{4/2}), while CBN performs three additions (\texttt{1 + 1} and \texttt{2 + 2} and \texttt{1 + 1} again) and one division (\texttt{4/2}).}
+
+    \bigskip
+
+    \part Which strategy evaluates \texttt{test(false, 2)} most efficiently?
+
+    \begin{oneparcheckboxes}
+      \choice CBV %is more efficient
+      \choice CBN %is more efficient
+      \CorrectChoice CBN and CBV require the same number of steps
+      %\choice the program does not terminate
+    \end{oneparcheckboxes}
+
+
+    \bigskip
+
+    \part Which strategy evaluates \texttt{test(false, 1+1)} most efficiently?
+
+    \begin{oneparcheckboxes}
+      \CorrectChoice CBN %is more efficient
+      \choice CBV %is more efficient
+      \choice CBN and CBV require the same number of steps
+      %\choice the program does not terminate
+    \end{oneparcheckboxes}
+
+    \explain{CBV performs one addition (\texttt{1 + 1}), while CBN performs no operations.}
+
+  \end{parts}
+
+  \vskip1cm
+
+  \question[9] \textbf{Latency and fault-tolerance}.
+
+\medskip
+
+  \begin{parts}
+  
+    \part \textit{Latency} is degradation in performance due to... (select two)
+
+    \begin{checkboxes}
+      \choice a small number of cores in the central processing unit
+      \CorrectChoice slow data transfer across the network or cluster
+      \CorrectChoice shuffling data between different nodes in a cluster
+      \choice stack overflow caused by recursion
+    \end{checkboxes}
+
+    \bigskip
+
+    \part Hadoop achieves fault-tolerance by...
+
+    \begin{checkboxes}
+      \choice using lazy evaluation and garbage collection.
+      \CorrectChoice writing intermediate computations to disk.
+      \choice keeping all data immutable and in-memory.
+      \choice replaying functional transformations over the original (immutable) dataset.
+    \end{checkboxes}
+
+    \bigskip
+
+    \part Spark decreases latency while remaining fault-tolerant by...  (select three)
+
+    \begin{checkboxes}
+      \choice using ideas from imperative programming.
+      \CorrectChoice using ideas from functional programming.
+      \choice discarding data when it's no longer needed.
+      \CorrectChoice keeping all data immutable and in-memory.
+      \CorrectChoice replaying functional transformations over the original (immutable) dataset.
+    \end{checkboxes}
+
+  \end{parts}
+
+  \newpage
+
+  \question[12] \textbf{Transformations and actions}.
+
+  \medskip
+
+  \begin{parts}
+  
+    \part A \textbf{transformation} on an RDD... (select two)
+
+    \begin{checkboxes}
+      \CorrectChoice does not immediately compute a result.
+      \choice immediately computes and returns a result.
+      \CorrectChoice is lazily evaluated.
+      \choice is eagerly evaluated.
+    \end{checkboxes}
+
+    \bigskip
+    \part An \textbf{action} on an RDD... (select two)
+
+    \begin{checkboxes}
+      \choice does not immediately compute a result.
+      \CorrectChoice immediately computes and returns a result.
+      \choice is lazily evaluated.
+      \CorrectChoice is eagerly evaluated.
+    \end{checkboxes}
+
+    \bigskip
+
+    \part After performing a series of transformations on an \texttt{RDD}, which of the following methods would ensure that Spark actually carries out the transformations.
+
+    \begin{oneparcheckboxes}
+      \choice \texttt{mapValues()}
+      \CorrectChoice \texttt{collect()}
+      \choice \texttt{groupBy()}
+      \choice none of these
+    \end{oneparcheckboxes}
+
+    \bigskip
+
+    \part After performing a series of transformations on an \texttt{RDD}, which of the following methods could you use to make sure those transformations are not repeated unnecessarily?
+
+    \begin{oneparcheckboxes}
+      \choice \texttt{save()}
+      \CorrectChoice \texttt{persist()}
+      \choice \texttt{collect()}
+      \choice \texttt{parallelize()}
+    \end{oneparcheckboxes}
+
+    \bigskip
+
+    \part Why does the \texttt{RDD} class have no \texttt{foldLeft} method?
+
+    \begin{checkboxes}
+      \choice \texttt{foldLeft} is not stack-safe.
+      \choice \texttt{foldLeft} is not fault-tolerant.
+      \choice \texttt{foldLeft} only works on \texttt{PairRDD}s.
+      \CorrectChoice \texttt{foldLeft} is not parallelizable.
+      \choice It's not true; the RDD class \textit{does} have a \texttt{foldLeft} method.
+    \end{checkboxes}
+
+    \bigskip
+
+    \part Which method of the \texttt{RDD} class has the same effect as \texttt{foldLeft} and overcomes limitations of the latter?
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice \texttt{aggregate}
+      \choice \texttt{foldRight}
+      \choice \texttt{join}
+    \choice \texttt{leftOuterJoin}
+    \choice \texttt{collect}
+  \end{oneparcheckboxes}
+
+  \end{parts}
+
+\newpage
+
+  \question[12] \textit{Everyday I'm shufflin'}.
+
+  \begin{parts}
+    \part What is shuffling?
+
+    \begin{checkboxes}
+      \choice a method for recovering data after hardware failure
+      \choice the method used to ensure a random number generator is unbiased
+      \choice any movement of data
+      \choice moving data from memory to disk, usually caused by insufficient fast memory
+      \CorrectChoice transferring data between nodes in a cluster, usually in order to complete a computation
+    \end{checkboxes}
+
+    \bigskip
+
+  \part What Spark feature or method can be used to reduce or eliminate shuffling?
+
+  \begin{checkboxes}
+    \choice \textit{fault-tolerance}: use higher quality, fault-tolerant hardware
+    \CorrectChoice \textit{partitioning}: partition an \texttt{RDD} before applying transformations or actions
+  \choice \textit{pre-shuffling}: use a pre-shuffled random number generator
+  \choice \textit{data siloing}: keep the entire RDD on a single node of the cluster
+  \choice \textit{caching}: keep the entire RDD in fast memory on a single node
+  \end{checkboxes}
+
+  \bigskip
+  \part Which transformations on an RDD of type \texttt{RDD[Int]} have we learned about or used in this class?
+
+\begin{oneparcheckboxes}
+\choice \texttt{curry}
+\choice \texttt{foldLeft}
+\choice \texttt{groupByKey}
+\CorrectChoice \texttt{map}
+\choice \texttt{mapValues}
+\end{oneparcheckboxes}
+
+\bigskip
+
+  \part Which transformations on a \textit{pair} RDD of type \texttt{RDD[(Int, String)]} have we learned about or used in this class? (select three)
+
+  \begin{oneparcheckboxes}
+    \choice \texttt{curry}
+    \choice \texttt{foldLeft}
+    \CorrectChoice \texttt{groupByKey}
+    \CorrectChoice   \texttt{map}
+    \CorrectChoice \texttt{mapValues}
+  \end{oneparcheckboxes}
+
+
+\end{parts}
+
+\vskip1cm
+
+\question[6] \textbf{Joins}.  Let \texttt{V} and \texttt{W} be types.  Suppose \texttt{rdd1:~RDD[(Int, V)]} and \texttt{rdd2:~RDD[(Int, W)]} are pair RDDs.
+
+\begin{parts}
+
+  \part What is the type of \texttt{rdd1 join rdd2}.
+
+\begin{checkboxes}
+\choice \texttt{RDD[(Int, V)]}
+\choice \texttt{RDD[(Int, V ⋂ W)]}
+\choice \texttt{RDD[(Int, V))]} if \texttt{rdd1} is larger than \texttt{rdd2}; otherwise, \texttt{RDD[(Int, W))]}
+\CorrectChoice \texttt{RDD[(Int, (V, W)]}
+\choice \texttt{RDD[(Int, (V, Option[W])]}
+\choice \texttt{RDD[(Int, Option[(V, W)])]}
+\end{checkboxes}
+
+\bigskip
+  \part What is the type of \texttt{rdd1 leftOuterJoin rdd2}.
+
+\begin{checkboxes}
+\choice \texttt{RDD[(Int, V)]}
+\choice \texttt{RDD[(Int, V ⋂ W)]}
+\choice \texttt{RDD[(Int, V))]} if \texttt{rdd1} is larger than \texttt{rdd2}; otherwise, \texttt{RDD[(Int, W))]}
+\choice \texttt{RDD[(Int, (V, W)]}
+\CorrectChoice \texttt{RDD[(Int, (V, Option[W])]}
+\choice \texttt{RDD[(Int, Option[(V, W)])]}
+\end{checkboxes}
+\end{parts}
+
+\newpage
+
+\question[12] \textbf{Partitioning}.
+
+
+Consider a Pair RDD with the following keys: 5, 10, 15, 20, 25, 30, 35, 40, 45.
+Suppose we partition this RDD into 3 blocks.
+
+\begin{parts}
+  
+  \part If we use hash partitioning, and if
+  \texttt{hashCode()} is the identity (\texttt{n.hashCode() == n}), then how many key-value pairs will end up in the first block (block 0) of the partition.
+
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \choice 0 
+    \choice 1 
+    \choice 2 
+    \CorrectChoice 3
+    \choice 4 
+    \choice 5
+  \end{oneparcheckboxes}
+
+  \bigskip
+  \part If we use range partitioning with ranges [0, 20], [21, 40], [41, 60], then how many key-value pairs will end up in the first block (block 0) of the partition.
+
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \choice 0 
+    \choice 1 
+    \choice 2 
+    \choice 3
+    \CorrectChoice 4
+    \choice 5
+  \end{oneparcheckboxes}
+
+  \bigskip
+  \part Which strategy results in a more even distribution of the RDD?
+
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice (a)'s hash partitioning
+    \choice (b)'s range partitioning
+    \choice they're equivalent
+  \end{oneparcheckboxes}
+
+\bigskip
+
+\part Which of the following transformations, when performed on a partitioned RDD, will result in an RDD with the same partitioning scheme?
+
+  \begin{oneparcheckboxes}
+    \choice \texttt{map} 
+    \CorrectChoice \texttt{mapValues}
+    \choice \texttt{foldLeft} 
+    \choice \texttt{repartition}
+  \end{oneparcheckboxes}
+
+
+\end{parts}
+
+
+
+\end{questions}
