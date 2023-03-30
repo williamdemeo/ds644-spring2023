@@ -3,3 +3,7 @@
 *.log
 tmp/
 .auctex-auto
+.bloop
+.metals
+.vscode
+target
