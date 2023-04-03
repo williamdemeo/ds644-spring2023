@@ -39,6 +39,15 @@ For example, the [American time use survey data](https://www.kaggle.com/datasets
 
 https://sparkbyexamples.com/spark/sparksession-vs-sparkcontext/
 
+---------------------------
+
+## Spark examples from ds644 lectures
+
+We will be borrowing some examples from Frank Kane's excellent course [Apache Spark with Scala--Hands On with Big Data!][].
+
+To try the examples on your machine, please follow [Frank Kane's instructions][].
+
+--------------------------------
 
 ## Packaging up a Spark project to run on a cluster
 
@@ -249,3 +258,5 @@ EEEEEEEEEEEEEEEEEEEE MMMMMMM             MMMMMMM RRRRRRR      RRRRRR
 
 [Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 [VSCode]: https://code.visualstudio.com
+[Apache Spark with Scala--Hands On with Big Data!]: https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/
+[Frank Kane's instructions]: https://www.sundog-education.com/spark-scala/
