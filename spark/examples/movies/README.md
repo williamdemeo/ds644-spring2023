@@ -38,43 +38,48 @@ You will need...
 
 -  [X] [Scala build tool (sbt)][sbt] ([download link][sbt-1.8.2.zip ]);
 -  [X] [Spark 2.4.8][] ([download link][spark-2.4.8-bin-hadoop2.7.tgz]);
--  [X] [Open JDK 8][], ([download link][openjdk8]);
--  [X] a way to create directories and plain text files on your computer.
+-  [X] [OpenJDK 8][], ([download link][openjdk8]);
 
 If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work, go to 
 https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][] and extract it.
 
-```
-mkdir -p ~/opt
-# ............ download/extract sbt .................
-mkdir -p ~/opt/SBT
-cd ~/opt/SBT
-wget https://github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip 
-unzip sbt-1.8.2.zip
-# ............ download/extract spark .................
-mkdir -p ~/opt/SPARK
-cd ~/opt/SPARK
-wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
-tar xvzf spark-2.4.8-bin-hadoop2.7.tgz
-```
+1. Download/extract [sbt][].
 
-**Note**. The commands below install [Open JDK 8][] on **Linux**.  Other operating systems (e.g., Mac, Windows) require a different 
-jdk binary (e.g., [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg][], [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip][]). For other installation candidates, visit [github.com/adoptium/../jdk8u362-b09][github.com/adoptium].
+   ```
+   mkdir -p ~/opt
+   mkdir -p ~/opt/SBT
+   cd ~/opt/SBT
+   wget https://github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip 
+   unzip sbt-1.8.2.zip
+   ```
 
-```
-# ............ download/extract openjdk8 .................
-mkdir -p ~/opt/JAVA
-cd ~/opt/JAVA
-wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
-tar xvzf OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
-```
+2. Download/extract [Spark][Spark 2.4.8].
 
-Finally, we should set the environment variable `JAVA_HOME` to `~/opt/JAVA/jdk8u362-b09` and make sure `~/opt/JAVA/jdk8u362-b09/bin` is in our PATH.
+   ```
+   mkdir -p ~/opt/SPARK
+   cd ~/opt/SPARK
+   wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
+   tar xvzf spark-2.4.8-bin-hadoop2.7.tgz
+   ```
 
-```
-export JAVA_HOME = $HOME/opt/JAVA/jdk8u362-b09
-export PATH = $HOME/opt/JAVA/jdk8u362-b09/bin:$PATH
-```
+3. Download/extract [OpenJDK 8][].
+
+   The commands here install [OpenJDK 8][] on **Linux**.  Other operating systems (e.g., Mac, Windows) require a different 
+   jdk binary (e.g., [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg][], [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip][]). For other installation candidates, visit [github.com/adoptium/../jdk8u362-b09][github.com/adoptium].
+
+   ```
+   mkdir -p ~/opt/JAVA
+   cd ~/opt/JAVA
+   wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
+   tar xvzf OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
+   ```
+
+   Finally, we should set the environment variable `JAVA_HOME` to `~/opt/JAVA/jdk8u362-b09` and make sure `~/opt/JAVA/jdk8u362-b09/bin` is in our PATH.
+
+   ```
+   export JAVA_HOME = $HOME/opt/JAVA/jdk8u362-b09
+   export PATH = $HOME/opt/JAVA/jdk8u362-b09/bin:$PATH
+   ```
 
 
 ---------------------------------
@@ -340,4 +345,4 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg
 [github.com/adoptium]: https://github.com/adoptium/temurin8-binaries/releases/tag/jdk8u362-b09
 [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip
-[Open JDK 8]: https://openjdk.org/projects/jdk8/
+[OpenJDK 8]: https://openjdk.org/projects/jdk8/
