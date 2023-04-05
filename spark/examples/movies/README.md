@@ -25,6 +25,7 @@ You will need...
 If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work for you, go to 
 https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][], and extract it.
 
+
 ```
 mkdir -p ~/opt
 # ............ download/extract sbt .................
@@ -37,6 +38,17 @@ mkdir -p ~/opt/SPARK
 cd ~/opt/SPARK
 wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
 tar xvzf spark-2.4.8-bin-hadoop2.7.tgz
+```
+
+**Note**. The commands below install openjdk8 on **Linux**.  Other operating systems (e.g., Mac, Windows) require a different jdk binary
+(e.g., [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg][], [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip][]). For other installation candidates, visit [github.com/adoptium/../jdk8u362-b09][github.com/adoptium].
+
+```
+# ............ download/extract openjdk8 .................
+mkdir -p ~/opt/JAVA
+cd ~/opt/JAVA
+wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
+tar xvzf OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
 ```
 
 ----------------------------------
@@ -313,3 +325,7 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 [movielens]: https://files.grouplens.org/datasets/movielens
 [ml-1m.zip]: https://files.grouplens.org/datasets/movielens/ml-1m.zip
 [nixos.wiki/Java]: https://nixos.wiki/wiki/Java
+[openjdk8]: https://adoptium.net/temurin/releases/?version=8
+[OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg
+[github.com/adoptium]: https://github.com/adoptium/temurin8-binaries/releases/tag/jdk8u362-b09
+[OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip
