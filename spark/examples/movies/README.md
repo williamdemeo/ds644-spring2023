@@ -17,16 +17,27 @@ From this tutorial you will learn how to package up a Spark program as a jar fil
 
 You will need...
 
--  [X] [Scala build tool (sbt)][sbt] ([download link][sbt-1.8.2.zip ])
--  [X] [Spark 2.4.8][] ([download link][spark-2.4.8.tgz])
+-  [X] [Scala build tool (sbt)][sbt] ([download link][sbt-1.8.2.zip ]);
+-  [X] [Spark 2.4.8][] ([download link][spark-2.4.8-bin-hadoop2.7.tgz]);
+-  [X] [openjdk8][], the open source Java development kit version 1.8;
 -  [X] a way to create directories and plain text files on your computer.
 
+If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work for you, go to 
+https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][], and extract it.
 
-...that's it!
-
-
-If for some reason the [Spark 2.4.8 download link][spark-2.4.8.tgz] doesn't work for you, go to 
-https://spark.apache.org/downloads.html and find spark-2.4.8.tgz in the [Spark release archives][].
+```
+mkdir -p ~/opt
+# ............ download/extract sbt .................
+mkdir -p ~/opt/SBT
+cd ~/opt/SBT
+wget https://github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip 
+unzip sbt-1.8.2.zip
+# ............ download/extract spark .................
+mkdir -p ~/opt/SPARK
+cd ~/opt/SPARK
+wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
+tar xvzf spark-2.4.8-bin-hadoop2.7.tgz
+```
 
 ----------------------------------
 
@@ -132,7 +143,7 @@ In this next section, we set up a small Spark project.
    
    ```
    cd ~/movies
-   sbt assembly
+   ~/opt/SBT/sbt assembly
    ```
 
    This creates a file called `~/movies/target/scala-2.12/movies-assembly-1.0.0.jar`.
@@ -150,57 +161,38 @@ In this next section, we set up a small Spark project.
 
 ## Step 3: test the program locally
 
-Here we assume you already downloaded and installed [Spark 2.4.8][].
+Here we assume you already downloaded and extracted Spark 2.4.8 (e.g., [spark-2.4.8-bin-hadoop2.7.tgz][]).
 
-If you extracted Spark 2.4.8 in the `SPARK_HOME` directory (e.g., `SPARK_HOME = ~/spark-2.4.8-bin-hadoop2.7`), 
+If you extracted the Spark tgz file in the `SPARK_HOME` directory (e.g., `SPARK_HOME = ~/spark-2.4.8-bin-hadoop2.7`), 
 then you can test the jar file you built above as follows:
     
 ```
 ~/spark-2.4.8-bin-hadoop2.7/bin/spark-submit --executor-memory 1g movies-assembly-1.0.0.jar
 ```
     
-If the job is successful, you should see something like the following in the terminal window:
+If the job is successful, you should see lots of log messages, such as
+
+something like the following in the terminal window:
 
 ```
+23/04/05 02:37:34 WARN Utils: Your hostname, alonzo resolves to a loopback address: 127.0.0.2; using 192.168.1.200 instead (on interface wlp0s20f3)
+23/04/05 02:37:34 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/04/05 02:37:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+23/04/05 02:37:34 INFO SparkContext: Running Spark version 2.4.8
+23/04/05 02:37:34 INFO SparkContext: Submitted application: RatingsCounter
+23/04/05 02:37:34 INFO SecurityManager: Changing view acls to: williamdemeo
+... <output abridged> ...
 ```
 
-Then Spark will compute for about 5 or 10 minutes, after which time you should see the following output.
+Then Spark will compute the number of 1, 2, 3, 4, and 5 star movie ratings, as pairs `(rating, number)`.following output.
 
 ```
-Top 50 similar movies for Star Wars: Episode IV - A New Hope (1977)
-Star Wars: Episode V - The Empire Strikes Back (1980)	score: 0.9897917106566659	strength: 2355
-Raiders of the Lost Ark (1981)	score: 0.9855548278565054	strength: 1972
-Star Wars: Episode VI - Return of the Jedi (1983)	score: 0.9841248359926177	strength: 2113
-Indiana Jones and the Last Crusade (1989)	score: 0.9774440028650038	strength: 1397
-Shawshank Redemption, The (1994)	score: 0.9768332708746131	strength: 1412
-Usual Suspects, The (1995)	score: 0.9766875136831684	strength: 1194
-Godfather, The (1972)	score: 0.9759284503618028	strength: 1583
-Sixth Sense, The (1999)	score: 0.974688767430798	strength: 1480
-Schindler's List (1993)	score: 0.9746820121947888	strength: 1422
-Terminator, The (1984)	score: 0.9745821991816754	strength: 1746
-Back to the Future (1985)	score: 0.9743476892310179	strength: 1845
-Fugitive, The (1993)	score: 0.9740503810950097	strength: 1429
-Princess Bride, The (1987)	score: 0.9737384179609926	strength: 1657
-Matrix, The (1999)	score: 0.9732130645719457	strength: 1908
-Butch Cassidy and the Sundance Kid (1969)	score: 0.9731825975678353	strength: 1048
-Hunt for Red October, The (1990)	score: 0.9731286559518592	strength: 1229
-Casablanca (1942)	score: 0.9730078799612648	strength: 1113
-Saving Private Ryan (1998)	score: 0.9729484985516464	strength: 1709
-Ghostbusters (1984)	score: 0.9726721862046535	strength: 1447
-Die Hard (1988)	score: 0.9724843514829112	strength: 1369
-L.A. Confidential (1997)	score: 0.9722077641949141	strength: 1416
-Toy Story (1995)	score: 0.9721270419610062	strength: 1382
-Stand by Me (1986)	score: 0.9718025936506943	strength: 1212
-Close Encounters of the Third Kind (1977)	score: 0.9717491756795117	strength: 1242
-Monty Python and the Holy Grail (1974)	score: 0.9717238750026624	strength: 1248
-Silence of the Lambs, The (1991)	score: 0.9714472073187363	strength: 1587
-Wizard of Oz, The (1939)	score: 0.9713633100564869	strength: 1346
-Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)	score: 0.9713269232938938	strength: 1149
-One Flew Over the Cuckoo's Nest (1975)	score: 0.9708527915400245	strength: 1125
-Ferris Bueller's Day Off (1986)	score: 0.9705811698208009	strength: 1073
-Godfather: Part II, The (1974)	score: 0.9704073574007531	strength: 1246
-Terminator 2: Judgment Day (1991)	score: 0.9703674024729073	strength: 1889
-E.T. the Extra-Terrestrial (1982)	score: 0.9702456868065551	strength: 1714
+(1,56174)
+(2,107557)
+(3,261197)
+(4,348971)
+(5,226310)
 ```
 
 -------------------------------
@@ -211,17 +203,16 @@ In this section we show how to deploy the jar file we created above in the cloud
 
 ### Sign up for an AWS account
 
-
 https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-connect-ssh-prereqs.html
 
 
 By default, Spark on an EMR cluster is configured to load data files from the
 `/user/hadoop/` directory on the master cluster, so we need to create that directory
-and place `movies.dat` and `ratings.dat` in there.
+and place the `ratings.dat` file in there.
 
 ```
 mkdir /user/hadoop
-cp movies.dat ratings.dat /usr/hadoop
+cp ratings.dat /usr/hadoop
 ```
 
 <!-- ter (e.g., `hdfs://ip-172-31-27-212.us-west-1.compute.internal:8020/user/hadoop/`/user/hadoop/ -->
@@ -316,11 +307,9 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 [Apache Spark with Scala--Hands On with Big Data!]: https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/
 [Frank Kane's instructions]: https://www.sundog-education.com/spark-scala/
 [Spark 2.4.8]: https://archive.apache.org/dist/spark/spark-2.4.8/
-[spark-2.4.8.tgz]: https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8.tgz
+[spark-2.4.8-bin-hadoop2.7.tgz]: https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
 [Spark release archives]: https://archive.apache.org/dist/spark/
 [AWS: create a Spark cluster]: https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-launch.html
 [movielens]: https://files.grouplens.org/datasets/movielens
 [ml-1m.zip]: https://files.grouplens.org/datasets/movielens/ml-1m.zip
-
-
-
+[nixos.wiki/Java]: https://nixos.wiki/wiki/Java
