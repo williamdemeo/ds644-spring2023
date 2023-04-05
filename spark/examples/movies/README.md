@@ -314,6 +314,7 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 [VSCode]: https://code.visualstudio.com
 [Apache Spark with Scala--Hands On with Big Data!]: https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/
 [Frank Kane's instructions]: https://www.sundog-education.com/spark-scala/
+[Spark 2.4.8]: https://archive.apache.org/dist/spark/spark-2.4.8/
 [Spark version 2.4.8]: https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
 [Spark release archives]: https://archive.apache.org/dist/spark/
 [AWS: create a Spark cluster]: https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-launch.html
