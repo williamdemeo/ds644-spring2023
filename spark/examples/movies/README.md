@@ -43,7 +43,7 @@ You will need...
 If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work, go to 
 https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][] and extract it.
 
-1. Download/extract [sbt][].
+1. Download/extract sbt ([sbt-1.8.2.zip ][]).
 
    ```
    mkdir -p ~/opt
@@ -53,7 +53,7 @@ https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.
    unzip sbt-1.8.2.zip
    ```
 
-2. Download/extract [Spark][Spark 2.4.8].
+2. Download/extract Spark ([spark-2.4.8-bin-hadoop2.7.tgz][]).
 
    ```
    mkdir -p ~/opt/SPARK
