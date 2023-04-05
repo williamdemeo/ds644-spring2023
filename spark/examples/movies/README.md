@@ -322,8 +322,6 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
     the `MovieSimilarity-assembly-1.0.jar` file in step 1 above (e.g., the main project directory). (It doesn't really matter where you put
     the files, as long as all three of them are in the same directory.)
 
-## Step 3: test the Spark program locally
-
 
 
 [AWS EMR]: https://aws.amazon.com/emr/
