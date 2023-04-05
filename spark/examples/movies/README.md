@@ -17,15 +17,16 @@ From this tutorial you will learn how to package up a Spark program as a jar fil
 
 You will need...
 
--  [X] [Scala build tool (sbt)][sbt] ([download it!][sbt download])
--  [X] [Spark 2.4.8][]
+-  [X] [Scala build tool (sbt)][sbt] ([download link][sbt-1.8.2.zip ])
+-  [X] [Spark 2.4.8][] ([download link][spark-2.4.8.tgz])
 -  [X] a way to create directories and plain text files on your computer.
+
 
 ...that's it!
 
 
-If for some reason the [Spark 2.4.8 download link][Spark 2.4.8] doesn't work for you, go to 
-https://spark.apache.org/downloads.html and find Spark 2.4.8 in the [Spark release archives][].
+If for some reason the [Spark 2.4.8 download link][spark-2.4.8.tgz] doesn't work for you, go to 
+https://spark.apache.org/downloads.html and find spark-2.4.8.tgz in the [Spark release archives][].
 
 ----------------------------------
 
@@ -308,15 +309,18 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 
 [AWS EMR]: https://aws.amazon.com/emr/
 [sbt]: https://www.scala-sbt.org/
-[sbt download]: https://www.scala-sbt.org/download.html
-
+[sbt-1.8.2.zip]: https://github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip 
+[sbt download page]: https://www.scala-sbt.org/download.html
 [Slack]: https://join.slack.com/t/ds644-bigdata/shared_invite/zt-1mriemcs6-kWEkz0rGCBNutfP79UWkLQ
 [VSCode]: https://code.visualstudio.com
 [Apache Spark with Scala--Hands On with Big Data!]: https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/
 [Frank Kane's instructions]: https://www.sundog-education.com/spark-scala/
 [Spark 2.4.8]: https://archive.apache.org/dist/spark/spark-2.4.8/
-[Spark version 2.4.8]: https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7.tgz
+[spark-2.4.8.tgz]: https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8.tgz
 [Spark release archives]: https://archive.apache.org/dist/spark/
 [AWS: create a Spark cluster]: https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-launch.html
 [movielens]: https://files.grouplens.org/datasets/movielens
 [ml-1m.zip]: https://files.grouplens.org/datasets/movielens/ml-1m.zip
+
+
+
