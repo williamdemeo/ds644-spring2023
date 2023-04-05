@@ -50,6 +50,14 @@ wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b0
 tar xvzf OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz
 ```
 
+Finally, we should set the environment variable `JAVA_HOME` to `~/opt/JAVA/jdk8u362-b09` and make sure `~/opt/JAVA/jdk8u362-b09/bin` is in our PATH.
+
+```
+export JAVA_HOME = $HOME/opt/JAVA/jdk8u362-b09
+export PATH = $HOME/opt/JAVA/jdk8u362-b09/bin:$PATH
+```
+
+
 ----------------------------------
 
 ## Motivation
