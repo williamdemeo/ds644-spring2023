@@ -19,12 +19,11 @@ You will need...
 
 -  [X] [Scala build tool (sbt)][sbt] ([download link][sbt-1.8.2.zip ]);
 -  [X] [Spark 2.4.8][] ([download link][spark-2.4.8-bin-hadoop2.7.tgz]);
--  [X] [openjdk8][], the open source Java development kit version 1.8;
+-  [X] [Open JDK 8][], ([download link][openjdk8]);
 -  [X] a way to create directories and plain text files on your computer.
 
-If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work for you, go to 
-https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][], and extract it.
-
+If for some reason the [Spark 2.4.8 download link][spark-2.4.8-bin-hadoop2.7.tgz] doesn't work, go to 
+https://spark.apache.org/downloads.html, find the file `spark-2.4.8-bin-hadoop2.7.tgz` in the [Spark release archives][] and extract it.
 
 ```
 mkdir -p ~/opt
@@ -40,8 +39,8 @@ wget https://archive.apache.org/dist/spark/spark-2.4.8/spark-2.4.8-bin-hadoop2.7
 tar xvzf spark-2.4.8-bin-hadoop2.7.tgz
 ```
 
-**Note**. The commands below install openjdk8 on **Linux**.  Other operating systems (e.g., Mac, Windows) require a different jdk binary
-(e.g., [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg][], [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip][]). For other installation candidates, visit [github.com/adoptium/../jdk8u362-b09][github.com/adoptium].
+**Note**. The commands below install [Open JDK 8][] on **Linux**.  Other operating systems (e.g., Mac, Windows) require a different 
+jdk binary (e.g., [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg][], [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip][]). For other installation candidates, visit [github.com/adoptium/../jdk8u362-b09][github.com/adoptium].
 
 ```
 # ............ download/extract openjdk8 .................
@@ -329,3 +328,4 @@ The datafile needed for our small example is `u.Download the movielens 1m datase
 [OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_mac_hotspot_8u362b09.pkg
 [github.com/adoptium]: https://github.com/adoptium/temurin8-binaries/releases/tag/jdk8u362-b09
 [OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip]: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_windows_hotspot_8u362b09.zip
+[Open JDK 8]: https://openjdk.org/projects/jdk8/
