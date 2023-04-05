@@ -4,14 +4,33 @@ From this tutorial you will learn how to package up a Spark program as a jar fil
 
 **Contents**
 
-- [Prerequisites](#prerequisites)
 - [Motivation](#motivation)
+- [Prerequisites](#prerequisites)
 - [Step 1: set up a simple Spark project](#step-1-set-up-a-simple-spark-project)
 - [Step 2: build a jar file](#step-2-build-a-jar-file)
 - [Step 3: test the program locally](#step-3-test-the-program-locally)
 - [Step 4: deploy the program on an AWS cluster](#step-4-deploy-the-program-on-an-aws-cluster)
 
 <!-- markdown-toc end -->
+
+----------------------------------
+
+## Motivation
+
+After learning how to write Spark programs that run in the IDE, it is essential that we learn how to package up and deploy 
+our programs so they run independently of an IDE, say, on an [Amazon Web Services (AWS) Elastic Map Reduce (EMR)][AWS EMR] 
+cluster.
+
+The steps described below demonstrate how to build a stand-alone Spark program on a Linux machine.
+If you're not using Linux, it should be easy to infer the analogous steps for your architecture.
+
+In the [next section](#step-1-set-up-a-simple-spark-project) we set up a small Spark project. 
+[After that](#step-2-building-a-jar-file) we demonstrate how to create a jar file containing the main program of our example project. 
+In the [last section](#step-3-test-the-spark-program-locally) we show how to deploy the example in the cloud by sending the jar 
+file to an AWS instance and running it.
+
+
+------------------------------------
 
 ## Prerequisites
 
@@ -58,22 +77,7 @@ export PATH = $HOME/opt/JAVA/jdk8u362-b09/bin:$PATH
 ```
 
 
-----------------------------------
-
-## Motivation
-
-After learning how to write Spark programs that run in the IDE, it is essential that we learn how to package up and deploy 
-our programs so they run independently of an IDE, say, on an [Amazon Web Services (AWS) Elastic Map Reduce (EMR)][AWS EMR] 
-cluster.
-
-The steps described below demonstrate how to build a stand-alone Spark program on a Linux machine.
-If you're not using Linux, it should be easy to infer the analogous steps for your architecture.
-
-In the [next section](#step-1-set-up-a-simple-spark-project) we set up a small Spark project. 
-[After that](#step-2-building-a-jar-file) we demonstrate how to create a jar file containing the main program of our example project. 
-In the [last section](#step-3-test-the-spark-program-locally) we show how to deploy the example in the cloud by sending the jar 
-file to an AWS instance and running it.
-
+---------------------------------
 
 ## Step 1: set up a simple Spark project
 
