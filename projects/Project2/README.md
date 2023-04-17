@@ -312,4 +312,4 @@ If you prefer to use a terminal/command line interface (cli) to test your code, 
 Upload your modified version of the `WikipediaRankings.scala` file to
 Gradescope.
 
-[wikipedia.zip]: https://github.com/williamdemeo/cs644-fall2022/raw/main/projects/Project1/wikipedia.zip
+[wikipedia.zip]: https://github.com/williamdemeo/ds644-spring2023/raw/main/projects/Project2/wikipedia.zip
