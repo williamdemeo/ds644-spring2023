@@ -14,81 +14,55 @@ scalaVersion := "2.13.8"
 // It's possible to define many kinds of settings, such as:
 
 name := "funsets"       // the name of the project
-organization := "njit"   // our team or company
+organization := "edu.njit"   // our team or company
 version := "0.0.1"       // current version of the project
 
 // It's not necessary to define these three settings, unless we intend
 // to publish our code or the compiled binary executable of our project
 // somewhere, like Sonatype, for others to use.
 //
-// Want to use a published library in your project?
-// You can define other libraries as dependencies in your build like this:
+// This sets it up so all tests that end in "Tester" will be run when you run sbt test
+// and all tests that end in "Grader" will run when you run stb Grader / test
+lazy val scalatest = "org.scalatest" %% "scalatest" % "3.2.15"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % Test
+// https://mvnrepository.com/artifact/junit/junit
+// For running the gradescope tests
+lazy val junit = "junit" % "junit" % "4.12"
 
-// Here, `libraryDependencies` is a set of libraries on which our project depends.
-// By using `+=`, we're adding the scalatest library to the set of dependencies
-// that sbt will go and fetch when it starts up.
-//
-// As a result, in any Scala file in our project, we can import classes,
-// objects, etc., from the scalatest library with a regular import.
-// (For examples, see the `*Suite.scala` files in the test directory.)
-//
-// TIP: To find the appopriate syntax required to add a dependency to our
-// project (like "org.scalatest" %% "scalatest" % "3.2.15" in the example above)
-// the following resources are helpful:
-//
-// +  Scaladex: https://index.scala-lang.org/scala
-// +  MVN: https://mvnrepository.com/
-// +  The SBT Reference Manual: https://www.scala-sbt.org/1.x/docs/
-//
-// For example, the line we use to add scalatest to our list of dependencies is found at
-// https://www.scalatest.org/install and
-// https://mvnrepository.com/artifact/org.scalatest/scalatest_3/3.2.15
-// The mvnrepository page is found by entering "scalatest" in the search box at
-// https://mvnrepository.com/
-// then selecting the link 3.2.15, and then selecting the "sbt" tab.
-// After we find the library we want, we just copy/paste the dependency 
-// information into our build file.
-//
-// IMPORTANT NOTE: while build files look _kind of_ like regular Scala, it's
-// important to note that syntax in *.sbt files doesn't always behave like
-// regular Scala. For example, notice in this build file that it's not required
-// to put our settings into an enclosing object or class. Always remember that
-// sbt is a bit different, semantically, than vanilla Scala.
-//
-// ============================================================================
-//
-// Most moderately interesting Scala projects don't make use of the very simple
-// build file style (called "bare style") used in this build.sbt file.
-// Instead they use so-called "multi-project" builds, which makes it possible
-// to have different folders that sbt can be configured differently for.
-// That is, we may wish to have different dependencies or different testing
-// frameworks defined for different parts of our codebase. Multi-project builds
-// make this possible.
-//
-// Here's a quick glimpse of what a multi-project build looks like for this
-// build, with only one "subproject" defined, called `root`:
-//
-// lazy val root = (project in file(".")).
-//   settings(
-//     inThisBuild(List(
-//       organization := "njit",
-//       scalaVersion := "2.13.8"
-//     )),
-//     name := "recursion"
-//   )
-//
-// To learn more about multi-project builds, see the official sbt
-// documentation at http://www.scala-sbt.org/documentation.html
+// https://mvnrepository.com/artifact/net.fornwall.jelf/jelf
+// For understanding elfs and directly running binary files
+lazy val jelf = "net.fornwall.jelf" % "jelf" % "0.4.1"
 
 
-//scalacOptions ++= Seq("-deprecation", "-feature")
-//libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.2" % Test
-//libraryDependencies += "junit" % "junit" % "4.10" % Test
-// "funsets" ->    ProjectDetails(
-//                 packageName = "funsets",
-//                 assignmentPartId = "gBXOL7Rd",
-//                 maxScore = 10d,
-//                 styleScoreRatio = 0.2,
-//                 courseId=currentCourseId),
+lazy val Grader = config("grader") extend(Test)
+
+lazy val depProject = RootProject(uri("git://github.com/ucsb-gradescope-tools/jh61b.git"))
+
+// Library dependencies
+lazy val myProject = Project("funsets", file("."))
+    .dependsOn(depProject)
+    .settings(
+        libraryDependencies += scalatest % Test,
+        libraryDependencies += scalatest % Grader
+    )
+
+/* lazy val root = (project in file("."))
+  .configs(TestAll).configs(Grader).configs(Lab1)
+  .dependsOn(depProject)
+  .settings(
+    inConfig(Grader)(Defaults.testTasks),
+    inConfig(TestAll)(Defaults.testTasks),
+    inConfig(Lab1)(Defaults.testTasks),
+    libraryDependencies += scalatest % Test,
+    libraryDependencies += scalatest % TestAll,
+    libraryDependencies += scalatest % Grader,
+    libraryDependencies += scalatest % Lab1
+    )
+ *//*     ,
+    testOptions in TestAll := Seq(Tests.Filter(allFilter)),
+    // CHANGE THE LINE BELOW FOR EACH LAB!!!! Use the matching filter
+    testOptions in Test := Seq(Tests.Filter(allFilter)),
+    testOptions in Grader := Seq(Tests.Filter(graderFilter)),
+    testOptions in Lab1 := Seq(Tests.Filter(lab1Filter))
+  )
+ */

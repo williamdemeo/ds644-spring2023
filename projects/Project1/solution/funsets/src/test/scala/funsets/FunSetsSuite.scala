@@ -1,6 +1,10 @@
 package funsets
 
 import org.scalatest.funsuite.AnyFunSuite
+import com.gradescope.jh61b.grader.{GradedTest,GradedTestRunnerJSON}
+import org.junit.Test
+import org.scalatest.junit.JUnitSuite
+import org.junit.runner.RunWith
 
 class FunSetsSuite extends AnyFunSuite {
   

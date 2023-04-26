@@ -1,8 +1,8 @@
-# CS 644: Introduction to Big Data (§§ 101, 103, 105)
+# DS 644: Introduction to Big Data (§§ 102, 104)
 
-## Project 2: Time Usage
+## Project 3: Time Usage
 
-**Deadline** TBA
+**Deadline** 5 May 2023 11:59pm
 
 ### Instructions
 
@@ -20,9 +20,9 @@
     should have just `timeusage/build.sbt` and `timeusage/src`; you should NOT
     have `timeusage/timeusage/build.sbt` and `timeusage/timeusage/src`.
 
-4.  Extract the [atussum.csv.bz2][] data file and place it in the
-    `timeusage/src/main/resources/timeusage/` directory.
+4.  Extract the [atussum.csv.bz2][] data file and place it in the `timeusage/src/main/resources/timeusage/` directory.
 
+    (If you don't know how to extract a compressed file with a .bz2 extension, please Google it.)  
 ------------------------
     
 #### The Problem
