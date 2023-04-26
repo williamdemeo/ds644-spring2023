@@ -353,8 +353,7 @@ def timeUsageGroupedTyped(summed: Dataset[TimeUsageRow]): Dataset[TimeUsageRow]
 
 ### How to submit
 
-To submit your solution, post your edited `TimeUsage.scala` file to the Gradescope
-assignment called "Project 2."
+To submit your solution, post your edited `TimeUsage.scala` file to the Gradescope assignment called "Project 3."
 
 
 [timeusage.zip]: https://github.com/williamdemeo/cs644-fall2022/raw/main/projects/Project2/timeusage.zip
