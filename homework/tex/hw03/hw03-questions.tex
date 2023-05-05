@@ -1,0 +1,235 @@
+\noindent \textbf{Instructions}. Answer the following multiple choice questions by selecting the correct choices.
+
+\begin{questions} % Begins the questions environment
+
+  \question \textbf{Principles of (functional) programming}
+
+\begin{parts}
+
+\part Which of the following are programming paradigms? (Select three.)
+
+\begin{oneparcheckboxes}
+\CorrectChoice Declarative
+\CorrectChoice Functional
+\choice Hadoop
+\CorrectChoice Imperative
+\choice Scala
+\end{oneparcheckboxes}
+
+\part
+
+What three concepts characterize a purely functional programming language?
+
+\begin{oneparcheckboxes}
+  \CorrectChoice referential transparency
+\choice input/output
+\CorrectChoice no side effects
+\choice procedural
+\CorrectChoice immutability
+\end{oneparcheckboxes}
+
+\end{parts}
+
+  \question \textbf{Big data properties}.
+
+  \begin{parts}
+    \part In lecture we discussed the meaning of the term ``Big Data.'' We decided that, for simplicity, we will call data ``big'' when it is
+
+    \begin{checkboxes}
+    \choice at least 1Gb
+    \CorrectChoice too big to fit in fast memory (cpu cache + ram) on a single compute node
+    \choice too big to fit in all computer memory (whether fast or slow)
+    \choice too big to be dealt with by traditional data-processing software
+    \end{checkboxes}
+
+\explain{We agreed that a good definition of ``Big Data'' for our purposes is data that is too large to fit in the fast computer memory of a single machine.  Although Wikipedia has an alternative definition---data that is ``too big to be dealt with by traditional data-processing application software''---and while that definition is not wrong, it is not the definition we agreed upon in this class.}
+
+    \part ``Big Data'' concerns which of the following types of data?
+
+\begin{oneparcheckboxes}
+\choice structured
+\choice semi-structured
+\choice unstructured
+\CorrectChoice all of these
+\end{oneparcheckboxes}
+
+\explain{Big Data is a blanket term for the data that are too large in size and complex in nature, and which may be structured, unstructured, or semi-structured, and may also be arriving at high velocity.}
+
+\part JSON and XML are examples of which type of data?
+
+\begin{oneparcheckboxes}
+\choice structured
+\choice unstructured
+\CorrectChoice semi-structured
+\choice none of these
+\end{oneparcheckboxes}
+
+\explain{Semi-structured data are that which have a structure but do not fit into the relational database. Semi-structured data are organized, which makes it easier for analysis when compared to unstructured data. JSON and XML are examples of semi-structured data.}
+
+\part Which two of the following statements are true of unstructured data?
+
+\begin{checkboxes}
+\choice It is generally easier to analyze than other types of data.
+\CorrectChoice It is often referred to as ``messy'' data.
+\choice It fits neatly into a schema.
+\CorrectChoice It is the most widespread type of data.
+\choice It is usually found in tables.
+\end{checkboxes}
+
+\end{parts}
+
+\newpage
+% QUESTION 3
+\question \textbf{Latency and fault-tolerance}.
+
+\begin{parts}
+  
+\part \textit{Latency} is degradation in performance due to...
+
+\begin{checkboxes}
+  \choice a small number of cores in the central processing unit
+  \CorrectChoice slow data transfer across the network or cluster
+  \CorrectChoice shuffling data between different nodes in a cluster
+  \choice failure of one or more nodes in the cluster
+  \choice stack overflow caused by recursion
+\end{checkboxes}
+
+\part Hadoop achieves fault-tolerance by...
+
+\begin{checkboxes}
+  \choice using lazy evaluation and garbage collection.
+  \CorrectChoice writing intermediate computations to disk.
+  \choice keeping all data immutable and in-memory.
+  \choice replaying functional transformations over the original (immutable) dataset.
+\end{checkboxes}
+
+\part Spark decreases latency while remaining fault-tolerant by...
+
+\begin{checkboxes}
+  \choice using ideas from imperative programming.
+  \CorrectChoice using ideas from functional programming.
+  \choice discarding data when it's no longer needed.
+  \CorrectChoice keeping all data immutable and in-memory.
+  \CorrectChoice replaying functional transformations over the original (immutable) dataset.
+\end{checkboxes}
+
+\end{parts}
+
+\newpage
+
+% QUESTION 4
+\question \textbf{Transformations and actions}.
+
+\begin{parts}
+  
+\part In Spark a \textbf{transformation} on an RDD...
+
+\begin{checkboxes}
+  \choice is eagerly evaluated.
+  \CorrectChoice is lazily evaluated.
+  \choice immediately computes and returns a result.
+  \CorrectChoice does not immediately compute a result.
+  \CorrectChoice usually returns another RDD (once it's evaluated).
+\end{checkboxes}
+
+\part In Spark an \textbf{action} on an RDD...
+
+\begin{checkboxes}
+  \CorrectChoice is eagerly evaluated.
+  \choice is lazily evaluated.
+  \CorrectChoice immediately computes and returns a result.
+  \choice does not immediately compute a result.
+  \choice always returns another RDD (once it's evaluated).
+\end{checkboxes}
+
+
+\part After performing a series of transformations on an \texttt{RDD}, which of the following methods could you use to make sure those transformations are not repeated (e.g., on each iteration of an algorithm)?
+
+\begin{checkboxes}
+  \choice \texttt{save}
+  \CorrectChoice \texttt{persist}
+  \choice \texttt{memoize}
+  \choice There is no such method because of the JVM's garbage collection mechanism.
+\end{checkboxes}
+
+
+\part Why does Spark's \texttt{RDD} class not have a \texttt{foldLeft} method?
+
+\begin{checkboxes}
+  \choice \texttt{foldLeft} can only be performed on lists of Boolean values.
+  \choice \texttt{foldLeft} doesn't work on immutable collections.
+   \choice \texttt{foldLeft} is not stack-safe.
+   \choice \texttt{foldLeft} is not fault-tolerant.
+   \CorrectChoice \texttt{foldLeft} is not parallelizable.
+\end{checkboxes}
+
+\part Why is available in Spark's \texttt{RDD} class that overcomes the limitation of \texttt{foldLeft} mentioned in the previous part of this exercise?
+
+\begin{oneparcheckboxes}
+  \CorrectChoice \texttt{aggregate}
+  \choice \texttt{fold}
+  \choice \texttt{foldLeft}
+   \choice \texttt{join}
+   \choice \texttt{leftOuterJoin}
+\end{oneparcheckboxes}
+
+\end{parts}
+
+\newpage
+
+% QUESTION 5
+\question \textbf{Read the docs}.  Navigate to the Spark API documentation at
+\\[4pt]
+\url{https://spark.apache.org/docs/3.3.1/api/scala/org/apache/spark/index.html}
+\\[4pt]
+Enter ``RDD'' in the search box and select \texttt{RDD} from the results that appear on the left.
+
+\begin{parts}
+  
+\part Scroll down the resulting \texttt{RDD} API documentation page and find the \texttt{cache()} method.  What does it say?
+
+\begin{checkboxes}
+\CorrectChoice Persist this RDD with the default storage level (\verb!MEMORY_ONLY!).
+\choice Mark the RDD as non-persistent, and remove all blocks for it from memory and disk.
+\choice Set this RDD's storage level to persist its values across operations after the first time it is computed.
+\choice Save this RDD as a SequenceFile of serialized objects.
+\end{checkboxes}
+
+\part On the \texttt{RDD} API doc page, find the version of \texttt{persist} that takes an argument:\\
+\texttt{def persist(newLevel:~StorageLevel)}.  What does it say?
+
+\begin{checkboxes}
+\choice Persist this RDD with the default storage level (\verb!MEMORY_ONLY!).
+\choice Mark the RDD as non-persistent, and remove all blocks for it from memory and disk.
+\CorrectChoice Set this RDD's storage level to persist its values across operations after the first time it is computed.
+\choice Save this RDD as a SequenceFile of serialized objects.
+\end{checkboxes}
+
+
+\part On the \texttt{RDD} API doc page, find the \texttt{unpersist} method.  What does it say?
+
+\begin{checkboxes}
+\choice Persist this RDD with the default storage level (\verb!MEMORY_ONLY!).
+\CorrectChoice Mark the RDD as non-persistent, and remove all blocks for it from memory and disk.
+\choice Set this RDD's storage level to persist its values across operations after the first time it is computed.
+\choice Save this RDD as a SequenceFile of serialized objects.
+\end{checkboxes}
+
+
+\part What's the difference between the \texttt{sample} and \texttt{takeSample} methods of the \texttt{RDD} class?
+
+\begin{checkboxes}
+%% \choice \texttt{sample} is a transformation (lazily evaluated) while \texttt{takeSample} is an action (eagerly evaluated).
+\choice \texttt{sample} always uses a with-replacement sampling method, while \texttt{takeSample} always samples without replacement.
+\CorrectChoice \texttt{sample} returns an \texttt{RDD}, while \texttt{takeSample} returns an \texttt{Array}.
+\CorrectChoice The second argument specifies the number of samples desired either as a fraction of the size of the RDD (\texttt{sample}) or as an absolute number (\texttt{takeSample}).
+\choice There is no difference; they are just two different names one can use to invoke the same function.
+\end{checkboxes}
+
+\end{parts}
+
+
+
+
+\end{questions}
+

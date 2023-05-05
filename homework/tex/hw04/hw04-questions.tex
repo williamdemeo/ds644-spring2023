@@ -1,0 +1,331 @@
+\noindent \textbf{Instructions}. Answer the following multiple choice questions by selecting all correct choices.
+
+\begin{questions}
+
+  % QUESTION 1
+\question[4] \textbf{Shuffling}.
+
+\begin{parts}
+  \part What is \textit{shuffling}?
+
+  \begin{checkboxes}
+  \choice a method for recovering data after hardware failure
+  \choice the method used to ensure a random number generator is unbiased
+  \choice any movement of data
+  \choice moving data from memory to disk, usually caused by insufficient fast memory
+  \CorrectChoice transferring data between nodes in a cluster, usually in order to complete a computation
+  \end{checkboxes}
+
+  \part How can shuffling sometimes be reduced or avoided using Spark?
+
+  \begin{checkboxes}
+  \choice use higher quality, fault-tolerant hardware
+  \choice use a pre-shuffled random number generator
+  \choice avoid algorithms that process the entire data set in favor of algorithms that only need a small subset of it
+  \choice use only fast memory, eliminating all spinning disks from the network
+  \CorrectChoice partition an \texttt{RDD} before applying transformations or actions that cause shuffling
+  \end{checkboxes}
+
+\end{parts}
+
+% QUESTION 2
+\question \textbf{Partitions and Partitioning}
+
+\begin{parts}  % QUESTION 1.1
+
+  \part Given a pair RDD (of key-value pairs), when we group values with the same key Spark collects key-value pairs with the same key on the same machine of our cluster.
+
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice True  \choice False
+  \end{oneparcheckboxes}
+
+  \medskip
+
+  \part By default, Spark uses range partitioning to determine which key-value pair should be sent to which machine.
+
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \choice True      \CorrectChoice False
+  \end{oneparcheckboxes}
+
+  \medskip
+
+  \part Suppose we partition an RDD into a number of blocks.  From the following statements, select the two that are true.
+
+  \smallskip
+
+  \begin{checkboxes}
+    \choice  A single block of the partition may be distributed across multiple machines in the cluster.
+    \CorrectChoice  A block of the partition is assigned to at most one machine of the cluster.
+    \choice  At least one block of the partition is assigned to every machine in the cluster.
+    \choice  At most one block of the partition is assigned to every machine in the cluster.
+    \CorrectChoice  More than one block of the partition may be assigned to the same machine in the cluster.
+  \end{checkboxes}
+\end{parts}
+
+\newpage
+
+% QUESTION 3
+\question
+
+Consider a Pair RDD, with keys [8, 23, 39, 40, 97], and suppose we want to partition these data into 4 blocks.
+
+Using hash partitioning with the identity as \texttt{hashCode()} function (\texttt{n.hashCode() == n}), check the boxes next to the numbers assigned to the given partition block.
+
+\medskip
+\begin{parts}
+
+    \part block 0:
+    \begin{oneparcheckboxes}
+      \CorrectChoice  8
+      \choice  23
+      \choice  39
+      \CorrectChoice  40
+      \choice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 1:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \choice  23
+      \choice  39
+      \choice  40
+      \CorrectChoice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 2:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \choice  23
+      \choice  39
+      \choice  40
+      \choice  97
+      \CorrectChoice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 3:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \CorrectChoice  23
+      \CorrectChoice  39
+      \choice  40
+      \choice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+  \end{parts}
+
+  \bigskip
+
+% QUESTION 4
+\question
+
+Consider a Pair RDD, with keys [8, 23, 39, 40, 97], and suppose we want to partition these data into 4 blocks.
+
+Using range partitioning with ranges [0, 20], [21, 40], [41, 60], [61, 100], check the boxes next to the numbers assigned to the given partition block.
+
+  \medskip
+
+  \begin{parts}
+
+    \part block 0:
+    \begin{oneparcheckboxes}
+      \CorrectChoice  8
+      \choice  23
+      \choice  39
+      \choice  40
+      \choice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 1:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \CorrectChoice  23
+      \CorrectChoice  39
+      \CorrectChoice  40
+      \choice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 2:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \choice  23
+      \choice  39
+      \choice  40
+      \choice  97
+      \CorrectChoice  none
+    \end{oneparcheckboxes}
+
+    \medskip
+
+    \part block 3:
+    \begin{oneparcheckboxes}
+      \choice  8
+      \choice  23
+      \choice  39
+      \choice  40
+      \CorrectChoice  97
+      \choice  none
+    \end{oneparcheckboxes}
+
+  \end{parts}
+
+
+
+\bigskip
+
+% QUESTION 5
+\question  Which strategy would result in a more balanced distribution of the data across the partition?
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice hash partitioning
+    \choice range partitioning
+  \end{oneparcheckboxes}
+
+  \explain{With both strategies, three out of four blocks are occupied.  However, with range partitioning, block 1 has 3 elements, which is 3 times larger than the next biggest block, whereas, with hash partitioning, blocks 0 and 3 each have 2 elements, which makes them equal in size and 2 times larger than the next biggest block (block 1).  Each block of a partition is assigned to a single machine in the cluster. If, in addition, we assume that
+  \begin{itemize}
+  \item no two blocks reside on the same machine, and
+  \item the amount of work done by each machine is proportional to the amount of data assigned to that machine,
+  \end{itemize}
+  then it should be clear that, for the present example, hash partitioning will result in a more even distribution of work among machines in the cluster.}
+
+
+
+\newpage
+
+
+% QUESTION 6
+\question
+
+\begin{parts}
+
+  \part %QUESTION 6.1
+
+  Which method can we use to determine whether Spark recognizes that a transformation or action will result in shuffling?
+
+  \begin{oneparcheckboxes}
+    \choice \texttt{debugDAG}
+    \choice \texttt{isShuffled}
+    \choice \texttt{showSchema}
+    \choice \texttt{showExecutionPlan}
+    \CorrectChoice \texttt{toDebugString}
+  \end{oneparcheckboxes}
+
+
+  \part %QUESTION 6.2
+
+  How data is initially partitioned and arranged on the cluster doesn't matter, since Spark will always re-arrange your data to avoid shuffling.
+
+  \begin{oneparcheckboxes}
+    \choice True
+    \CorrectChoice False
+  \end{oneparcheckboxes}
+
+
+  \part %QUESTION 6.3
+
+  \texttt{reduceByKey} running on a pre-partitioned ROD will computed values locally, requiring only the final reduced values to
+  be sent from workers to the driver.
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice True
+    \choice False
+  \end{oneparcheckboxes}
+
+  \part %QUESTION 6.4
+
+  \texttt{join} called on two RDDs that are pre-partitioned with the same partitioner and cached on the same node will cause
+  the join to be computed locally, with no shuffling across the network.
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice True
+    \choice False
+  \end{oneparcheckboxes}
+
+
+  \part %QUESTION 6.5
+
+  Suppose algorithm \textbf{A} joins two RDDs and then performs a filter on the result while algorithm \textbf{B} performs a filter on the two RDDs and then joins the results.  Assume the two algorithms obtain the same result.  In general, which algorithm do you expect will cause less data shuffling?
+
+  \begin{oneparcheckboxes}
+    \choice \textbf{A}
+    \CorrectChoice \textbf{B}
+  \end{oneparcheckboxes}
+
+
+\end{parts}
+
+\bigskip
+
+%QUESTION 7
+\question
+Answer the following parts by typing in the spaces provided.  Select from among the following words or phrases: ``at most one,'' ``multiple,'' ``fast,'' ``slow,'' ``some,'' or ``none.''
+
+\medskip
+\begin{parts}
+
+  \part
+
+  In a \textit{narrow dependency}, each block of the parent RDD may be used by \fillin[at most one] block(s) of the child RDD.
+  \medskip
+
+  Narrow dependencies are \fillin[fast] since they require \fillin[none] of the data to be shuffled.
+
+  \medskip
+  \part
+
+  In a \textit{wide dependency}, each block of the parent RDD may be used by \fillin[multiple] block(s) of the child RDD.
+
+  \medskip
+  Wide dependencies are \fillin[slow] since they require \fillin[some] of the data to be shuffled.
+
+\end{parts}
+
+\question % QUESTION 8
+\begin{parts}
+  \part % QUESTION 8.1
+  The \textit{query optimizer} of Spark SQL is called
+  \smallskip
+
+  \begin{oneparcheckboxes}
+    \CorrectChoice Catalyst
+    \choice Cobalt
+    \choice Map Reduce
+    \choice Platinum
+    \choice Tungsten
+  \end{oneparcheckboxes}
+
+
+  \part % QUESTION 8.2
+  The \textit{off-heap serializer} of Spark SQL is called
+
+  \smallskip
+  \begin{oneparcheckboxes}
+    \choice Catalyst
+    \choice Cobalt
+    \choice Map Reduce
+    \choice Platinum
+    \CorrectChoice Tungsten
+  \end{oneparcheckboxes}
+
+\end{parts}
+
+
+\end{questions}
