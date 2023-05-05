@@ -1,6 +1,5 @@
-%%% Uncomment only one of the next two lines (depending on whether you want the answers printed)
-\documentclass[fleqn,12pt]{exam}
-%\documentclass[answers,addpoints,12pt]{exam}
+%\documentclass[fleqn,12pt]{exam}               % use this for no answers
+\documentclass[answers,addpoints,12pt]{exam}  % use this for answers
 
 \usepackage[usenames, dvipsnames]{color} % defines a new color
 % \definecolor{SolutionColor}{rgb}{0.8,0.9,1} % light blue
@@ -285,9 +284,6 @@
 
 
 
-
-
-
 \newcommand{\figscl}{.5}
 \newcommand{\tf}[1][{}]{%
   \fillin[#1][0.25in]%
@@ -311,9 +307,5 @@
 \fi
 
 \newcommand\myheader{%
-\noindent {\bf \coursename: \assignment}\hfill \ifanswers {\bf ANSWERS} \hfill {\bf \assignment} 
-%% \else  % \hfill Due \duedate 11:59pm}
-%% \\[5mm]
-%% Name: \underline{\phantom{XXXXXXXXXXXXXXXXXXXX}} \hfill Student ID: \underline{\phantom{XXXXXXXXXXXX}}
-\fi%
+  \noindent {\bf \coursename: \assignment}\hfill \ifanswers {\bf ANSWERS} \hfill {\bf \assignment} \fi%
 }
