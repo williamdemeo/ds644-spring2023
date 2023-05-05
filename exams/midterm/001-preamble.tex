@@ -1,0 +1,282 @@
+%! TEX root = **/000-main.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX preamble, load in 000-main.tex with: \input{preamble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENTCLASS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% IF ANSWERS:
+        %\documentclass[answers,fleqn,addpoints,12pt]{exam}
+
+%% ELSEIF NO ANSWERS:
+        \documentclass[fleqn,addpoints,12pt]{exam}
+
+%% ELSEIF NOT AN EXAM:
+        %\documentclass[12pt, oneside]{article}
+
+%% ELSEIF DEBUGGING OVERFULLS:
+        %\documentclass[draft, 12pt, oneside]{article}
+        %\usepackage[showframe, a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+%% ENDIF
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGE LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage[T1]{fontenc}
+        \usepackage{fontspec}
+        \usepackage{microtype}
+        \setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LANGUAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage{polyglossia}
+        %\setdefaultlanguage{english}
+        %\setotherlanguages{spanish,catalan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage[backend=biber,style=numeric]{biblatex}
+        %\DeclareNameAlias{default}{family-given}
+        %\addbibresource{biblio.bib}
+        %\usepackage{fvextra}        % Req by minted (must load before csquotes)
+        %\usepackage{csquotes}       % For bibliography quotations
+        %\DeclareQuoteAlias{spanish}{catalan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COMMON
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage{color, xcolor}     % more colors
+        \usepackage{graphicx}   % graphics
+        \graphicspath{{./figures/}}
+        \usepackage{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MATHS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage{mathtools}                         % amsmath + more
+        \usepackage{amsthm}                            % Theorem enviroment
+        \usepackage{amssymb}                           % More symbols
+        \usepackage{amstext}                           % Text inside mathenv
+        %\usepackage{relsize}                           % Bigger math with mathlarger{___}
+        %\usepackage{nicefrac}                          % nice fractions in one line
+        %\usepackage{IEEEtrantools}                     % Complex equation arrays
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% REFERENCES (load order is important)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage{varioref}                          % reference far away (1)
+        \usepackage[colorlinks = true]{hyperref}       % links in references (2)
+        \usepackage{cleveref}                          % smart references (3)
+
+        %% Hyperref configuration so that it doesn't contrast so much colorlinks.
+        \hypersetup{
+           linkcolor={black},
+           citecolor={black},
+           %linkcolor={red!50!black},
+           %citecolor={blue!50!black},
+           urlcolor={blue!80!black}
+        }
+        \usepackage[bottom]{footmisc}                  % Footnotes at bottom of page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIGURES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage[export]{adjustbox}               % Adjust table size
+        \usepackage{float}                             % Force tables and images position (H and H!)
+        %\usepackage{wrapfig}                         % Wrap images like in HTML
+        \usepackage[justification=centering]{caption}
+        %\usepackage{subcaption}                     % Subfigures
+        %\usepackage[framemethod=tikz]{mdframed}     % Custom frames
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage{colortbl, booktabs} % Better tables
+        %\usepackage{tabularx}
+        %\usepackage{longtable} % Multiple page table (does not work with tabularx)
+        \usepackage{xltabular, colortbl, booktabs} % longtable + tabularx (has bug with booktabs: fix below)
+
+        % Split cell in lines and more formating options inside table
+        \usepackage{array, multirow, multicol, makecell}
+
+        % bug fix for booktabs + xltabular incompatibility
+        \makeatletter
+        \def\@BTrule[#1]{%
+          \ifx\longtable\undefined
+            \let\@BTswitch\@BTnormal
+          \else\ifx\hline\LT@hline
+            \nobreak
+            \let\@BTswitch\@BLTrule
+          \else
+             \let\@BTswitch\@BTnormal
+          \fi\fi
+          \global\@thisrulewidth=#1\relax
+          \ifnum\@thisruleclass=\tw@\vskip\@aboverulesep\else
+          \ifnum\@lastruleclass=\z@\vskip\@aboverulesep\else
+          \ifnum\@lastruleclass=\@ne\vskip\doublerulesep\fi\fi\fi
+          \@BTswitch}
+        \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TIKZ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage{tikz}
+        %\usetikzlibrary{arrows}
+        %\usetikzlibrary{scopes}
+        %\usetikzlibrary{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MINTED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \usepackage{minted}
+        \definecolor{codeBg}{HTML}{FFFDE7}
+        \setminted{
+            %style=pastie,
+            frame=lines,
+            framesep=3mm,
+            linenos,
+            breaklines=true,
+            encoding=utf8,
+            fontsize=\footnotesize,
+            bgcolor=codeBg
+        }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXAM MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        % Create a True False question format
+        \newcommand*{\TrueFalse}[1]{%
+          \ifprintanswers
+            \ifthenelse{\equal{#1}{T}}{\textbf{TRUE}\hspace*{14pt}False}{True\hspace*{14pt}\textbf{FALSE}}
+          \else
+            {True}\hspace*{20pt}False
+          \fi
+        }
+
+        %% The following code is based on an answer by Gonzalo Medina
+        %% http://tex.stackexchange.com/a/13106/39194
+        \newlength\TFlengthA
+        \newlength\TFlengthB
+        \settowidth\TFlengthA{\hspace*{1.16in}}
+        \newcommand\TFQuestion[2]{%
+          \setlength\TFlengthB{\linewidth}
+          \addtolength\TFlengthB{-\TFlengthA}
+          \parbox[t]{\TFlengthB}{#2}
+          \parbox[t]{\TFlengthA}{\TrueFalse{#1}}}
+
+        \newtheorem*{answer}{{\bf Answer}}
+        \newtheorem*{answers}{{\bf Answers}}
+        \newtheorem*{explanation}{{\bf Explanation}}
+
+        %% Make available "ifanswers" macro.
+        \makeatletter    % change catcode of @ to 11.
+        \newif\ifanswers
+        \@ifclasswith{exam}{answers}{\answerstrue}{\answersfalse}
+        \makeatother     % change catcode of @ to 12
+
+        \pagestyle{foot}
+        \ifanswers
+          \usepackage{background}
+          \backgroundsetup{color=black,opacity=.25,scale=2,
+            contents={\textsc{FOR PERSONAL USE ONLY -- DO NOT DISTRIBUTE}}}
+        \else
+          %%% Running footer will have a space for page score (if this is not the solution key)
+          \runningfooter{}{}{Score for this page: \makebox[1in]{\hrulefill} out of \pointsonpage{\thepage}}
+        \fi
+
+        \newcommand\myheader{%
+          \noindent {\bf \coursename : \semester}\hfill \ifanswers {\bf ANSWERS} \hfill {\bf \assignment}
+          \else {\bf \assignment \hfill Due \duedate 11:59pm}
+          \\[5mm]
+          Name: \underline{\phantom{XXXXXXXXXXXXXXXXXXXX}} \hfill Student ID: \underline{\phantom{XXXXXXXXXXXX}}
+          \fi%
+        }
+        \checkboxchar{$\Box$}% \renewcommand{\questionshook}{%
+
+        \renewcommand{\solutiontitle}{\noindent\textbf{Answer: }}
+        %% How to print correct answer choices:
+        \CorrectChoiceEmphasis{\itshape\bfseries} %% <-- bold italics
+
+        %% How to typeset the points information shown for each question.
+        % \pointsinmargin
+        \pointpoints{pt}{pts}
+        %\marginpointname{pts}
+        %\marginbonuspointname{pts}
+
+
+        \newcommand\explain[1]{%
+          \ifanswers
+          \begin{EnvUplevel}
+            {\small \underline{Explanation}. #1}
+          \end{EnvUplevel}
+          \else \fi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CUSTOM COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        % empty whitepage without numbering
+        \newcommand{\whitepage}{
+            \clearpage\thispagestyle{empty}\addtocounter{page}{-1} \newpage \clearpage
+        }
+
+        % scratch page which could be added at end of exam
+        \newcommand{\scratchpage}{%
+          \clearpage\thispagestyle{empty}
+          \addtocounter{page}{-1} \newpage
+          % for a blank page (no "scratch" header at top), comment the next line
+          \begin{center} -- scratch -- \end{center}
+          \clearpage
+        }
+
+
+        % Add command before appendix section for page numbering: A-1
+        \newcommand{\appendixpagenumbering}{
+            \break
+            \pagenumbering{arabic}
+            \renewcommand{\thepage}{\thesection-\arabic{page}}
+        }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CUSTOM MATH OPERATORS (functions not in italic in math mode)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\DeclareMathOperator{\arcsec}{arcsec}
+        %\DeclareMathOperator{\arccot}{arccot}
+        %\DeclareMathOperator{\arccsc}{arccsc}
+        %\DeclareMathOperator{\cis}{cis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MISC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %\usepackage{datetime} % Customize date
+        %\monthyeardate\today gives the date without the day
+        %\newdateformat{monthyeardate}{\monthname[\THEMONTH], \THEYEAR}

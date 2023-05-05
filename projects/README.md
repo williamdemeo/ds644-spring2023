@@ -15,10 +15,8 @@ See the project description README file to determine which files you should subm
 
 ### [Project 0: Recursion (basic Scala set up and recursive functions)](https://github.com/williamdemeo/ds644-spring2023/tree/main/projects/Project0)
 
-### Project 1: Functional and Object Oriented Sets (not yet released)
+### [Project 1: Functional and Object Oriented Sets](https://github.com/williamdemeo/ds644-spring2023/tree/main/projects/Project1)
 
-### Project 2: TBD
+### [Project 2: RDDs (Wikipedia)](https://github.com/williamdemeo/ds644-spring2023/tree/main/projects/Project2)
 
-### Project 3: RDDs (Wikipedia)
-
-### Project 4: DataFrames and Datasets (TimeUsage)
+### [Project 3: DataFrames and Datasets (TimeUsage)](https://github.com/williamdemeo/ds644-spring2023/tree/main/projects/Project3)
