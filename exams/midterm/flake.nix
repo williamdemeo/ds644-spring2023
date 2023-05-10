@@ -45,7 +45,7 @@
           '';
           installPhase = ''
             mkdir -p $out
-            cp ./exams/midterm/midterm.pdf ./exams/midterm/midterm-SOLUTIONS.pdf $out/
+            mv midterm.pdf midterm-SOLUTIONS.pdf $out/
           '';
         };
       };
