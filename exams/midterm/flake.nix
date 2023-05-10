@@ -18,37 +18,32 @@
             latex-bin
             latexmk
             exam
-#               framed
-#               titlesec
-#               cleveref
+            framed
+            titlesec
+            cleveref
             multirow
-#               wrapfig
-#               tabu
-#               threeparttable
-#               threeparttablex
-#               makecell
-#               environ
-#               # biblatex
-#               # biber
-#               fvextra
-#               upquote
-#               catchfile
-#               xstring
-#               csquotes
-#               minted
-#               dejavu
+            wrapfig
+            tabu
+            threeparttable
+            threeparttablex
+            makecell
+            environ
+              # biblatex
+              # biber
+            fvextra
+            upquote
+            catchfile
+            xstring
+            csquotes
+            minted
+            dejavu
             comment
-#               footmisc
-#               xltabular
+            footmisc
+            xltabular
             ltablex
             background
             everypage
             ;
-#           })
-#           which
-#           python39Packages.pygments
-#         ];
-
       };
     in rec {
       packages = {
