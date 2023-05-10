@@ -43,6 +43,7 @@
             ltablex
             background
             everypage
+            pygmentex
             ;
       };
     in rec {
