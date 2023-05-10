@@ -1,0 +1,133 @@
+%%% Uncomment only one of the next two lines (depending on whether you want the answers printed)
+\documentclass[answers,fleqn,addpoints,12pt]{exam}
+
+% \usepackage[usenames, dvipsnames]{color} % defines a new color
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Answer: }}
+%% How to print correct answer choices:
+\CorrectChoiceEmphasis{\itshape\bfseries} %% <-- bold italics
+\newcommand\coursename{DS 644}
+\newcommand\semester{Spring 2023}
+
+% \pointsinmargin
+\pointpoints{pt}{pts}
+% \marginpointname{pts}
+% \marginbonuspointname{pts}
+
+\makeatletter
+\newif\ifanswers
+\@ifclasswith{exam}{answers}{\answerstrue}{\answersfalse}
+\makeatother
+\newcommand{\scratchpage}{%
+  \ifanswers % do nothing
+  \else \newpage \thispagestyle{empty} \begin{center} -- scratch -- \end{center} \fi}
+
+%% Change geometry if you want:
+\usepackage[top=1cm, left=2cm,right=2cm,bottom=1cm]{geometry}%
+
+\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{unixode}
+\newtheorem*{answer}{{\bf Answer}}
+\newtheorem*{answers}{{\bf Answers}}
+\newtheorem*{explanation}{{\bf Explanation}}
+
+% Create a True False question format
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+    \ifthenelse{\equal{#1}{T}}{%
+        \textbf{TRUE}\hspace*{14pt}False
+    }{
+        True\hspace*{14pt}\textbf{FALSE}
+    }
+\else
+    {True}\hspace*{20pt}False
+\fi
+} 
+%% The following code is based on an answer by Gonzalo Medina
+%% http://tex.stackexchange.com/a/13106/39194
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{1.16in}}
+\newcommand\TFQuestion[2]{%
+    \setlength\TFlengthB{\linewidth}
+    \addtolength\TFlengthB{-\TFlengthA}
+    \parbox[t]{\TFlengthB}{#2}
+    \parbox[t]{\TFlengthA}{\TrueFalse{#1}}}
+
+
+
+%% Some of my own personal favoriate macros... (remove these if you want)
+\renewcommand{\vec}[1]{\mathbf{#1}}
+%% To make a boldface vector, use backslash v in front of the 
+%% letter and add a new command for that letter here or in 
+%% the macros.tex file:
+\newcommand\im{\ensuremath{\operatorname{im}}}
+\newcommand\rank{\ensuremath{\operatorname{rank}}}
+\newcommand\nullity{\ensuremath{\operatorname{nullity}}}
+\newcommand{\join}{\ensuremath{\vee}}
+\newcommand{\meet}{\ensuremath{\wedge}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\<}{\ensuremath{\langle}}
+\renewcommand{\>}{\ensuremath{\rangle}}
+\newcommand\vR{\ensuremath{\operatorname{R}}}
+\newcommand\vN{\ensuremath{\operatorname{N}}}
+\newcommand\vC{\ensuremath{\operatorname{C}}}
+\newcommand\va{\vec{a}}
+\newcommand\vb{\vec{b}}
+\newcommand\ve{\vec{e}}
+\newcommand\vE{\vec{E}}
+\newcommand\vu{\vec{u}}
+\newcommand\vv{\vec{v}}
+\newcommand\vw{\vec{w}}
+\newcommand\vs{\vec{s}}
+\newcommand\vx{\vec{x}}
+\newcommand\vy{\vec{y}}
+\newcommand\vz{\vec{z}}
+\newcommand\vzero{\vec{0}}
+\newcommand{\probskip}{\vskip1.5cm}
+\newcommand{\finans}[1]{\ensuremath{\underline{\underline{#1}}}}
+\newcommand{\dotsize}{1pt}
+\newcommand{\Heq}{\ensuremath{ \; \stackrel{\mathrm{H}}{=}} \; }
+
+\pagestyle{foot}
+%%% Running footer will have a space for page score (if this is not the solution key)
+\ifanswers  %% do nothing
+\else
+\runningfooter{}{}{Score for this page: \makebox[1in]{\hrulefill} out of \pointsonpage{\thepage}}
+\fi
+
+
+
+\newcommand{\figscl}{.5}
+\newcommand{\tf}[1][{}]{%
+  \fillin[#1][0.25in]%
+}
+
+\newcommand\explain[1]{%
+  \ifanswers
+  \begin{EnvUplevel}
+    {\small \underline{Explanation}. #1} 
+  \end{EnvUplevel}
+  \else \fi}
+
+\ifanswers
+\usepackage{background}
+\backgroundsetup{
+  color=black,
+  opacity=.25,
+  scale=2,
+  contents={\textsc{FOR PERSONAL USE ONLY -- DO NOT DISTRIBUTE}}%
+}
+\fi
+
+\newcommand\myheader{%
+  \noindent {\bf \coursename : \semester}\hfill \ifanswers {\bf ANSWERS} \hfill {\bf \assignment} 
+  \else {\bf \assignment \hfill Due \duedate 11:59pm}
+  \\[5mm]
+  Name: \underline{\phantom{XXXXXXXXXXXXXXXXXXXX}} \hfill Student ID: \underline{\phantom{XXXXXXXXXXXX}}
+  \fi%
+}
+\checkboxchar{$\Box$}% \renewcommand{\questionshook}{%
