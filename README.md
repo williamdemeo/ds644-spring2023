@@ -95,13 +95,13 @@ Information about homework is in the [homework directory](homework):
 **All exams take place in the same classroom as the lecture**, [CKB Room 124][].
 
 +  **MIDTERM EXAM DATE**  
-   +  [§ 102 (Monday)][] TBA
-   +  [§ 104 (Wednesday)][] TBA
+   +  [§ 102 (Mon) midterm exam](https://github.com/williamdemeo/ds644-spring2023/raw/main/exams/midterm/ds644-midterm-sec102-spring2023.pdf) 27 March 2023 18:00--20:00 in [CKB Room 124][]
+   +  [§ 104 (Wed) midterm exam](https://github.com/williamdemeo/ds644-spring2023/raw/main/exams/midterm/ds644-midterm-sec104-spring2023.pdf) 29 March 2023 18:00--20:00 in [CKB Room 124][]
 
 
-+  **FINAL EXAM DATE** (cumulative)  
-   +  [§ 102 (Monday)][] TBA
-   +  [§ 104 (Wednesday)][] TBA
++  **FINAL EXAM DATE** (cumulative)
+   +  **§ 102 (Mon) final exam** 8 May 2023 18:00--20:00 in [CKB Room 124][]
+   +  **§ 104 (Wed) final exam** 10 May 2023 18:00--20:00 in [CKB Room 124][]
 
 In accordance with university policy, **the final exam must be taken by all students at the scheduled time in the usual classroom.** *Do not make plans which would have you depart campus before the scheduled final exam date.*
 

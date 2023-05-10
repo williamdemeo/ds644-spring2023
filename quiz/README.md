@@ -11,14 +11,21 @@ is the average number of friends people of age `k` have.
 
 1.  Download and unzip **one** of the following zip files:
 
-    -  [friends-friends.zip](friends-friends.zip)---expands to a directory called `friends` that contains the `build.sbt` file and the `src` directory. (This is the usual way we use zip files, as in all the project.)
+    -  [friends-friends.zip](friends-friends.zip)---expands to a directory called `friends` that contains the `build.sbt` file and the `src` directory. (This is the usual way we use zip files, as in all the projects.)
 
-    -  [friends.zip](friends.zip)---expands to just the `build.sbt` file and the `src` directory (for users whose unzip program subversively creates an extraneous `friends` directory and places the contents of `friends.zip` inside that directory; such a user would end up with a `friends/friends` directory if they used the `friends-friends.zip` file).
+    -  [friends.zip](friends.zip)---expands to just the `build.sbt` file and the `src` directory (for users whose unzip program creates an extraneous `friends` directory and places the contents of `friends.zip` inside that directory; such a user would end up with a `friends/friends` directory if they used the `friends-friends.zip` file).
 
-2.  Open the `friends` folder in VSCode and replace each `???` in the `FriendsByAge.scala` file with the correct Scala/Spark code.
+2.  Load the project into VSCode by selecting "Open Folder" from the VSCode menu and selecting the `friends` folder that you just unzipped.
 
-3.  The `FriendsByAge` object has a `main` method, so you can run it.  Run the program by clicking on the `run`  link just above the line `object FriendsByAge`.  (If you don't see a `run` link, it means your program has errors.)
+    If you prefer IntelliJ, select "Open" from the File menu, navigate to the `friends` folder you just unzipped, and double-click the `build.sbt` file.
+    You should be asked whether you want to "Open as a project." Select "Yes."
 
-4.  Once you can run your program without errors and the results look good to you, submit the `FriendsByAge.scala` file to Gradescope.
+3.  Edit the main file `src/main/scala/friends/FriendsByAge.scala` and replace the `???` symbols with the appropriate Scala/Spark code.
+
+4.  The `FriendsByAge` object has a `main` method, so you can run it.  Run the program by clicking on the `run` link just above the line `object FriendsByAge`, or by clicking the green play button (IntelliJ users, after clicking the play button, must selecting "Run FriendsByAge" from the resulting pop-up menu.)
+
+    If you don't see a `run` link or a green play icon, then your program likely has errors.  Debug it until you see a `run` link or a green play icon.
+
+5.  Once you can run your program without errors and the results look good, submit your `FriendsByAge.scala` file to Gradescope.
 
 
