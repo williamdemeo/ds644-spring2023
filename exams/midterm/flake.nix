@@ -21,7 +21,7 @@
 #               framed
 #               titlesec
 #               cleveref
-#               multirow
+            multirow
 #               wrapfig
 #               tabu
 #               threeparttable
@@ -37,13 +37,13 @@
 #               csquotes
 #               minted
 #               dejavu
-#               comment
+            comment
 #               footmisc
 #               xltabular
-#               ltablex
-               background
-#               everypage
-               ;
+            ltablex
+            background
+            everypage
+            ;
 #           })
 #           which
 #           python39Packages.pygments
