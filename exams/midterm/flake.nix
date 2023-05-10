@@ -38,10 +38,10 @@
             mkdir -p .cache/texmf-var
             env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
               latexmk -interaction=nonstopmode -pdf -lualatex -f \
-              templates/exams/midterm-example2/midterm.tex
+              ./exams/midterm/midterm.tex
             env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
               latexmk -interaction=nonstopmode -pdf -lualatex -f \
-              templates/exams/midterm-example2/midterm-SOLUTIONS.tex
+              ./exams/midterm/midterm-SOLUTIONS.tex
           '';
           installPhase = ''
             mkdir -p $out
