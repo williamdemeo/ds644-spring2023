@@ -34,7 +34,7 @@ We use [VSCode][] in this class.  However, if you are already comfortable with t
 
     To carry out this step, first start up VSCode and then click on the Extensions icon on the left-hand pane of the VSCode window.  It looks like a set of blocks, like the icon shown below.
 
-    ![Extensions](../img/Extensions.png)
+    ![Extensions](../.img/Extensions.png)
 
     In the "Search Extensions" box, type "Metals" and click on the entry for "Scala (Metals)" and then click the blue "Install" button.
 
@@ -52,7 +52,7 @@ If you get errors, please consult the [Metals documentation][] webpage or the [T
 
 3.  Click on the [Metals][] icon in the left-hand pane of VSCode. It looks like this
 
-    ![Metals](../img/Metals-icon.png)
+    ![Metals](../.img/Metals-icon.png)
 
     Note that this icon will only appear in VSCode if you successfully installed the [Metals][] extension following the instructions in Step 3 of the previous section.
 
@@ -231,4 +231,4 @@ If you have decided to abandon VSCode and you need help configuring IntelliJ IDE
 [VSCode for Mac Intel chip]: https://code.visualstudio.com/docs/?dv=darwinx64
 [x64 version of JDK 11]: https://www.oracle.com/java/technologies/downloads/#license-lightbox
 
-[blocks icon]: https://github.com/williamdemeo/ds644-spring2023/blob/main/img/Extensions.png
+[blocks icon]: https://github.com/williamdemeo/ds644-spring2023/blob/main/.img/Extensions.png
